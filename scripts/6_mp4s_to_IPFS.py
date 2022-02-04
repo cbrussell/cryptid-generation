@@ -6,7 +6,7 @@ from pinatapy import PinataPy
 
 # IPFS Daemon must be running
 
-image_path = "/Users/chrisrussell/CryptidToken/generation/output/videos_shifted"
+image_path = "/Users/chrisrussell/CryptidToken/cryptid-generation/output/videos_shifted"
 image_list = fnmatch.filter(os.listdir(image_path), '*.mp4')
 image_count = len(image_list)
 

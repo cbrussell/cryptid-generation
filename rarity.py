@@ -11,10 +11,10 @@ def count_files(dir):
 def main():
 
     
-    names = json.load(open("/Users/chrisrussell/CryptidToken/generation/names2.json"))
+    names = json.load(open("/Users/chrisrussell/CryptidToken/cryptid-generation/names2.json"))
     metadata = {}
 
-    metadata_dir = "/Users/chrisrussell/CryptidToken/generation/output/metadata"
+    metadata_dir = "/Users/chrisrussell/CryptidToken/cryptid-generation/output/metadata"
     file_count = count_files(metadata_dir)
     
 
@@ -37,7 +37,7 @@ def main():
 
     new = {k: v for k, v in sorted(metadata.items(), key=lambda item: item[1], reverse=True)}
 
-    with open("/Users/chrisrussell/CryptidToken/generation/rarity.json", "w") as w:
+    with open("/Users/chrisrussell/CryptidToken/cryptid-generation/rarity.json", "w") as w:
         json.dump(new, w, indent=4)
 
     print('Success!')

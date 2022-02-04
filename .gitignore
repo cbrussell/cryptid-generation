@@ -9,3 +9,4 @@ test_archive/**
 assets/*
 __pycache__/
 *.pyc
+.tmp.driveupload/

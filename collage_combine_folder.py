@@ -9,7 +9,7 @@ from prime_factor import gridSize
 def main():
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
-    still_path = Path(__file__).resolve().parents[1] / "generation/output/stills/"
+    still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
 
     still_list = fnmatch.filter(os.listdir(still_path), '*.png')
 

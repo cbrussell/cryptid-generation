@@ -5,7 +5,7 @@ from pinatapy import PinataPy
 
 # IPFS Daemon must be running
 
-json_path = "/Users/chrisrussell/CryptidToken/generation/output/metadata_shifted_final"
+json_path = "/Users/chrisrussell/CryptidToken/cryptid-generation/output/metadata_shifted_final"
 json_list = fnmatch.filter(os.listdir(json_path), '*.json')
 json_count = len(json_list)
 

@@ -4,7 +4,7 @@ import ipfshttpclient
 import fnmatch
 from pinatapy import PinataPy
 
-image_path = "/Users/chrisrussell/CryptidToken/generation/output/stills_shifted"
+image_path = "/Users/chrisrussell/CryptidToken/cryptid-generation/output/stills_shifted"
 image_list = fnmatch.filter(os.listdir(image_path), '*.png')
 image_count = len(image_list)
 

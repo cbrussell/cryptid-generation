@@ -6,8 +6,8 @@ mp4_cid = "QmXkFbUZUNqNUk7G2c4VNBAV6Ty6jpwuphc6oJADjFHdhr"
 still_cid = "QmS8T7GJCD47sHRrrM9TcimgUfrxvyTQ2BBseWXv2c1mDZ"
 
 def main():
-    names = json.load(open("/Users/chrisrussell/CryptidToken/generation/names2.json"))
-    for filename in os.scandir("/Users/chrisrussell/CryptidToken/generation/output/metadata_shifted"):
+    names = json.load(open("/Users/chrisrussell/CryptidToken/cryptid-generation/names2.json"))
+    for filename in os.scandir("/Users/chrisrussell/CryptidToken/cryptid-generation/output/metadata_shifted"):
         if len(filename.name.split(".")) != 2:
             continue
         file_name = filename.name.split(".")[0]
@@ -15,7 +15,7 @@ def main():
             json.load(open(filename.path)), names, file_name
         )
 
-        with open(f"/Users/chrisrussell/CryptidToken/generation/output/metadata_shifted_final/{file_name}.json", "w") as o:
+        with open(f"/Users/chrisrussell/CryptidToken/cryptid-generation/output/metadata_shifted_final/{file_name}.json", "w") as o:
             json.dump(transformed, o, indent=4)
     print('Success!')
 

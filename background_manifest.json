@@ -1,0 +1,47 @@
+[
+    {
+        "color": "blue_green",
+        "weight": 1
+    },
+    {
+        "color": "desert",
+        "weight": 1
+    },
+    {
+        "color": "light_purple",
+        "weight": 1
+    },
+    {
+        "color": "midnight_sky",
+        "weight": 1
+    },
+    {
+        "color": "orange_test",
+        "weight": 1
+    },
+    {
+        "color": "pink_purple",
+        "weight": 1
+    },
+    {
+        "color": "pink",
+        "weight": 1
+    },
+    {
+        "color": "purple_test",
+        "weight": 1
+    },
+    {
+        "color": "purple",
+        "weight": 1
+    },
+    {
+        "color": "red_test",
+        "weight": 1
+    },
+    {
+        "color": "black",
+        "weight": 1
+    }
+  
+]

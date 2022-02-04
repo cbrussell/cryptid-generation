@@ -1,0 +1,11 @@
+venv/**
+output/*.mp4
+output/*.png
+RENDERS/*
+.DS_Store
+output/**
+test_archive/**
+*.DS_Store
+assets/*
+__pycache__/
+*.pyc

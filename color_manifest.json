@@ -1,0 +1,38 @@
+[
+    {
+        "color": "red",
+        "weight": 1
+    },
+    {
+        "color": "orange",
+        "weight": 1
+    },
+    {
+        "color": "yellow",
+        "weight": 1
+    },
+    {
+        "color": "blue",
+        "weight": 1
+    },
+    {
+        "color": "purple",
+        "weight": 1
+    },
+    {
+        "color": "brown",
+        "weight": 1
+    },
+    {
+        "color": "gray",
+        "weight": 1
+    },
+    {
+        "color": "black",
+        "weight": 1
+    },
+    {
+        "color": "white",
+        "weight": 1
+    }
+]

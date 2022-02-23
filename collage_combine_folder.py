@@ -16,13 +16,13 @@ def main():
 
     still_count = len(still_list)
 
-    grid = [] #[x,y]
+    grid = [7, 4] #[x,y]
 
-    print(grid)
+    # print(grid)
 
-    grid = gridSize(still_count)
+    # grid = gridSize(still_count)
 
-    print(grid)
+    # print(grid)
 
     image = Image.open(f"{dir_path}/output/stills/1.png")
 
@@ -40,14 +40,14 @@ def main():
             # find texts with "find {/System,}/Library/Fonts -name *ttf"
             ######
     
-            Width, Height = frame.size 
-            drawn = ImageDraw.Draw(frame) 
-            text = f"{frame_count}"
-            font = ImageFont.truetype("Arial Black", 70)
-            textwidth, textheight = drawn.textsize(text, font)
+            # Width, Height = frame.size 
+            # drawn = ImageDraw.Draw(frame) 
+            # text = f"{frame_count}"
+            # font = ImageFont.truetype("Arial Black", 70)
+            # textwidth, textheight = drawn.textsize(text, font)
          
             
-            drawn.text((height * x + 30, height * y + 10), text, font=font, fill="black") 
+            # drawn.text((height * x + 30, height * y + 10), text, font=font, fill="black") 
     
             #####
 

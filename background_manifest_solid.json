@@ -31,33 +31,10 @@
         "weight": 1
     },
     {
-        "color": "118",
-        "weight": 1
-    },
-    {
         "color": "125",
         "weight": 1
     },
-    {
-        "color": "207",
-        "weight": 1
-    },
-    {
-        "color": "392",
-        "weight": 1
-    },
-    {
-        "color": "556",
-        "weight": 1
-    },
-    {
-        "color": "745",
-        "weight": 1
-    },
-    {
-        "color": "967",
-        "weight": 1
-    },
+
     {
         "color": "293",
         "weight": 1
@@ -68,6 +45,14 @@
     },
     {
         "color": "409",
+        "weight": 1
+    },
+    {
+        "color": "tan_egg_dark",
+        "weight": 1
+    },
+    {
+        "color": "tan_egg_light",
         "weight": 1
     }
 ]

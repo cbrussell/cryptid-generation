@@ -45,7 +45,12 @@ incompatible_list = [
     { "4_back": "back_spike_white", "background": "tan_egg_dark" },           
     { "4_back": "back_dragonwings_white", "background": "tan_egg_dark" },
     { "4_back": "back_featherwings_white", "background": "tan_egg_dark" },
-    { "4_back": "back_spike_white", "background": "tan_egg_dark" },                  
+    { "4_back": "back_spike_white", "background": "tan_egg_dark" },      
+
+    { "4_back": "back_spike_white", "background":               "super_tan" },           
+    { "4_back": "back_dragonwings_white", "background":         "super_tan" },
+    { "4_back": "back_featherwings_white", "background":        "super_tan" },
+    { "4_back": "back_spike_white", "background":               "super_tan" },              
     
     # orange featherwing clashes
     { "4_back": "back_featherwings_orange", "background": "sand2"},
@@ -72,6 +77,10 @@ incompatible_list = [
     { "base_color": "red", "background": "varsity"},
     { "base_color": "red", "background": "purp2"},
 
+    { "base_color": "white", "background": "super_tan"},
+
+    { "base_color": "red", "background": "125"},
+
     # tail and background clashes with black tips (scorpion, kitsune, lion)
 
 
@@ -90,6 +99,7 @@ incompatible_list = [
     { "1_tail": "tail_kitsune_orange","background":     "navy"},
     { "1_tail": "tail_kitsune_brown","background":     "navy"},
     { "1_tail": "tail_lion_red", "background":          "navy"},
+     { "1_tail": "tail_lion_yellow", "background":          "navy"},
     { "1_tail": "tail_kitsune_red","background":        "navy"},
     { "1_tail": "tail_lion_orange", "background":       "navy"},
     { "1_tail": "tail_scorpion_orange", "background":   "navy"},
@@ -109,6 +119,17 @@ incompatible_list = [
     { "background": "navy", "13_horns": "horns_bull_dark"},
     { "background": "navy", "13_horns": "horns_antlers_medium"},
     { "background": "navy", "13_horns": "horns_antlers_dark"},
+
+    { "background": "80", "13_horns": "horns_ram_medium"},
+    { "background": "80", "13_horns": "horns_ram_dark"},
+    { "background": "80", "13_horns": "horns_unicorn_medium"},
+    { "background": "80", "13_horns": "horns_unicorn_dark"},
+    { "background": "80", "13_horns": "horns_goat_medium"},
+    { "background": "80", "13_horns": "horns_goat_dark"},
+    { "background": "80", "13_horns": "horns_bull_medium"},
+    { "background": "80", "13_horns": "horns_bull_dark"},
+    { "background": "80", "13_horns": "horns_antlers_medium"},
+    { "background": "80", "13_horns": "horns_antlers_dark"},
 
     { "background": "black", "13_horns": "horns_ram_medium"},
     { "background": "black", "13_horns": "horns_ram_dark"},
@@ -182,6 +203,9 @@ incompatible_list = [
     # purple base on purp2 bg and varsity
     { "base_color": "purple","background": "purp2"},
     { "base_color": "purple","background": "varsity"},
+    { "base_color": "purple","background": "black"},
+    { "base_color": "purple","background": "80"},
+    { "base_color": "blue","background": "80"},
 
     # blue base on varisty/navy
     { "base_color": "blue", "background": "varsity"},
@@ -197,6 +221,8 @@ incompatible_list = [
     {"7_fur": "fur_bushy_black", "background": "navy"},
     {"7_fur": "fur_windy_black","background": "black"},
     {"7_fur": "fur_windy_black", "background": "navy"},
+
+    {"7_fur": "fur_silky_white","background": "tan_egg_light"},
     
     # no black on black/navy
     {"base_color": "black", "background": "navy"},

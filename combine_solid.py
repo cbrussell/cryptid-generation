@@ -8,7 +8,7 @@ from dna import Frames
 from time import sleep
 from background_2d_generator import get_2d_gradient
 
-def combine_attributes(frames: Frames, prefix: str):
+def combine_attributes_solid(frames: Frames, prefix: str):
     # R = np.random.randint(0, 256)
     # G = np.random.randint(0, 256)
     # B = np.random.randint(0, 256)
@@ -29,7 +29,7 @@ def combine_attributes(frames: Frames, prefix: str):
     # for (n, background) in enumerate(frames.background_frames):
     # print("Generating frames...")
 
-    for n in range(0, 1): #0,72
+    for n in range(0, 72): #0,72
 
         # use this is background color
         # frame = Image.open(background) # background of data
@@ -47,17 +47,23 @@ def combine_attributes(frames: Frames, prefix: str):
 
         # frame = Image.new('RGB', (1180, 1180), (0, 177, 64)) # black bg
 
+        solid_color = 'white'
+
         if frames.tail_frames:
             print(frames.tail_frames[n])
             tail = Image.open(frames.tail_frames[n])
-            # tail = tail.convert('LA').convert('RGBA')
+
             alpha = tail.getchannel('A')
-            tail = Image.new('RGBA', tail.size, color='black')
+            tail = Image.new('RGBA', tail.size, color=solid_color)
             tail.putalpha(alpha) 
+
             frame.paste(tail, box=(20, 70), mask=tail)
 
         if frames.leftbackleg_frames:
             leftbackleg = Image.open(frames.leftbackleg_frames[n])
+            alpha = leftbackleg.getchannel('A')
+            leftbackleg = Image.new('RGBA', leftbackleg.size, color=solid_color)
+            leftbackleg.putalpha(alpha) 
             frame.paste(leftbackleg, box=(20, 70), mask=leftbackleg)
 
         if frames.leftbacklegshadow_frames:
@@ -66,6 +72,9 @@ def combine_attributes(frames: Frames, prefix: str):
 
         if frames.leftfrontleg_frames[n]:
             leftfrontleg = Image.open(frames.leftfrontleg_frames[n])
+            alpha = leftfrontleg.getchannel('A')
+            leftfrontleg = Image.new('RGBA', leftfrontleg.size, color=solid_color)
+            leftfrontleg.putalpha(alpha) 
             frame.paste(leftfrontleg, box=(20, 70), mask=leftfrontleg)
 
         if frames.leftfrontlegshadow_frames[n]:
@@ -74,39 +83,67 @@ def combine_attributes(frames: Frames, prefix: str):
 
         if frames.back_frames:
             back = Image.open(frames.back_frames[n])
+            alpha = back.getchannel('A')
+            back = Image.new('RGBA', back.size, color=solid_color)
+            back.putalpha(alpha) 
             frame.paste(back, box=(20, 70), mask=back)
        
         if frames.torsobase_frames:
             torsobase = Image.open(frames.torsobase_frames[n])
+            alpha = torsobase.getchannel('A')
+            torsobase = Image.new('RGBA', torsobase.size, color=solid_color)
+            torsobase.putalpha(alpha) 
             frame.paste(torsobase, box=(20, 70), mask=torsobase)
 
         if frames.torsoaccent_frames:
             torsoaccent = Image.open(frames.torsoaccent_frames[n])
-            torsoaccent = torsoaccent
+            alpha = torsoaccent.getchannel('A')
+            torsoaccent = Image.new('RGBA', torsoaccent.size, color=solid_color)
+            torsoaccent.putalpha(alpha) 
             frame.paste(torsoaccent, box=(20, 70), mask=torsoaccent)
 
         if frames.torsopattern_frames:
             torsopattern = Image.open(frames.torsopattern_frames[n])
+
+            alpha = torsopattern.getchannel('A')
+            torsopattern = Image.new('RGBA', torsopattern.size, color=solid_color)
+            torsopattern.putalpha(alpha)
+
             frame.paste(torsopattern, box=(20, 70), mask=torsopattern)
 
         if frames.neckbase_frames:
             neckbase = Image.open(frames.neckbase_frames[n])
+            alpha = neckbase.getchannel('A')
+            neckbase = Image.new('RGBA', neckbase.size, color=solid_color)
+            neckbase.putalpha(alpha)
             frame.paste(neckbase, box=(20, 70), mask=neckbase)
         
         if frames.neckaccent_frames:
             neckaccent = Image.open(frames.neckaccent_frames[n])
+            alpha = neckaccent.getchannel('A')
+            neckaccent = Image.new('RGBA', neckaccent.size, color=solid_color)
+            neckaccent.putalpha(alpha)
             frame.paste(neckaccent, box=(20, 70), mask=neckaccent)
 
         if frames.neckpattern_frames:
             neckpattern = Image.open(frames.neckpattern_frames[n])
+            alpha = neckpattern.getchannel('A')
+            neckpattern = Image.new('RGBA', neckpattern.size, color=solid_color)
+            neckpattern.putalpha(alpha)
             frame.paste(neckpattern, box=(20, 70), mask=neckpattern)
         
         if frames.neckshadow_frames:
             neckshadow = Image.open(frames.neckshadow_frames[n])
+            # alpha = neckshadow.getchannel('A')
+            # neckshadow = Image.new('RGBA', neckshadow.size, color=solid_color)
+            # neckshadow.putalpha(alpha)
             frame.paste(neckshadow, box=(20, 70), mask=neckshadow)
 
         if frames.fur_frames:
             fur = Image.open(frames.fur_frames[n])
+            alpha = fur.getchannel('A')
+            fur = Image.new('RGBA', fur.size, color=solid_color)
+            fur.putalpha(alpha)
             frame.paste(fur, box=(20, 70), mask=fur)
 
         if frames.furshadow_frames:
@@ -115,38 +152,65 @@ def combine_attributes(frames: Frames, prefix: str):
 
         if frames.rightbackleg_frames:
             rightbackleg = Image.open(frames.rightbackleg_frames[n])
+            alpha = rightbackleg.getchannel('A')
+            rightbackleg = Image.new('RGBA', rightbackleg.size, color=solid_color)
+            rightbackleg.putalpha(alpha)
             frame.paste(rightbackleg, box=(20, 70), mask=rightbackleg)
         
         if frames.rightfrontleg_frames:
             rightfrontleg = Image.open(frames.rightfrontleg_frames[n])
+            alpha = rightfrontleg.getchannel('A')
+            rightfrontleg = Image.new('RGBA', rightfrontleg.size, color=solid_color)
+            rightfrontleg.putalpha(alpha)
             frame.paste(rightfrontleg, box=(20, 70), mask=rightfrontleg)
 
         if frames.ears_frames:
             ears = Image.open(frames.ears_frames[n])
+            alpha = ears.getchannel('A')
+            ears = Image.new('RGBA', ears.size, color=solid_color)
+            ears.putalpha(alpha)
             frame.paste(ears, box=(20, 70), mask=ears)
 
         if frames.headbase_frames:
             headbase = Image.open(frames.headbase_frames[n])
+            alpha = headbase.getchannel('A')
+            headbase = Image.new('RGBA', headbase.size, color=solid_color)
+            headbase.putalpha(alpha)
             frame.paste(headbase, box=(20, 70), mask=headbase)
         
         if frames.headaccent_frames:
             headaccent = Image.open(frames.headaccent_frames[n])
+            alpha = headaccent.getchannel('A')
+            headaccent = Image.new('RGBA', headaccent.size, color=solid_color)
+            headaccent.putalpha(alpha)
             frame.paste(headaccent, box=(20, 70), mask=headaccent)
 
         if frames.headpattern_frames:
             headpattern = Image.open(frames.headpattern_frames[n])
+            alpha = headpattern.getchannel('A')
+            headpattern = Image.new('RGBA', headpattern.size, color=solid_color)
+            headpattern.putalpha(alpha)
             frame.paste(headpattern, box=(20, 70), mask=headpattern)
 
         if frames.mouth_frames:
             mouth = Image.open(frames.mouth_frames[n])
+            alpha = mouth.getchannel('A')
+            mouth = Image.new('RGBA', mouth.size, color=solid_color)
+            mouth.putalpha(alpha)
             frame.paste(mouth, box=(20, 70), mask=mouth)
 
         if frames.horns_frames:
             horns = Image.open(frames.horns_frames[n])
+            alpha = horns.getchannel('A')
+            horns = Image.new('RGBA', horns.size, color=solid_color)
+            horns.putalpha(alpha)
             frame.paste(horns, box=(20, 70), mask=horns)
         
         if frames.eyes_frames:
             eyes = Image.open(frames.eyes_frames[n])
+            alpha = eyes.getchannel('A')
+            eyes = Image.new('RGBA', eyes.size, color=solid_color)
+            eyes.putalpha(alpha)
             frame.paste(eyes, box=(20, 70), mask=eyes)
 
         print("Almost there...")

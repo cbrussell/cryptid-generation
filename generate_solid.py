@@ -4,7 +4,7 @@ from datetime import datetime
 from multiprocessing import Process, Manager, Value
 from dna import get_dna, to_hash
 from traits import TraitManifest, ColorManifest, BackgroundManifest
-from combine import combine_attributes
+from combine_solid import combine_attributes_solid
 
 def main():
 
@@ -18,7 +18,7 @@ def main():
 
     start_time = datetime.now()
     procs = 10
-    n = 50 # collection size
+    n = 30 # collection size
     increment = int(n / procs)
     jobs = []
     start = 1
@@ -73,7 +73,7 @@ def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifes
             os.makedirs(f"{dir_path}/output/metadata", exist_ok=True)
             with open(f"{dir_path}/output/metadata/{str(edition)}.json", "w") as f:
                 json.dump(dna, f, indent=4)
-                combine_attributes(images, str(edition))
+                combine_attributes_solid(images, str(edition))
                 number += 1
                 print(f"Completed edition #{edition}/{stop - 1}")
 

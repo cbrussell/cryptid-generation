@@ -29,7 +29,7 @@ def combine_attributes(frames: Frames, prefix: str):
     # for (n, background) in enumerate(frames.background_frames):
     # print("Generating frames...")
 
-    for n in range(0, 1): #0,72
+    for n in range(0, 72): #0,72
 
         # use this is background color
         # frame = Image.open(background) # background of data
@@ -50,10 +50,6 @@ def combine_attributes(frames: Frames, prefix: str):
         if frames.tail_frames:
             print(frames.tail_frames[n])
             tail = Image.open(frames.tail_frames[n])
-            # tail = tail.convert('LA').convert('RGBA')
-            alpha = tail.getchannel('A')
-            tail = Image.new('RGBA', tail.size, color='black')
-            tail.putalpha(alpha) 
             frame.paste(tail, box=(20, 70), mask=tail)
 
         if frames.leftbackleg_frames:

@@ -29,7 +29,7 @@ def combine_attributes_solid(frames: Frames, prefix: str):
     # for (n, background) in enumerate(frames.background_frames):
     # print("Generating frames...")
 
-    for n in range(0, 72): #0,72
+    for n in range(0, 1): #0,72
 
         # use this is background color
         # frame = Image.open(background) # background of data
@@ -134,16 +134,20 @@ def combine_attributes_solid(frames: Frames, prefix: str):
         
         if frames.neckshadow_frames:
             neckshadow = Image.open(frames.neckshadow_frames[n])
+
             # alpha = neckshadow.getchannel('A')
             # neckshadow = Image.new('RGBA', neckshadow.size, color=solid_color)
             # neckshadow.putalpha(alpha)
+
             frame.paste(neckshadow, box=(20, 70), mask=neckshadow)
 
         if frames.fur_frames:
             fur = Image.open(frames.fur_frames[n])
+            
             alpha = fur.getchannel('A')
             fur = Image.new('RGBA', fur.size, color=solid_color)
             fur.putalpha(alpha)
+
             frame.paste(fur, box=(20, 70), mask=fur)
 
         if frames.furshadow_frames:

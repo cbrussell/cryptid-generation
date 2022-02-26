@@ -27,6 +27,7 @@ class Frames:
     neckaccent_frames: list
     neckpattern_frames: list
     neckshadow_frames: list
+    neckshadow_teeth_frames: list
     rightbackleg_frames: list
     rightfrontleg_frames: list
     ears_frames: list
@@ -49,8 +50,6 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
 
         leftbackleg, backanimalleg, leftbackleg_color, leftbackleg_frames = get_trait_color(trait_manifest, "2_leftbackleg", color)
         data.update(leftbackleg)
-
-        
 
         leftfrontleg, frontanimalleg, leftfrontleg_color, leftfrontleg_frames  = get_trait_color(trait_manifest, "3_leftfrontleg", color)
         data.update(leftfrontleg)
@@ -132,6 +131,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         data.update(headpattern)
 
         mouth, mouth_frames = get_trait_category(trait_manifest, "12_mouth", animal)[0:4:3]
+        
         data.update(mouth)
 
         if fur:
@@ -139,6 +139,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
             neckaccent_frames = []
             neckpattern_frames = []
             neckshadow_frames = []
+            neckshadow_teeth_frames = []
         else:
             neckbase, neckbase_frames = get_trait_color(trait_manifest, "6a_neckbase", color)[0:4:3]
             data.update(neckbase)
@@ -159,8 +160,15 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
             # if animal == 'eagle':
                 # neckshadow_frames = []
             # else:
+
             neckshadow, neckshadow_frames = get_trait_category(trait_manifest, "6d_neckshadow", animal)[0:4:3]
             data.update(neckshadow)
+
+            if mouth['12_mouth'] == 'mouth_horse_teeth':
+                neckshadow_teeth, neckshadow_teeth_frames = get_trait_category(trait_manifest, "6e_neckshadow_teeth", animal)[0:4:3]
+                data.update(neckshadow_teeth)
+            else:
+                neckshadow_teeth_frames = []
 
         rightbackleg, rightbackleg_frames = get_trait_category_color(trait_manifest, "8_rightbackleg", backanimalleg, color)[0:4:3]
         data.update(rightbackleg)
@@ -210,6 +218,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
                     , neckaccent_frames
                     , neckpattern_frames
                     , neckshadow_frames
+                    , neckshadow_teeth_frames
                     , rightbackleg_frames
                     , rightfrontleg_frames
                     , ears_frames

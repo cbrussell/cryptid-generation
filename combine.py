@@ -100,6 +100,10 @@ def combine_attributes(frames: Frames, prefix: str):
         if frames.neckshadow_frames:
             neckshadow = Image.open(frames.neckshadow_frames[n])
             frame.paste(neckshadow, box=(20, 70), mask=neckshadow)
+        
+        if frames.neckshadow_teeth_frames:
+            neckshadow_teeth = Image.open(frames.neckshadow_teeth_frames[n])
+            frame.paste(neckshadow_teeth, box=(20, 70), mask=neckshadow_teeth)
 
         if frames.fur_frames:
             fur = Image.open(frames.fur_frames[n])

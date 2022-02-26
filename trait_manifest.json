@@ -3388,6 +3388,28 @@
         ]
     },
     {
+        "attribute": "6e_neckshadow_teeth",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "horse",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "tusks",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "neckshadow_teeth_horse_tusks",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "attribute": "7_fur",
         "rarity": 0.55,
         "categories": [

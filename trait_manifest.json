@@ -3396,11 +3396,27 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "tusks",
+                        "color": "teeth",
                         "weight": 1,
                         "traits": [
                             {
                                 "trait": "neckshadow_teeth_horse_tusks",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "lion",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "teeth",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "neckshadow_teeth_lion_fangs",
                                 "weight": 1
                             }
                         ]
@@ -4199,6 +4215,44 @@
                         "traits": [
                             {
                                 "trait": "furshadow_wolf_wooly",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "attribute": "7e_fur_shadow_teeth",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "lion",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "teeth",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "neckshadow_teeth_lion_fangs",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "horse",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "teeth",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_teeth_horse_tusks",
                                 "weight": 1
                             }
                         ]
@@ -5858,6 +5912,195 @@
         ]
     },
     {
+        "attribute": "10a_ear_shadow_fur",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "lamb",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "wooly",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_lamb_wooly",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "windy",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_lamb_windy",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "bushy",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_lamb_bushy",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "prick",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "bushy",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_prick_bushy",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "wooly",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_prick_wooly",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "feather",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "bushy",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_feather_bushy",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "wooly",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_feather_wooly",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "flop",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "bushy",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_flop_bushy",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "wooly",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_flop_wooly",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "lynx",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "bushy",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_lynx_bushy",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "round",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "bushy",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_round_bushy",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "wooly",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_round_wooly",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "fox",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "wooly",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_fox_wooly",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "bushy",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_fox_bushy",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                    
+                ]
+            }
+        ]
+    },
+    {
         "attribute": "11a_headbase",
         "rarity": 1,
         "categories": [
@@ -6654,7 +6897,7 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "empty",
                         "weight": 1,
                         "traits": [
                             {
@@ -6670,7 +6913,7 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "empty",
                         "weight": 1,
                         "traits": [
                             {
@@ -6686,13 +6929,19 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "teeth",
                         "weight": 1,
                         "traits": [
                             {
                                 "trait": "mouth_horse_teeth",
                                 "weight": 0.7
-                            },
+                            } 
+                        ]
+                    },
+                    {
+                        "color": "empty",
+                        "weight": 1,
+                        "traits": [
                             {
                                 "trait": "mouth_horse_empty",
                                 "weight": 1
@@ -6706,16 +6955,22 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "teeth",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "mouth_lion_teeth",
+                                "weight": 0.6
+                            }
+                        ]
+                    },
+                    {
+                        "color": "empty",
                         "weight": 1,
                         "traits": [
                             {
                                 "trait": "mouth_lion_empty",
                                 "weight": 1
-                            },
-                            {
-                                "trait": "mouth_lion_teeth",
-                                "weight": 0.6
                             }
                         ]
                     }
@@ -6726,7 +6981,7 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "empty",
                         "weight": 1,
                         "traits": [
                             {

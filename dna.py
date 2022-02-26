@@ -1,3 +1,4 @@
+from calendar import c
 import json
 import hashlib
 from dataclasses import dataclass
@@ -28,9 +29,11 @@ class Frames:
     neckpattern_frames: list
     neckshadow_frames: list
     neckshadow_teeth_frames: list
+    fur_shadow_teeth_frames: list
     rightbackleg_frames: list
     rightfrontleg_frames: list
     ears_frames: list
+    ear_shadow_fur_frames: list
     horns_frames: list
     background_frame: list
     tail_frames: list
@@ -123,6 +126,8 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         else:
             
             furshadow_frames = []
+        
+        
 
         headaccent, headaccent_frames = get_trait_category(trait_manifest, "11b_headaccent", animal)[0:4:3]
         data.update(headaccent)
@@ -130,7 +135,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         headpattern, headpattern_frames = get_trait_category(trait_manifest, "11c_headpattern", animal)[0:4:3]
         data.update(headpattern)
 
-        mouth, mouth_frames = get_trait_category(trait_manifest, "12_mouth", animal)[0:4:3]
+        mouth, mouth_animal, mouth_type, mouth_frames = get_trait_category(trait_manifest, "12_mouth", animal)
         
         data.update(mouth)
 
@@ -164,11 +169,22 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
             neckshadow, neckshadow_frames = get_trait_category(trait_manifest, "6d_neckshadow", animal)[0:4:3]
             data.update(neckshadow)
 
-            if mouth['12_mouth'] == 'mouth_horse_teeth':
-                neckshadow_teeth, neckshadow_teeth_frames = get_trait_category(trait_manifest, "6e_neckshadow_teeth", animal)[0:4:3]
+            if mouth_type == 'teeth':
+                neckshadow_teeth, neckshadow_teeth_frames = get_trait_category_color(trait_manifest, "6e_neckshadow_teeth", animal, mouth_type)[0:4:3]
                 data.update(neckshadow_teeth)
             else:
                 neckshadow_teeth_frames = []
+
+        print(fur)
+        print(mouth_type)
+        print(animal)
+        if fur and mouth_type == 'teeth':
+            fur_shadow_teeth, fur_shadow_teeth_frames = get_trait_category_color(trait_manifest, "7e_fur_shadow_teeth", animal, mouth_type)[0:4:3]
+            data.update(fur_shadow_teeth)
+        else:
+            fur_shadow_teeth_frames = []
+
+
 
         rightbackleg, rightbackleg_frames = get_trait_category_color(trait_manifest, "8_rightbackleg", backanimalleg, color)[0:4:3]
         data.update(rightbackleg)
@@ -177,8 +193,34 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         data.update(rightfrontleg)
 
         
-        ears, ears_frames = get_trait_color(trait_manifest, "10_ears", color)[0:4:3]
+        ears, ear_type, ear_color, ears_frames = get_trait_color(trait_manifest, "10_ears", color)
         data.update(ears)
+
+        ear_fur_combos = [
+                          ("lamb", "wooly"),
+                          ("lamb", "windy"),
+                          ("lamb", "bushy"),
+                          ("prick", "bushy"),
+                          ("prick", "wooly"),
+                          ("feather", "bushy"),
+                          ("feather", "wooly"),
+                          ("flop", "bushy"),
+                          ("flop", "wooly"),
+                          ("lynx", "bushy"),
+                          ("round", "bushy"),
+                          ("round", "wooly"),
+                          ("fox", "bushy"),
+                          ("fox", "wooly"),
+                   ]
+
+       
+        if (ear_type, fur_type) in ear_fur_combos:
+            print(ear_type)
+            print(fur_type)
+            ear_shadow_fur, ear_shadow_fur_frames = get_trait_category_color(trait_manifest, "10a_ear_shadow_fur", ear_type, fur_type)[0:4:3]
+            data.update(ear_shadow_fur)
+        else:
+            ear_shadow_fur_frames = []
 
         horns, hornstype, hornscolor, horns_frames = get_trait(trait_manifest, "13_horns")
         data.update(horns)
@@ -219,9 +261,11 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
                     , neckpattern_frames
                     , neckshadow_frames
                     , neckshadow_teeth_frames
+                    , fur_shadow_teeth_frames
                     , rightbackleg_frames
                     , rightfrontleg_frames
                     , ears_frames
+                    , ear_shadow_fur_frames
                     , horns_frames
                     , background_frame
                     , tail_frames

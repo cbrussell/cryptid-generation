@@ -113,6 +113,14 @@ def combine_attributes(frames: Frames, prefix: str):
             furshadow = Image.open(frames.furshadow_frames[n])
             frame.paste(furshadow, box=(20, 70), mask=furshadow)
 
+        if frames.fur_shadow_teeth_frames:
+            fur_shadow_teeth = Image.open(frames.fur_shadow_teeth_frames[n])
+            frame.paste(fur_shadow_teeth, box=(20, 70), mask=fur_shadow_teeth)
+
+        if frames.ear_shadow_fur_frames:
+            ear_shadow_fur = Image.open(frames.ear_shadow_fur_frames[n])
+            frame.paste(ear_shadow_fur, box=(20, 70), mask=ear_shadow_fur)
+
         if frames.rightbackleg_frames:
             rightbackleg = Image.open(frames.rightbackleg_frames[n])
             frame.paste(rightbackleg, box=(20, 70), mask=rightbackleg)

@@ -3314,7 +3314,7 @@
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "neckshadow_bear_black",
+                                "trait": "neckshadow_bear",
                                 "weight": 1
                             }
                         ]
@@ -3330,7 +3330,7 @@
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "neckshadow_eagle_black",
+                                "trait": "neckshadow_eagle",
                                 "weight": 1
                             }
                         ]
@@ -3346,7 +3346,7 @@
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "neckshadow_horse_black",
+                                "trait": "neckshadow_horse",
                                 "weight": 1
                             }
                         ]
@@ -3362,7 +3362,7 @@
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "neckshadow_lion_black",
+                                "trait": "neckshadow_lion",
                                 "weight": 1
                             }
                         ]
@@ -3378,7 +3378,7 @@
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "neckshadow_wolf_black",
+                                "trait": "neckshadow_wolf",
                                 "weight": 1
                             }
                         ]
@@ -5940,6 +5940,16 @@
                         ]
                     },
                     {
+                        "color": "silky",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_lamb_silky",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
                         "color": "bushy",
                         "weight": 1,
                         "traits": [
@@ -6039,6 +6049,16 @@
                         "traits": [
                             {
                                 "trait": "furshadow_lynx_bushy",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "wooly",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_lynx_wooly",
                                 "weight": 1
                             }
                         ]

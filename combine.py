@@ -29,7 +29,7 @@ def combine_attributes(frames: Frames, prefix: str):
     # for (n, background) in enumerate(frames.background_frames):
     # print("Generating frames...")
 
-    for n in range(0, 1): #0,72
+    for n in range(0, 72): #0,72
 
         # use this is background color
         # frame = Image.open(background) # background of data

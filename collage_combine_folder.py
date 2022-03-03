@@ -16,11 +16,11 @@ def main():
 
     still_count = len(still_list)
 
-    grid = [7, 4] #[x,y]
+    # grid = [7, 4] #[x,y]
 
     # print(grid)
 
-    # grid = gridSize(still_count)
+    grid = gridSize(still_count)
 
     # print(grid)
 
@@ -57,7 +57,7 @@ def main():
 
     # ***************     scale      ***************     
 
-    basewidth = 8000
+    basewidth = 15000
     resize_scale = (basewidth)/(width*grid[0])
     frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 

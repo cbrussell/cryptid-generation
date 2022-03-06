@@ -966,6 +966,108 @@
         ]
     },
     {
+        "attribute": "1a_tail_pattern_stripes",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "horse",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_horse_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_horse_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_horse_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_horse_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_horse_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_horse_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_horse_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_horse_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_horse_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "attribute": "2_leftbackleg",
         "rarity": 1,
         "categories": [
@@ -3071,7 +3173,7 @@
     },
     {
         "attribute": "5c_torsopattern",
-        "rarity": 0,
+        "rarity": 1,
         "categories": [
             {
                 "category": "stripes",
@@ -3082,23 +3184,87 @@
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "torsopattern_spripes_black",
+                                "trait": "torsopattern_stripes_black",
                                 "weight": 1
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                "category": "spots",
-                "weight": 1,
-                "colors": [
+                    },
                     {
-                        "color": "black",
+                        "color": "blue",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "torsopattern_spots_black",
+                                "trait": "torsopattern_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "torsopattern_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "torsopattern_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "torsopattern_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "torsopattern_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "torsopattern_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "torsopattern_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "torsopattern_stripes_yellow",
                                 "weight": 1
                             }
                         ]
@@ -3265,7 +3431,7 @@
     },
     {
         "attribute": "6c_neckpattern",
-        "rarity": 0,
+        "rarity": 1,
         "categories": [
             {
                 "category": "stripes",
@@ -3276,23 +3442,87 @@
                         "weight": 1,
                         "traits": [
                             {
+                                "trait": "neckpattern_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "neckpattern_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "neckpattern_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "neckpattern_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "neckpattern_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "neckpattern_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "neckpattern_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
                                 "trait": "neckpattern_stripes_white",
                                 "weight": 1
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                "category": "spots",
-                "weight": 1,
-                "colors": [
+                    },
                     {
-                        "color": "black",
+                        "color": "yellow",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "neckpattern_spots_white",
+                                "trait": "neckpattern_stripes_yellow",
                                 "weight": 1
                             }
                         ]
@@ -4748,6 +4978,108 @@
         ]
     },
     {
+        "attribute": "8a_rightbackleg_pattern_stripes",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "lion",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightbackleg_stripes_lion_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightbackleg_stripes_lion_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightbackleg_stripes_lion_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightbackleg_stripes_lion_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightbackleg_stripes_lion_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightbackleg_stripes_lion_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightbackleg_stripes_lion_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightbackleg_stripes_lion_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightbackleg_stripes_lion_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "attribute": "9_rightfrontleg",
         "rarity": 1,
         "categories": [
@@ -5225,6 +5557,108 @@
                         "traits": [
                             {
                                 "trait": "rightfrontleg_lion_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "attribute": "9a_rightfrontleg_pattern_stripes",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "lion",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_lion_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_lion_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_lion_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_lion_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_lion_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_lion_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_lion_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_lion_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_lion_black",
                                 "weight": 1
                             }
                         ]
@@ -6115,7 +6549,6 @@
                             }
                         ]
                     }
-                    
                 ]
             }
         ]
@@ -6773,133 +7206,99 @@
         ]
     },
     {
-        "attribute": "11c_headpattern",
-        "rarity": 0.5,
+        "attribute": "11c_headpattern_stripes",
+        "rarity": 1,
         "categories": [
             {
-                "category": "bear",
-                "weight": 0,
-                "colors": [
-                    {
-                        "color": "stripes",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "headpattern_bear_stripes",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "spots",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "headpattern_bear_spots",
-                                "weight": 1
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "category": "eagle",
-                "weight": 0,
-                "colors": [
-                    {
-                        "color": "stripes",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "headpattern_eagle_stripes",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "spots",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "headpattern_eagle_spots",
-                                "weight": 1
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "category": "horse",
-                "weight": 0,
-                "colors": [
-                    {
-                        "color": "stripes",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "headpattern_horse_stripes",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "spots",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "headpattern_horse_spots",
-                                "weight": 1
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
                 "category": "lion",
-                "weight": 0,
+                "weight": 1,
                 "colors": [
                     {
-                        "color": "stripes",
+                        "color": "yellow",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "headpattern_lion_stripes",
+                                "trait": "headpattern_lion_stripes_yellow",
                                 "weight": 1
                             }
                         ]
                     },
                     {
-                        "color": "spots",
+                        "color": "white",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "headpattern_lion_spots",
-                                "weight": 1
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "category": "wolf",
-                "weight": 0,
-                "colors": [
-                    {
-                        "color": "stripes",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "headpattern_wolf_stripes",
+                                "trait": "headpattern_lion_stripes_white",
                                 "weight": 1
                             }
                         ]
                     },
                     {
-                        "color": "spots",
+                        "color": "red",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "headpattern_wolf_spots",
+                                "trait": "headpattern_lion_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_lion_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_lion_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_lion_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_lion_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_lion_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_lion_stripes_black",
                                 "weight": 1
                             }
                         ]
@@ -6955,7 +7354,7 @@
                             {
                                 "trait": "mouth_horse_teeth",
                                 "weight": 0.7
-                            } 
+                            }
                         ]
                     },
                     {

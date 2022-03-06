@@ -31,12 +31,15 @@ class Frames:
     neckshadow_teeth_frames: list
     fur_shadow_teeth_frames: list
     rightbackleg_frames: list
+    rightbackleg_pattern_frames: list
     rightfrontleg_frames: list
+    rightfrontleg_pattern_frames: list
     ears_frames: list
     ear_shadow_fur_frames: list
     horns_frames: list
     background_frame: list
     tail_frames: list
+    tailpattern_frames: list
     eyes_frames: list
 
 def to_hash(data):
@@ -73,12 +76,31 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         # torso accent needs to relate to torso base, input type
         torsoaccent, torsoaccent_category, torsoaccent_color, torsoaccent_frames = get_trait_category(trait_manifest, "5b_torsoaccent", torsotype)
         data.update(torsoaccent)
+        
+        # if backcolor:
 
-        torsopattern, torsopattern_category, torsopattern_color, torsopattern_frames = get_trait_category(trait_manifest, "5c_torsopattern", torsotype)
+        #     torsopattern, torsopattern_category, torsopattern_color, torsopattern_frames = get_trait_color(trait_manifest, "5c_torsopattern", backcolor)
+        #     data.update(torsopattern)
+        # else:
+        #     torsopattern, torsopattern_category, torsopattern_color, torsopattern_frames = get_trait(trait_manifest, "5c_torsopattern")
+        #     data.update(torsopattern)
+
+
+        torsopattern, torsopattern_category, torsopattern_color, torsopattern_frames = get_trait(trait_manifest, "5c_torsopattern")
         data.update(torsopattern)
+
+        # if backcolor:
+        #     fur, fur_type, fur_color, fur_frames = get_trait_color(trait_manifest, "7_fur", backcolor)
+        #     data.update(fur) 
+        # elif torsopattern_color:
+        #     fur, fur_type, fur_color, fur_frames = get_trait_color(trait_manifest, "7_fur", torsopattern_color)
+        #     data.update(fur) 
+        # else:
 
         fur, fur_type, fur_color, fur_frames = get_trait(trait_manifest, "7_fur")
         data.update(fur) 
+
+
 
         if fur:
 
@@ -131,9 +153,16 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
 
         headaccent, headaccent_frames = get_trait_category(trait_manifest, "11b_headaccent", animal)[0:4:3]
         data.update(headaccent)
+        
+        print(torsopattern_category)
+        print(animal)
 
-        headpattern, headpattern_frames = get_trait_category(trait_manifest, "11c_headpattern", animal)[0:4:3]
-        data.update(headpattern)
+        if torsopattern_category == 'stripes' and animal == 'lion':
+            headpattern, headpattern_frames = get_trait_category_color(trait_manifest, "11c_headpattern_stripes", animal, torsopattern_color)[0:4:3]
+            data.update(headpattern)
+            print(headpattern)
+        else:
+            headpattern_frames = []
 
         mouth, mouth_animal, mouth_type, mouth_frames = get_trait_category(trait_manifest, "12_mouth", animal)
         
@@ -156,7 +185,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
                 neckaccent_frames = []
 
             if torsopattern:
-                neckpattern, neckpattern_frames = get_trait_category(trait_manifest, "6c_neckpattern", torsopattern_category )[0:4:3]
+                neckpattern, neckpattern_frames = get_trait_category_color(trait_manifest, "6c_neckpattern", torsopattern_category, torsopattern_color)[0:4:3]
                 data.update(neckpattern)
             else:
                 neckpattern_frames = []
@@ -189,8 +218,23 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         rightbackleg, rightbackleg_frames = get_trait_category_color(trait_manifest, "8_rightbackleg", backanimalleg, color)[0:4:3]
         data.update(rightbackleg)
 
+
+        if torsopattern_category == 'stripes' and backanimalleg == 'lion':
+            rightbackleg_pattern, rightbackleg_pattern_frames = get_trait_category_color(trait_manifest, "8a_rightbackleg_pattern_stripes", backanimalleg, torsopattern_color)[0:4:3]
+            data.update(rightbackleg_pattern)
+            print(rightbackleg_pattern)
+        else:
+            rightbackleg_pattern_frames = []
+
         rightfrontleg, rightfrontleg_frames = get_trait_category_color(trait_manifest, "9_rightfrontleg", frontanimalleg, color)[0:4:3]
         data.update(rightfrontleg)
+
+        if torsopattern_category == 'stripes' and frontanimalleg == 'lion':
+            rightfrontleg_pattern, rightfrontleg_pattern_frames = get_trait_category_color(trait_manifest, "9a_rightfrontleg_pattern_stripes", frontanimalleg, torsopattern_color)[0:4:3]
+            data.update(rightfrontleg_pattern)
+            print(rightfrontleg_pattern)
+        else:
+            rightfrontleg_pattern_frames = []
 
         
         ears, ear_type, ear_color, ears_frames = get_trait_color(trait_manifest, "10_ears", color)
@@ -228,8 +272,20 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         background, background_frame = background_manifest.get()
         data["background"] = background
 
-        tail, tail_frames = get_trait_color(trait_manifest, "1_tail", color)[0:4:3]
+        tail, tail_category, tail_color, tail_frames = get_trait_color(trait_manifest, "1_tail", color)
         data.update(tail)
+
+        print(tail_category)
+        print(animal)
+
+        if torsopattern_category == 'stripes' and tail_category == 'horse':
+            tailpattern, tailpattern_frames = get_trait_category_color(trait_manifest, "1a_tail_pattern_stripes", tail_category, torsopattern_color)[0:4:3]
+            data.update(tailpattern)
+            print(tailpattern)
+        else:
+            tailpattern_frames = []
+
+        
 
         eyes, eyes_frames = get_trait(trait_manifest, "14_eyes")[0:4:3]
         data.update(eyes)
@@ -263,11 +319,14 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
                     , neckshadow_teeth_frames
                     , fur_shadow_teeth_frames
                     , rightbackleg_frames
+                    , rightbackleg_pattern_frames
                     , rightfrontleg_frames
+                    , rightfrontleg_pattern_frames
                     , ears_frames
                     , ear_shadow_fur_frames
                     , horns_frames
                     , background_frame
                     , tail_frames
+                    , tailpattern_frames
                     , eyes_frames
                     ), data

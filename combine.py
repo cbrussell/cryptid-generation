@@ -29,7 +29,7 @@ def combine_attributes(frames: Frames, prefix: str):
     # for (n, background) in enumerate(frames.background_frames):
     # print("Generating frames...")
 
-    for n in range(0, 72): #0,72
+    for n in range(0, 1): #0,72
 
         # use this is background color
         # frame = Image.open(background) # background of data
@@ -51,6 +51,11 @@ def combine_attributes(frames: Frames, prefix: str):
             print(frames.tail_frames[n])
             tail = Image.open(frames.tail_frames[n])
             frame.paste(tail, box=(20, 70), mask=tail)
+
+        if frames.tailpattern_frames:
+            print(frames.tailpattern_frames[n])
+            tailpattern = Image.open(frames.tailpattern_frames[n])
+            frame.paste(tailpattern, box=(20, 70), mask=tailpattern)
 
         if frames.leftbackleg_frames:
             leftbackleg = Image.open(frames.leftbackleg_frames[n])
@@ -124,11 +129,19 @@ def combine_attributes(frames: Frames, prefix: str):
         if frames.rightbackleg_frames:
             rightbackleg = Image.open(frames.rightbackleg_frames[n])
             frame.paste(rightbackleg, box=(20, 70), mask=rightbackleg)
+
+        if frames.rightbackleg_pattern_frames:
+            rightbackleg_pattern = Image.open(frames.rightbackleg_pattern_frames[n])
+            frame.paste(rightbackleg_pattern, box=(20, 70), mask=rightbackleg_pattern)
         
         if frames.rightfrontleg_frames:
             rightfrontleg = Image.open(frames.rightfrontleg_frames[n])
             frame.paste(rightfrontleg, box=(20, 70), mask=rightfrontleg)
 
+        if frames.rightfrontleg_pattern_frames:
+            rightfrontleg_pattern = Image.open(frames.rightfrontleg_pattern_frames[n])
+            frame.paste(rightfrontleg_pattern, box=(20, 70), mask=rightfrontleg_pattern)
+        
         if frames.ears_frames:
             ears = Image.open(frames.ears_frames[n])
             frame.paste(ears, box=(20, 70), mask=ears)

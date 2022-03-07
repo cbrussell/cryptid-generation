@@ -40,14 +40,14 @@ def main():
             # find texts with "find {/System,}/Library/Fonts -name *ttf"
             ######
     
-            # Width, Height = frame.size 
-            # drawn = ImageDraw.Draw(frame) 
-            # text = f"{frame_count}"
-            # font = ImageFont.truetype("Arial Black", 70)
-            # textwidth, textheight = drawn.textsize(text, font)
+            Width, Height = frame.size 
+            drawn = ImageDraw.Draw(frame) 
+            text = f"{frame_count}"
+            font = ImageFont.truetype("Arial Black", 70)
+            textwidth, textheight = drawn.textsize(text, font)
          
             
-            # drawn.text((height * x + 30, height * y + 10), text, font=font, fill="black") 
+            drawn.text((height * x + 30, height * y + 10), text, font=font, fill="black") 
     
             #####
 
@@ -57,7 +57,7 @@ def main():
 
     # ***************     scale      ***************     
 
-    basewidth = 8000
+    basewidth = 10000
     resize_scale = (basewidth)/(width*grid[0])
     frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 

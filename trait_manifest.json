@@ -3657,7 +3657,7 @@
     },
     {
         "attribute": "7_fur",
-        "rarity": 0.55,
+        "rarity": 0.45,
         "categories": [
             {
                 "category": "bushy",
@@ -7207,7 +7207,7 @@
     },
     {
         "attribute": "11c_headpattern_stripes",
-        "rarity": 1,
+        "rarity": 0.5,
         "categories": [
             {
                 "category": "lion",

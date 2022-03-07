@@ -29,7 +29,7 @@ def combine_attributes(frames: Frames, prefix: str):
     # for (n, background) in enumerate(frames.background_frames):
     # print("Generating frames...")
 
-    for n in range(0, 1): #0,72
+    for n in range(0, 72): #0,72
 
         # use this is background color
         # frame = Image.open(background) # background of data
@@ -46,14 +46,14 @@ def combine_attributes(frames: Frames, prefix: str):
         frame = Image.open(frames.background_frame[0]) # use chosen background from DNA
 
         # frame = Image.new('RGB', (1180, 1180), (0, 177, 64)) # black bg
-
+        print(f'Generating frame {n}...')
         if frames.tail_frames:
-            print(frames.tail_frames[n])
+            # print(frames.tail_frames[n])
             tail = Image.open(frames.tail_frames[n])
             frame.paste(tail, box=(20, 70), mask=tail)
 
         if frames.tailpattern_frames:
-            print(frames.tailpattern_frames[n])
+            # print(frames.tailpattern_frames[n])
             tailpattern = Image.open(frames.tailpattern_frames[n])
             frame.paste(tailpattern, box=(20, 70), mask=tailpattern)
 
@@ -170,7 +170,7 @@ def combine_attributes(frames: Frames, prefix: str):
             eyes = Image.open(frames.eyes_frames[n])
             frame.paste(eyes, box=(20, 70), mask=eyes)
 
-        print("Almost there...")
+        # print("Almost there...")
 
         # watermark settings
         # find texts with "find {/System,}/Library/Fonts -name *ttf"

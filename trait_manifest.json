@@ -3173,7 +3173,7 @@
     },
     {
         "attribute": "5c_torsopattern",
-        "rarity": 1,
+        "rarity": 0.5,
         "categories": [
             {
                 "category": "stripes",

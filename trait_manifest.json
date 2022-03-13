@@ -101,7 +101,7 @@
             },
             {
                 "category": "devil",
-                "weight": 1,
+                "weight": 10000,
                 "colors": [
                     {
                         "color": "red",

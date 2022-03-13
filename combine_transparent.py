@@ -75,9 +75,6 @@ def combine_attributes(frames: Frames, prefix: str):
             leftfrontleg = Image.open(frames.leftfrontleg_frames[n])
             frame = Image. alpha_composite(frame, leftfrontleg)
 
-
-
-
         if frames.leftfrontlegshadow_frames[n]:
             leftfrontlegshadow = Image.open(frames.leftfrontlegshadow_frames[n])
             frame = Image. alpha_composite(frame, leftfrontlegshadow )
@@ -179,16 +176,14 @@ def combine_attributes(frames: Frames, prefix: str):
             eyes = Image.open(frames.eyes_frames[n])
             frame = Image. alpha_composite(frame, eyes)
 
-
         if n == 0:
             # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             frame.save(f"{dir_path}/output/stills/{prefix}_transparent.png")
 
 
-
         background = Image.open(frames.background_frame[0]) # use chosen background from DNA
-        background = background.crop((40, 40, 1140, 1140))
-        background.paste(frame, (0, 20), mask=frame)
+        # background = background.crop((40, 40, 1140, 1140))
+        background.paste(frame, box=(20, 70), mask=frame)
 
         # print("Almost there...")
 
@@ -206,33 +201,7 @@ def combine_attributes(frames: Frames, prefix: str):
         # y = Height - textheight
         # drawn.text(((x/2), (y/2)), text, font=font) 
 
-        #####
-
-
-        ### add transparency
-        # frame = frame.convert('RGBA')
-
-        # newImage = []
-        # for item in frame.getdata():
-        #     if item[:3] == (0, 177, 64) or (17,176,62) or (84,172,51):
-        #         newImage.append((0, 177, 64, 0))
-        #     else:
-        #         newImage.append(item)
-
-        # frame.putdata(newImage)
-
-        ## transparenct attempt 2
-        # frame = frame.convert("RGBA")  
-        # pixdata = frame.load()  
-        # for y in range(frame.size[1]):  
-        #      for x in range(frame.size[0]):  
-        #           r, g, b, a = frame.getpixel((x, y))  
-        #           if (r < 130) and (g < 60) and (b < 60):  
-        #                pixdata[x, y] = (255, 255, 255, 0)  
-        #           #Remove anti-aliasing outline of body.  
-        #           if r == 0 and g == 0 and b == 0:  
-        #                pixdata[x, y] = (255, 255, 255, 0)  
-        # frame = frame.filter(ImageFilter.GaussianBlur(radius=1)) 
+      
 
         frame = frame.convert("RGB")  
 

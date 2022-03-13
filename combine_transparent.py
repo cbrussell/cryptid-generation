@@ -29,7 +29,7 @@ def combine_attributes(frames: Frames, prefix: str):
     # for (n, background) in enumerate(frames.background_frames):
     # print("Generating frames...")
 
-    for n in range(0, 72): #0,72
+    for n in range(0, 1): #0,72
 
         # use this is background color
         # frame = Image.open(background) # background of data
@@ -45,131 +45,146 @@ def combine_attributes(frames: Frames, prefix: str):
 
         # frame = Image.open(frames.background_frame[0]) # use chosen background from DNA
 
-        frame = Image.new('RGB', (1180, 1180), (0, 177, 64)) # green bg for transparency
+        # frame = Image.new('RGB', (1180, 1180), (0, 177, 64)) # green bg for transparency
+
+        frame = Image.new('RGBA', (1100, 1100)) # green bg for transparency
        
         print(f'Generating frame {n}...')
         if frames.tail_frames:
-            # print(frames.tail_frames[n])
             tail = Image.open(frames.tail_frames[n])
-            frame.paste(tail, box=(20, 70), mask=tail)
+            frame = Image. alpha_composite(frame, tail)
+
+            # frame = Image. alpha_composite(frame,tail tail)
 
         if frames.tailpattern_frames:
             # print(frames.tailpattern_frames[n])
             tailpattern = Image.open(frames.tailpattern_frames[n])
-            frame.paste(tailpattern, box=(20, 70), mask=tailpattern)
+            frame = Image. alpha_composite(frame, tailpattern)
+
+            # frame = Image. alpha_composite(frame,tailpattern tailpattern)
 
         if frames.leftbackleg_frames:
             leftbackleg = Image.open(frames.leftbackleg_frames[n])
-            frame.paste(leftbackleg, box=(20, 70), mask=leftbackleg)
+            frame = Image. alpha_composite(frame, leftbackleg)
 
         if frames.leftbacklegshadow_frames:
             leftbacklegshadow = Image.open(frames.leftbacklegshadow_frames[n])
-            frame.paste(leftbacklegshadow, box=(20, 70), mask=leftbacklegshadow)
+            frame = Image. alpha_composite(frame, leftbacklegshadow )
 
         if frames.leftfrontleg_frames[n]:
             leftfrontleg = Image.open(frames.leftfrontleg_frames[n])
-            frame.paste(leftfrontleg, box=(20, 70), mask=leftfrontleg)
+            frame = Image. alpha_composite(frame, leftfrontleg)
+
+
+
 
         if frames.leftfrontlegshadow_frames[n]:
             leftfrontlegshadow = Image.open(frames.leftfrontlegshadow_frames[n])
-            frame.paste(leftfrontlegshadow, box=(20, 70), mask=leftfrontlegshadow)
+            frame = Image. alpha_composite(frame, leftfrontlegshadow )
 
         if frames.back_frames:
             back = Image.open(frames.back_frames[n])
-            frame.paste(back, box=(20, 70), mask=back)
+            frame = Image. alpha_composite(frame, back)
        
         if frames.torsobase_frames:
             torsobase = Image.open(frames.torsobase_frames[n])
-            frame.paste(torsobase, box=(20, 70), mask=torsobase)
+            frame = Image. alpha_composite(frame, torsobase)
 
         if frames.torsoaccent_frames:
             torsoaccent = Image.open(frames.torsoaccent_frames[n])
             torsoaccent = torsoaccent
-            frame.paste(torsoaccent, box=(20, 70), mask=torsoaccent)
+            frame = Image. alpha_composite(frame, torsoaccent )
 
         if frames.torsopattern_frames:
             torsopattern = Image.open(frames.torsopattern_frames[n])
-            frame.paste(torsopattern, box=(20, 70), mask=torsopattern)
+            frame = Image. alpha_composite(frame, torsopattern)
 
         if frames.neckbase_frames:
             neckbase = Image.open(frames.neckbase_frames[n])
-            frame.paste(neckbase, box=(20, 70), mask=neckbase)
+            frame = Image. alpha_composite(frame, neckbase)
         
         if frames.neckaccent_frames:
             neckaccent = Image.open(frames.neckaccent_frames[n])
-            frame.paste(neckaccent, box=(20, 70), mask=neckaccent)
+            frame = Image. alpha_composite(frame, neckaccent)
 
         if frames.neckpattern_frames:
             neckpattern = Image.open(frames.neckpattern_frames[n])
-            frame.paste(neckpattern, box=(20, 70), mask=neckpattern)
+            frame = Image. alpha_composite(frame, neckpattern)
         
         if frames.neckshadow_frames:
             neckshadow = Image.open(frames.neckshadow_frames[n])
-            frame.paste(neckshadow, box=(20, 70), mask=neckshadow)
+            frame = Image. alpha_composite(frame, neckshadow)
         
         if frames.neckshadow_teeth_frames:
             neckshadow_teeth = Image.open(frames.neckshadow_teeth_frames[n])
-            frame.paste(neckshadow_teeth, box=(20, 70), mask=neckshadow_teeth)
+            frame = Image. alpha_composite(frame, neckshadow_teeth)
 
         if frames.fur_frames:
             fur = Image.open(frames.fur_frames[n])
-            frame.paste(fur, box=(20, 70), mask=fur)
+            frame = Image. alpha_composite(frame, fur)
 
         if frames.furshadow_frames:
             furshadow = Image.open(frames.furshadow_frames[n])
-            frame.paste(furshadow, box=(20, 70), mask=furshadow)
+            frame = Image. alpha_composite(frame, furshadow)
 
         if frames.fur_shadow_teeth_frames:
             fur_shadow_teeth = Image.open(frames.fur_shadow_teeth_frames[n])
-            frame.paste(fur_shadow_teeth, box=(20, 70), mask=fur_shadow_teeth)
+            frame = Image. alpha_composite(frame, fur_shadow_teeth)
 
         if frames.ear_shadow_fur_frames:
             ear_shadow_fur = Image.open(frames.ear_shadow_fur_frames[n])
-            frame.paste(ear_shadow_fur, box=(20, 70), mask=ear_shadow_fur)
+            frame = Image. alpha_composite(frame, ear_shadow_fur)
 
         if frames.rightbackleg_frames:
             rightbackleg = Image.open(frames.rightbackleg_frames[n])
-            frame.paste(rightbackleg, box=(20, 70), mask=rightbackleg)
+            frame = Image. alpha_composite(frame, rightbackleg)
 
         if frames.rightbackleg_pattern_frames:
             rightbackleg_pattern = Image.open(frames.rightbackleg_pattern_frames[n])
-            frame.paste(rightbackleg_pattern, box=(20, 70), mask=rightbackleg_pattern)
+            frame = Image. alpha_composite(frame, rightbackleg_pattern)
         
         if frames.rightfrontleg_frames:
             rightfrontleg = Image.open(frames.rightfrontleg_frames[n])
-            frame.paste(rightfrontleg, box=(20, 70), mask=rightfrontleg)
+            frame = Image. alpha_composite(frame, rightfrontleg)
 
         if frames.rightfrontleg_pattern_frames:
             rightfrontleg_pattern = Image.open(frames.rightfrontleg_pattern_frames[n])
-            frame.paste(rightfrontleg_pattern, box=(20, 70), mask=rightfrontleg_pattern)
+            frame = Image. alpha_composite(frame, rightfrontleg_pattern)
         
         if frames.ears_frames:
             ears = Image.open(frames.ears_frames[n])
-            frame.paste(ears, box=(20, 70), mask=ears)
+            frame = Image. alpha_composite(frame, ears)
 
         if frames.headbase_frames:
             headbase = Image.open(frames.headbase_frames[n])
-            frame.paste(headbase, box=(20, 70), mask=headbase)
+            frame = Image. alpha_composite(frame, headbase)
         
         if frames.headaccent_frames:
             headaccent = Image.open(frames.headaccent_frames[n])
-            frame.paste(headaccent, box=(20, 70), mask=headaccent)
+            frame = Image. alpha_composite(frame, headaccent)
 
         if frames.headpattern_frames:
             headpattern = Image.open(frames.headpattern_frames[n])
-            frame.paste(headpattern, box=(20, 70), mask=headpattern)
+            frame = Image. alpha_composite(frame, headpattern)
 
         if frames.mouth_frames:
             mouth = Image.open(frames.mouth_frames[n])
-            frame.paste(mouth, box=(20, 70), mask=mouth)
+            frame = Image. alpha_composite(frame, mouth)
 
         if frames.horns_frames:
             horns = Image.open(frames.horns_frames[n])
-            frame.paste(horns, box=(20, 70), mask=horns)
+            frame = Image. alpha_composite(frame, horns)
         
         if frames.eyes_frames:
             eyes = Image.open(frames.eyes_frames[n])
-            frame.paste(eyes, box=(20, 70), mask=eyes)
+            frame = Image. alpha_composite(frame, eyes)
+
+
+
+
+
+
+
 
         # print("Almost there...")
 
@@ -203,7 +218,7 @@ def combine_attributes(frames: Frames, prefix: str):
         # frame.putdata(newImage)
 
         ## transparenct attempt 2
-        frame = frame.convert("RGBA")  
+        # frame = frame.convert("RGBA")  
         # pixdata = frame.load()  
         # for y in range(frame.size[1]):  
         #      for x in range(frame.size[0]):  

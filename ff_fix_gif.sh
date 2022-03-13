@@ -7,7 +7,12 @@ for i in {1..30}
 do
     cd "${i}" || exit
 
-    # ffmpeg -y -r 24 -start_number 0 -stream_loop 1 -i "${i}_%03d.png"  -c:v libx264 -crf 8 -pix_fmt yuv420p ../../videos/"${i}".mp4 
+    ffmpeg -y -r 24 -start_number 0 -stream_loop 1 -i "${i}_%03d.png"  -c:v libx264 -crf 8 -pix_fmt yuv420p ../../videos/"${i}".mp4 
+
+
+
+
+    
     
     # ffmpeg -i input.png -vf chromakey=green out.png chromakey=#00b140:0.125:0.0
     

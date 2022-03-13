@@ -29,7 +29,7 @@ def combine_attributes(frames: Frames, prefix: str):
     # for (n, background) in enumerate(frames.background_frames):
     # print("Generating frames...")
 
-    for n in range(0, 1): #0,72
+    for n in range(0, 72): #0,72
 
         # use this is background color
         # frame = Image.open(background) # background of data
@@ -180,11 +180,15 @@ def combine_attributes(frames: Frames, prefix: str):
             frame = Image. alpha_composite(frame, eyes)
 
 
+        if n == 0:
+            # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            frame.save(f"{dir_path}/output/stills/{prefix}_transparent.png")
 
 
 
-
-
+        background = Image.open(frames.background_frame[0]) # use chosen background from DNA
+        background = background.crop((40, 40, 1140, 1140))
+        background.paste(frame, (0, 20), mask=frame)
 
         # print("Almost there...")
 
@@ -230,13 +234,13 @@ def combine_attributes(frames: Frames, prefix: str):
         #                pixdata[x, y] = (255, 255, 255, 0)  
         # frame = frame.filter(ImageFilter.GaussianBlur(radius=1)) 
 
+        frame = frame.convert("RGB")  
 
-
-        frame.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}.png", format="png") 
+        background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}.png", format="png") 
 
         if n == 0:
             # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            frame.save(f"{dir_path}/output/stills/{prefix}.png")
+            background.save(f"{dir_path}/output/stills/{prefix}.png")
 
 
             # frame = Image.fromarray(np.uint8(array)).rotate(270).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R1}_{G1}_{B1}_{R}_{G}_{B}.png", "PNG")

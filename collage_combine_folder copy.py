@@ -11,12 +11,12 @@ def main():
 
     still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
 
-    still_list = fnmatch.filter(os.listdir(still_path), '*.png')
+    still_list = fnmatch.filter(os.listdir(still_path), '*transparent.png')
 
 
     still_count = len(still_list)
 
-    # grid = [7, 4] #[x,y]
+    # grid = [4, 8] #[x,y]
 
     # print(grid)
 
@@ -28,12 +28,12 @@ def main():
 
     width, height = image.size
 
-    frame = Image.new('RGB', (width*grid[0], height*grid[1]))# random solid
+    frame = Image.new('RGBA', (width*grid[0], height*grid[1]))# random solid
 
     frame_count = 1
     for y in range(grid[1]):
         for x in range(grid[0]):
-            still = Image.open(f"{dir_path}/output/stills/{frame_count}.png")
+            still = Image.open(f"{dir_path}/output/stills/{frame_count}_transparent.png")
             frame.paste(still, box=(height * x, height * y))
 
                     # watermark settings
@@ -47,7 +47,7 @@ def main():
             textwidth, textheight = drawn.textsize(text, font)
          
             
-            drawn.text((height * x + 30, height * y + 10), text, font=font, fill="black") 
+            drawn.text((height * x + 30, height * y + 10), text, font=font, fill="white") 
     
             #####
 
@@ -55,17 +55,26 @@ def main():
             print(f"Pasted frame #{frame_count}! Only {still_count - frame_count} more frames left to go!")
             frame_count += 1
 
+
+
+    # ***************     paste to color      ***************     
+
+
+    # finished_width, finished_height = frame.size
+
     # ***************     scale      ***************     
 
-    basewidth = 10000
-    resize_scale = (basewidth)/(width*grid[0])
-    frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
+    # basewidth = 10000
+    # resize_scale = (basewidth)/(width*grid[0])
+    # frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 
     # ***************     scale      ***************
 
     print("Saving collage...")
     frame.save(f"{dir_path}/output/collage_still/full_collage_{grid[0]}_x_{grid[1]}.png", format="png")  
     print(f'Completed Collage!')
+
+
 
 if __name__ == "__main__":
     main()

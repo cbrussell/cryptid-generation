@@ -5,10 +5,12 @@ from multiprocessing import Process, Manager, Value
 from dna import get_dna, to_hash
 from traits import TraitManifest, ColorManifest, BackgroundManifest
 # from combine import combine_attributes
-from combine_transparent import combine_attributes
+# from combine_transparent import combine_attributes
+# from combine_solid_transparent import combine_attributes
+from combine_transparent_accent import combine_attributes
 
 def main():
-
+    open('colors.txt', 'w').close()
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     trait_manifest = TraitManifest(json.load(open(f'{dir_path}/trait_manifest.json')))
@@ -18,8 +20,8 @@ def main():
     os.makedirs(f"{dir_path}/output/bg", exist_ok=True)
 
     start_time = datetime.now()
-    procs = 10
-    n = 20 # collection size
+    procs = 1
+    n = 100 # collection size
     increment = int(n / procs)
     jobs = []
     start = 1

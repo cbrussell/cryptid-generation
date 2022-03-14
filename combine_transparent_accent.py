@@ -9,9 +9,16 @@ from time import sleep
 from background_2d_generator import get_2d_gradient
 
 def combine_attributes(frames: Frames, prefix: str):
-    # R = np.random.randint(0, 256)
-    # G = np.random.randint(0, 256)
-    # B = np.random.randint(0, 256)
+    R = np.random.randint(0, 256)
+    G = np.random.randint(0, 256)
+    B = np.random.randint(0, 256)
+
+    accent_color = (R, G, B)
+
+    outFile = open('colors.txt', 'a')
+    outFile.write(f'{accent_color}\n')
+    outFile.close()
+
 
     # R1 = np.random.randint(0, 256)
     # G1 = np.random.randint(0, 256)
@@ -90,7 +97,17 @@ def combine_attributes(frames: Frames, prefix: str):
 
         if frames.torsoaccent_frames:
             torsoaccent = Image.open(frames.torsoaccent_frames[n])
-            torsoaccent = torsoaccent
+            
+        if frames.torsoaccent_frames:
+            torsoaccent = Image.open(frames.torsoaccent_frames[n])
+         
+            alpha = torsoaccent.getchannel('A')
+            torsoaccent = Image.new('RGBA', torsoaccent.size, color=accent_color)
+            torsoaccent.putalpha(alpha) 
+
+
+           
+
             frame = Image.alpha_composite(frame, torsoaccent )
 
         if frames.torsopattern_frames:
@@ -103,6 +120,10 @@ def combine_attributes(frames: Frames, prefix: str):
         
         if frames.neckaccent_frames:
             neckaccent = Image.open(frames.neckaccent_frames[n])
+
+            alpha = neckaccent.getchannel('A')
+            neckaccent = Image.new('RGBA', neckaccent.size, color=accent_color)
+            neckaccent.putalpha(alpha)
             frame = Image.alpha_composite(frame, neckaccent)
 
         if frames.neckpattern_frames:
@@ -159,6 +180,10 @@ def combine_attributes(frames: Frames, prefix: str):
         
         if frames.headaccent_frames:
             headaccent =Image.open(frames.headaccent_frames[n])
+            alpha = headaccent.getchannel('A')
+            headaccent = Image.new('RGBA', headaccent.size, color=accent_color)
+            headaccent.putalpha(alpha)
+
             frame = Image.alpha_composite(frame, headaccent)
 
         if frames.headpattern_frames:
@@ -210,7 +235,7 @@ def combine_attributes(frames: Frames, prefix: str):
 
         if n == 0:
             # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            background.save(f"{dir_path}/output/stills/{prefix}.png")
+            background.save(f"{dir_path}/output/stills/{prefix}_solid.png")
 
 
             # frame = Image.fromarray(np.uint8(array)).rotate(270).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R1}_{G1}_{B1}_{R}_{G}_{B}.png", "PNG")

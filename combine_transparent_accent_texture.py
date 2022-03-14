@@ -1,6 +1,8 @@
 import os
 import numpy as np
 from datetime import datetime
+from blend_modes import multiply
+import random
 from numpy.core.multiarray import array
 from PIL import Image, ImageFont, ImageDraw, ImageFilter
 from background import get_gradient, get_gradient_3d
@@ -9,9 +11,18 @@ from time import sleep
 from background_2d_generator import get_2d_gradient
 
 def combine_attributes(frames: Frames, prefix: str):
-    # R = np.random.randint(0, 256)
-    # G = np.random.randint(0, 256)
-    # B = np.random.randint(0, 256)
+    R = np.random.randint(0, 256)
+    G = np.random.randint(0, 256)
+    B = np.random.randint(0, 256)
+
+    opacity = round(random.random(), 2)
+    print(opacity)
+    pattern_color = (R, G, B)
+
+    outFile = open('colors.txt', 'a')
+    outFile.write(f'{pattern_color} - {opacity}\n')
+    outFile.close()
+
 
     # R1 = np.random.randint(0, 256)
     # G1 = np.random.randint(0, 256)
@@ -55,9 +66,14 @@ def combine_attributes(frames: Frames, prefix: str):
             tail = Image.open(frames.tail_frames[n])
             frame = Image.alpha_composite(frame, tail)
 
+            # frame = Image. alpha_composite(frame,tail tail)
+
         if frames.tailpattern_frames:
+            # print(frames.tailpattern_frames[n])
             tailpattern = Image.open(frames.tailpattern_frames[n])
             frame = Image.alpha_composite(frame, tailpattern)
+
+            # frame = Image. alpha_composite(frame,tailpattern tailpattern)
 
         if frames.leftbackleg_frames:
             leftbackleg = Image.open(frames.leftbackleg_frames[n])
@@ -85,6 +101,18 @@ def combine_attributes(frames: Frames, prefix: str):
 
         if frames.torsoaccent_frames:
             torsoaccent = Image.open(frames.torsoaccent_frames[n])
+            
+        if frames.torsoaccent_frames:
+            torsoaccent = Image.open(frames.torsoaccent_frames[n])
+         
+
+            # alpha = torsoaccent.getchannel('A')
+            # torsoaccent = Image.new('RGBA', torsoaccent.size, color=accent_color)
+            # torsoaccent.putalpha(alpha) 
+
+
+           
+
             frame = Image.alpha_composite(frame, torsoaccent )
 
         if frames.torsopattern_frames:
@@ -97,11 +125,46 @@ def combine_attributes(frames: Frames, prefix: str):
         
         if frames.neckaccent_frames:
             neckaccent = Image.open(frames.neckaccent_frames[n])
-            frame = Image.alpha_composite(frame, neckaccent)
 
-        if frames.neckpattern_frames:
-            neckpattern = Image.open(frames.neckpattern_frames[n])
-            frame = Image.alpha_composite(frame, neckpattern)
+            # alpha = neckaccent.getchannel('A')
+            # neckaccent = Image.new('RGBA', neckaccent.size, color=accent_color)
+            # neckaccent.putalpha(alpha)
+            # frame = Image.alpha_composite(frame, neckaccent)
+
+        # if frames.neckpattern_frames:
+            # neckpattern = Image.open(frames.neckpattern_frames[n])
+
+            # Import background image
+
+            # get frame
+
+        background_img_raw = Image.open(f'{dir_path}/RENDERS/test_neckpattern_stripes_color/neckpattern_stripes_color_001.png') 
+            
+           
+
+        alpha = background_img_raw.getchannel('A')
+
+        # give frame color
+        background_img_raw = Image.new('RGBA', background_img_raw.size, color=pattern_color)
+
+        background_img_raw.putalpha(alpha)
+        background_img = np.array(background_img_raw)  # Inputs to blend_modes need to be np arrays.
+        background_img_float = background_img.astype(float)  # Inputs to blend_modes need to be floats.
+        # Import foreground image
+        foreground_img_raw = Image.open(f'{dir_path}/RENDERS/test_neckpattern_stripes_texture/neckpattern_stripes_texture_001.png')  # RGBA image
+        foreground_img = np.array(foreground_img_raw)  # Inputs to blend_modes need to be np arrays.
+        foreground_img_float = foreground_img.astype(float)  # Inputs to blend_modes need to be floats.
+        # Blend images
+        # opacity = 0.7  # The opacity of the foreground that is blended onto the background is 70 %.
+        blended_img_float = multiply(background_img_float, foreground_img_float, opacity)
+        # Convert blended image back into PIL image
+        blended_img = np.uint8(blended_img_float)  # Image needs to be converted back to uint8 type for PIL handling.
+        neckpattern = Image.fromarray(blended_img)
+        # neckpattern.show()
+
+        # break
+
+        frame = Image.alpha_composite(frame, neckpattern)
         
         if frames.neckshadow_frames:
             neckshadow = Image.open(frames.neckshadow_frames[n])
@@ -153,6 +216,11 @@ def combine_attributes(frames: Frames, prefix: str):
         
         if frames.headaccent_frames:
             headaccent =Image.open(frames.headaccent_frames[n])
+           
+            # alpha = headaccent.getchannel('A')
+            # headaccent = Image.new('RGBA', headaccent.size, color=accent_color)
+            # headaccent.putalpha(alpha)
+
             frame = Image.alpha_composite(frame, headaccent)
 
         if frames.headpattern_frames:

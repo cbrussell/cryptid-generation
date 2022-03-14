@@ -86,7 +86,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         #     data.update(torsopattern)
 
 
-        torsopattern, torsopattern_category, torsopattern_color, torsopattern_frames = get_trait_color(trait_manifest, "5c_torsopattern", 'black') #blue, black, yellow, white, red, purple, orange, gray, brown
+        torsopattern, torsopattern_category, torsopattern_color, torsopattern_frames = get_trait(trait_manifest, "5c_torsopattern") #blue, black, yellow, white, red, purple, orange, gray, brown
         data.update(torsopattern)
 
         # if backcolor:

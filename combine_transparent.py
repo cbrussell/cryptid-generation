@@ -173,12 +173,54 @@ def combine_attributes(frames: Frames, prefix: str):
 
         if n == 0:
             # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            frame.save(f"{dir_path}/output/stills/{prefix}_transparent.png")
+            transparent_resize = Image.new('RGBA', (1180, 1180))
+
+            transparent_resize.paste(frame, box=(20, 70), mask=frame)
+
+            width, height = transparent_resize.size
+ 
+            # Setting the points for cropped image
+            # center
+            x, y = (881, 305)
+
+            # pfp size
+            width, height = (515, 515)
+            left = x - width/2
+            top = y - height/2
+            right = x + width/2
+            bottom = y + height/2 
+
+            
+
+            # draw = ImageDraw.Draw(transparent_resize)
+            # leftUpPoint = (left, top)
+            # rightDownPoint = (right, bottom)
+
+            # twoPointList = [leftUpPoint, rightDownPoint]
+
+            # draw.ellipse(twoPointList, fill=None, outline='yellow', width=5)
+
+            # draw.line([(x, top + 5), (x, bottom - 5)], fill='black', width=5)
+
+            # draw.line([(left + 5, y), (right - 5, y)], fill='black', width=5)
+
+
+
+            transparent_resize.save(f"{dir_path}/output/stills/{prefix}_transparent.png")
+
+            transparent_resize_crop = transparent_resize.crop((left, top, right, bottom))
+
+            transparent_resize_crop.save(f"{dir_path}/output/stills/{prefix}_transparent_pfp.png")
+
+
+
 
 
         background = Image.open(frames.background_frame[0]) # use chosen background from DNA
+
         # background = background.crop((40, 40, 1140, 1140))
         background.paste(frame, box=(20, 70), mask=frame)
+        
 
         # print("Almost there...")
 
@@ -204,7 +246,22 @@ def combine_attributes(frames: Frames, prefix: str):
 
         if n == 0:
             # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    
+
+            # draw = ImageDraw.Draw(background)
+           
+            # draw.ellipse(twoPointList, fill=None, outline='yellow', width=5)
+
+            # draw.line([(x, top + 5), (x, bottom -5)], fill='black', width=5)
+
+            # draw.line([(left +5, y), (right -5, y)], fill='black', width=5)
+
             background.save(f"{dir_path}/output/stills/{prefix}_solid.png")
+
+            background_crop = background.crop((left, top, right, bottom))
+
+            background_crop.save(f"{dir_path}/output/stills/{prefix}_solid_pfp.png")
 
 
             # frame = Image.fromarray(np.uint8(array)).rotate(270).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R1}_{G1}_{B1}_{R}_{G}_{B}.png", "PNG")

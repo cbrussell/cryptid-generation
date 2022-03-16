@@ -171,24 +171,24 @@ def combine_attributes(frames: Frames, prefix: str):
             eyes = Image.open(frames.eyes_frames[n])
             frame = Image.alpha_composite(frame, eyes)
 
-        if n == 0:
-            # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            transparent_resize = Image.new('RGBA', (1180, 1180))
+        # if n == 0:
+        #     # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        #     transparent_resize = Image.new('RGBA', (1180, 1180))
 
-            transparent_resize.paste(frame, box=(20, 70), mask=frame)
+        #     transparent_resize.paste(frame, box=(20, 70), mask=frame)
 
-            width, height = transparent_resize.size
+        #     width, height = transparent_resize.size
  
-            # Setting the points for cropped image
-            # center
-            x, y = (881, 305)
+        #     # Setting the points for cropped image
+        #     # center
+        #     x, y = (881, 305)
 
-            # pfp size
-            width, height = (515, 515)
-            left = x - width/2
-            top = y - height/2
-            right = x + width/2
-            bottom = y + height/2 
+        #     # pfp size
+        #     width, height = (515, 515)
+        #     left = x - width/2
+        #     top = y - height/2
+        #     right = x + width/2
+        #     bottom = y + height/2 
 
             
 
@@ -206,46 +206,31 @@ def combine_attributes(frames: Frames, prefix: str):
 
 
 
-            transparent_resize.save(f"{dir_path}/output/stills/{prefix}_transparent.png")
+            # transparent_resize.save(f"{dir_path}/output/stills/{prefix}_transparent.png")
 
-            transparent_resize_crop = transparent_resize.crop((left, top, right, bottom))
+            # transparent_resize_crop = transparent_resize.crop((left, top, right, bottom))
 
-            transparent_resize_crop.save(f"{dir_path}/output/stills/{prefix}_transparent_pfp.png")
-
-
+            # transparent_resize_crop.save(f"{dir_path}/output/stills/{prefix}_transparent_pfp.png")
 
 
+            bg = Image.new('RGBA', (1100, 1100)) # make transparent background
 
-        background = Image.open(frames.background_frame[0]) # use chosen background from DNA
+            alpha = frame.getchannel('A')
+            frame = Image.new('RGBA', frame.size, color='black')
+            frame.putalpha(alpha) 
+            bg.paste(frame, mask=frame)
 
-        # background = background.crop((40, 40, 1140, 1140))
-        background.paste(frame, box=(20, 70), mask=frame)
-        
 
-        # print("Almost there...")
-
-        # watermark settings
-        # find texts with "find {/System,}/Library/Fonts -name *ttf"
-        ######
-
-        # Width, Height = frame.size 
-        # drawn = ImageDraw.Draw(frame) 
-        # text = "test mint"
-        # font = ImageFont.truetype("Arial Black", 138)
-        # textwidth, textheight = drawn.textsize(text, font)
-        # margin = 5
-        # x = Width - textwidth
-        # y = Height - textheight
-        # drawn.text(((x/2), (y/2)), text, font=font) 
-
+       
       
       
 
-        frame = frame.convert("RGB")  
+        # frame = frame.convert("RGB")  
 
-        background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}.png", format="png") 
+        bg = bg.filter(ImageFilter.GaussianBlur(radius = 2))
+        bg.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}.png", format="png") 
 
-        if n == 0:
+        # if n == 0:
             # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     
@@ -258,11 +243,11 @@ def combine_attributes(frames: Frames, prefix: str):
 
             # draw.line([(left +5, y), (right -5, y)], fill='black', width=5)
 
-            background.save(f"{dir_path}/output/stills/{prefix}_solid.png")
+            # background.save(f"{dir_path}/output/stills/{prefix}_solid.png")
 
-            background_crop = background.crop((left, top, right, bottom))
+            # background_crop = background.crop((left, top, right, bottom))
 
-            background_crop.save(f"{dir_path}/output/stills/{prefix}_solid_pfp.png")
+            # background_crop.save(f"{dir_path}/output/stills/{prefix}_solid_pfp.png")
 
 
             # frame = Image.fromarray(np.uint8(array)).rotate(270).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R1}_{G1}_{B1}_{R}_{G}_{B}.png", "PNG")

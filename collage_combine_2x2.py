@@ -3,10 +3,10 @@ from PIL import Image
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-tl = 2 # top left
-tr = 1 # top right
-bl = 11 # bottom left
-br = 15 # bottom right
+tl = 9 # top left
+tr = 8 # top right
+bl = 19 # bottom left
+br = 3 # bottom right
 
 def main():
     for n in range(0, 72): #0,72

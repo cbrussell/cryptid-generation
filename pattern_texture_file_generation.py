@@ -17,9 +17,9 @@ def main():
     start_time = datetime.now()
     for animal in animals:
     # animal = 'eagle'
-        base_folder_name = f'torsopattern_stripes_color'
-        texture_folder_name = f'torsopattern_stripes_texture'
-        combined_name = f'torsopattern_stripes'
+        base_folder_name = f'rightfrontlegpattern_stripes_{animal}_color'
+        texture_folder_name = f'rightfrontlegpattern_stripes_{animal}_texture'
+        combined_name = f'rightfrontleg_stripes_{animal}'
 
         # define location of base and texture folder names 
 

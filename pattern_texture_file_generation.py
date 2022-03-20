@@ -12,55 +12,52 @@ def main():
     color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.05], 'yellow': ['#Dc7F12', 0.2]}
 
     ##### user input for folder names to combine #####
-
+    animals = ['lion']
     # define name of folders for combining
-
-    animal = 'eagle'
-    base_folder_name = f'rightfrontlegpattern_stripes_{animal}_color'
-    texture_folder_name = f'rightfrontlegpattern_stripes_{animal}_texture'
-
-    # base_file_name = 'neckpattern_stripes_color'
-    # texture_file_name = 'neckpattern_stripes_texture'
-
-    combined_name = f'rightfrontleg_stripes_{animal}'
-
-    # define location of base and texture folder names 
-
-    base_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/{base_folder_name}/"
-    texture_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/{texture_folder_name}/"
-    combined_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/{combined_name}/"
-
-    # count number of pngs
-
-    base_list = fnmatch.filter(os.listdir(base_path), '*.png')
-    texture_list = fnmatch.filter(os.listdir(texture_path), '*.png')
-
-    #g et file count
-
-    base_frame_count = len(base_list)
-    texture_frame_count = len(texture_list)
-
-    # check for matching file counts
-    if base_frame_count != texture_frame_count:
-        sys.exit("Base frame and texture frame count do not match!")  
-
-
-    os.makedirs(combined_path, exist_ok=True)
     start_time = datetime.now()
-    jobs = []
-    with Manager() as manager:
+    for animal in animals:
+    # animal = 'eagle'
+        base_folder_name = f'torsopattern_stripes_color'
+        texture_folder_name = f'torsopattern_stripes_texture'
+        combined_name = f'torsopattern_stripes'
 
-        for key in color_opacity:
-            process = Process(target=worker, args=(key, combined_path, color_opacity, base_path, base_folder_name, texture_path, texture_folder_name, combined_name))
-            jobs.append(process)
+        # define location of base and texture folder names 
 
-        [j.start() for j in jobs]
-        [j.join() for j in jobs]
+        base_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/{base_folder_name}/"
+        texture_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/{texture_folder_name}/"
+        combined_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/{combined_name}/"
 
-        end_time = datetime.now()
-        elapsed_time = end_time - start_time
-        print(f'Completed in {elapsed_time}.')
-     
+        # count number of pngs
+
+        base_list = fnmatch.filter(os.listdir(base_path), '*.png')
+        texture_list = fnmatch.filter(os.listdir(texture_path), '*.png')
+
+        #g et file count
+
+        base_frame_count = len(base_list)
+        texture_frame_count = len(texture_list)
+
+        # check for matching file counts
+        if base_frame_count != texture_frame_count:
+            sys.exit("Base frame and texture frame count do not match!")  
+
+
+        os.makedirs(combined_path, exist_ok=True)
+        
+        jobs = []
+        with Manager() as manager:
+
+            for key in color_opacity:
+                process = Process(target=worker, args=(key, combined_path, color_opacity, base_path, base_folder_name, texture_path, texture_folder_name, combined_name))
+                jobs.append(process)
+
+            [j.start() for j in jobs]
+            [j.join() for j in jobs]
+
+    end_time = datetime.now()
+    elapsed_time = end_time - start_time
+    print(f'Completed in {elapsed_time}.')
+
     return
 
 def worker(key, combined_path, color_opacity, base_path, base_file_name, texture_path, texture_file_name, combined_name):

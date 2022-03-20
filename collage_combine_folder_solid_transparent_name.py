@@ -14,7 +14,7 @@ def main():
 
     still_list = fnmatch.filter(os.listdir(still_path), '*transparent.png')
 
-    colors_file = open("colors.txt", "r")
+    colors_file = open("deep_names.txt", "r")
     data = colors_file.read()
     colors_list = data.split("\n")
     colors_file.close()

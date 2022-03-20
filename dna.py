@@ -157,7 +157,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         # print(torsopattern_category)
         # print(animal)
 
-        if torsopattern_category == 'stripes' and animal == 'lion':
+        if torsopattern_category == 'stripes':
             headpattern, headpattern_frames = get_trait_category_color(trait_manifest, "11c_headpattern_stripes", animal, torsopattern_color)[0:4:3]
             data.update(headpattern)
             # print(headpattern)
@@ -219,7 +219,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         data.update(rightbackleg)
 
 
-        if torsopattern_category == 'stripes' and backanimalleg == 'lion':
+        if torsopattern_category == 'stripes':
             rightbackleg_pattern, rightbackleg_pattern_frames = get_trait_category_color(trait_manifest, "8a_rightbackleg_pattern_stripes", backanimalleg, torsopattern_color)[0:4:3]
             data.update(rightbackleg_pattern)
             # print(rightbackleg_pattern)
@@ -229,7 +229,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         rightfrontleg, rightfrontleg_frames = get_trait_category_color(trait_manifest, "9_rightfrontleg", frontanimalleg, color)[0:4:3]
         data.update(rightfrontleg)
 
-        if torsopattern_category == 'stripes' and frontanimalleg == 'lion':
+        if torsopattern_category == 'stripes':
             rightfrontleg_pattern, rightfrontleg_pattern_frames = get_trait_category_color(trait_manifest, "9a_rightfrontleg_pattern_stripes", frontanimalleg, torsopattern_color)[0:4:3]
             data.update(rightfrontleg_pattern)
             # print(rightfrontleg_pattern)

@@ -18,7 +18,7 @@ do
     
     # ffmpeg -y -f image2 -framerate 24  ${i}_%03d.png -plays 0 ../../gifs/"${i}".apng
 
-    ffmpeg -r 24 -y -thread_queue_size 512  -i "${i}_%03d.png"  -filter_complex "setpts=PTS-STARTPTS,scale=320:-1:flags=lanczos" -plays 0   -f  apng   ../../gifs/"${i}".png
+    ffmpeg -r 24 -y -thread_queue_size 512  -i "${i}_%03d.png"  -filter_complex setpts=PTS-STARTPTS -plays 0   -f  apng   ../../gifs/"${i}".png
 
     cd ..
     done

@@ -13,10 +13,10 @@ def main():
 
     still_list = fnmatch.filter(os.listdir(still_path), '*transparent.png')
 
-    # colors_file = open("colors.txt", "r")
-    # data = colors_file.read()
-    # colors_list = data.split("\n")
-    # colors_file.close()
+    colors_file = open("deep_names.txt", "r")
+    data = colors_file.read()
+    colors_list = data.split("\n")
+    colors_file.close()
 
     still_count = len(still_list)
 
@@ -46,9 +46,10 @@ def main():
     
             Width, Height = frame.size 
             drawn = ImageDraw.Draw(frame) 
-            text = f"{frame_count}"
+            text = f"{frame_count}, {colors_list[frame_count -1 ]}"
             font = ImageFont.truetype("Arial Black", 60)
             textwidth, textheight = drawn.textsize(text, font)
+         
          
             
             drawn.text((height * x + 30, height * y + 10), text, font=font, fill="white") 
@@ -68,9 +69,9 @@ def main():
 
     # ***************     scale      ***************     
 
-    # basewidth = 7000
-    # resize_scale = (basewidth)/(width*grid[0])
-    # frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
+    basewidth = 7000
+    resize_scale = (basewidth)/(width*grid[0])
+    frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 
     # ***************     scale      ***************
 
@@ -113,7 +114,7 @@ def main():
     
             Width, Height = frame.size 
             drawn = ImageDraw.Draw(frame) 
-            text = f"{frame_count}"
+            text = f"{frame_count}, {colors_list[frame_count -1 ]}"
             font = ImageFont.truetype("Arial Black", 60)
             textwidth, textheight = drawn.textsize(text, font)
          
@@ -135,9 +136,9 @@ def main():
 
     # ***************     scale      ***************     
 
-    # basewidth = 7000
-    # resize_scale = (basewidth)/(width*grid[0])
-    # frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
+    basewidth = 7000
+    resize_scale = (basewidth)/(width*grid[0])
+    frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 
     # ***************     scale      ***************
 
@@ -179,7 +180,7 @@ def main():
     
             Width, Height = frame.size 
             drawn = ImageDraw.Draw(frame) 
-            text = f"{frame_count}"
+            text = f"{frame_count}, {colors_list[frame_count -1 ]}"
             font = ImageFont.truetype("Arial Black", 60)
             textwidth, textheight = drawn.textsize(text, font)
          
@@ -201,9 +202,9 @@ def main():
 
     # ***************     scale      ***************     
 
-    # basewidth = 7000
-    # resize_scale = (basewidth)/(width*grid[0])
-    # frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
+    basewidth = 7000
+    resize_scale = (basewidth)/(width*grid[0])
+    frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 
     # ***************     scale      ***************
 
@@ -247,7 +248,7 @@ def main():
     
             Width, Height = frame.size 
             drawn = ImageDraw.Draw(frame) 
-            text = f"{frame_count}"
+            text = f"{frame_count}, {colors_list[frame_count -1 ]}"
             font = ImageFont.truetype("Arial Black", 60)
             textwidth, textheight = drawn.textsize(text, font)
          
@@ -269,9 +270,9 @@ def main():
 
     # ***************     scale      ***************     
 
-    # basewidth = 7000
-    # resize_scale = (basewidth)/(width*grid[0])
-    # frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
+    basewidth = 7000
+    resize_scale = (basewidth)/(width*grid[0])
+    frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 
     # ***************     scale      ***************
 

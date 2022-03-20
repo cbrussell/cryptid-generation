@@ -6,13 +6,13 @@ from dna import get_dna, to_hash
 from traits import TraitManifest, ColorManifest, BackgroundManifest
 # from combine import combine_attributes
 
-# from combine_transparent import combine_attributes
+from combine_transparent import combine_attributes
 
 # from combine_solid_transparent import combine_attributes
 # from combine_transparent_accent import combine_attributes
 # from combine_transparent_accent_texture import combine_attributes
 # from combine_transparent_accent_texture import combine_attributes
-from combine_transparent_black import combine_attributes
+# from combine_transparent_black import combine_attributes
 
 def main():
 
@@ -27,8 +27,8 @@ def main():
     os.makedirs(f"{dir_path}/output/bg", exist_ok=True)
 
     start_time = datetime.now()
-    procs = 5
-    n = 5 # collection size
+    procs = 10
+    n = 100 # collection size
     increment = int(n / procs)
     jobs = []
     start = 1

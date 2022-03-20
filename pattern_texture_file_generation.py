@@ -15,19 +15,20 @@ def main():
 
     # define name of folders for combining
 
-    base_folder = 'test_neckpattern_stripes_color'
-    texture_folder = 'test_neckpattern_stripes_texture'
+    animal = 'eagle'
+    base_folder_name = f'rightfrontlegpattern_stripes_{animal}_color'
+    texture_folder_name = f'rightfrontlegpattern_stripes_{animal}_texture'
 
-    base_file_name = 'neckpattern_stripes_color'
-    texture_file_name = 'neckpattern_stripes_texture'
+    # base_file_name = 'neckpattern_stripes_color'
+    # texture_file_name = 'neckpattern_stripes_texture'
 
-    combined_name = 'neckpattern_stripes'
+    combined_name = f'rightfrontleg_stripes_{animal}'
 
     # define location of base and texture folder names 
 
-    base_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/RENDERS/{base_folder}/"
-    texture_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/RENDERS/{texture_folder}/"
-    combined_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/RENDERS/{combined_name}/"
+    base_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/{base_folder_name}/"
+    texture_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/{texture_folder_name}/"
+    combined_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/{combined_name}/"
 
     # count number of pngs
 
@@ -50,7 +51,7 @@ def main():
     with Manager() as manager:
 
         for key in color_opacity:
-            process = Process(target=worker, args=(key, combined_path, color_opacity, base_path, base_file_name, texture_path, texture_file_name, combined_name))
+            process = Process(target=worker, args=(key, combined_path, color_opacity, base_path, base_folder_name, texture_path, texture_folder_name, combined_name))
             jobs.append(process)
 
         [j.start() for j in jobs]
@@ -89,7 +90,7 @@ def worker(key, combined_path, color_opacity, base_path, base_file_name, texture
         blended_img = np.uint8(blended_img_float)  # Image needs to be converted back to uint8 type for PIL handling.
         blended_img_raw = Image.fromarray(blended_img)
         # blended_img_raw.show()
-        blended_img_raw.save(color_path / f'neckpattern_stripes_{key}_{i:03}.png', format="png")
+        blended_img_raw.save(color_path / f'{combined_name}_{key}_{i:03}.png', format="png")
 
     print(f'Multiprocess job complete! Process ID is {os.getpid()}.')
 

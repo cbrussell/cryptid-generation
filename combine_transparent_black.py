@@ -227,7 +227,7 @@ def combine_attributes(frames: Frames, prefix: str):
 
         # frame = frame.convert("RGB")  
 
-        bg = bg.filter(ImageFilter.GaussianBlur(radius = 2))
+        # bg = bg.filter(ImageFilter.GaussianBlur(radius = 2))
         bg.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}.png", format="png") 
 
         # if n == 0:

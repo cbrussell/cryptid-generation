@@ -5664,6 +5664,390 @@
                         ]
                     }
                 ]
+            },
+            {
+                "category": "deer",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_deer_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_deer_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_deer_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_deer_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_deer_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_deer_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_deer_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_deer_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_deer_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "horse",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_horse_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_horse_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_horse_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_horse_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_horse_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_horse_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_horse_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_horse_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_horse_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "wolf",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_wolf_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_wolf_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_wolf_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_wolf_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_wolf_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_wolf_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_wolf_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_wolf_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_wolf_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "eagle",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_eagle_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_eagle_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_eagle_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_eagle_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_eagle_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_eagle_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_eagle_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_eagle_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "rightfrontleg_stripes_eagle_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -7299,6 +7683,390 @@
                         "traits": [
                             {
                                 "trait": "headpattern_lion_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "wolf",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_wolf_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_wolf_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_wolf_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_wolf_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_wolf_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_wolf_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_wolf_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_wolf_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_wolf_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "horse",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_horse_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_horse_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_horse_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_horse_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_horse_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_horse_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_horse_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_horse_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_horse_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "eagle",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_eagle_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_eagle_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_eagle_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_eagle_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_eagle_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_eagle_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_eagle_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_eagle_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_eagle_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "bear",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_bear_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_bear_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_bear_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_bear_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_bear_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_lion_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_lion_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_bear_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_bear_stripes_black",
                                 "weight": 1
                             }
                         ]

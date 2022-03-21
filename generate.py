@@ -6,7 +6,9 @@ from dna import get_dna, to_hash
 from traits import TraitManifest, ColorManifest, BackgroundManifest
 # from combine import combine_attributes
 
-from combine_transparent import combine_attributes
+# from combine_transparent import combine_attributes
+
+from combine_transparent_shifted import combine_attributes
 
 # from combine_solid_transparent import combine_attributes
 # from combine_transparent_accent import combine_attributes
@@ -28,7 +30,7 @@ def main():
 
     start_time = datetime.now()
     procs = 10
-    n = 100 # collection size
+    n = 10 # collection size
     increment = int(n / procs)
     jobs = []
     start = 1

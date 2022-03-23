@@ -10,7 +10,7 @@ do
     
     ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i "${i}_%03d.png" -vf palettegen=reserve_transparent=on ${i}_palette.png
 
-    ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i "${i}_%03d.png" -i ${i}_palette.png -filter_complex "[0]scale=800:-1:flags=lanczos[j];[j][1]paletteuse"  ../../gifs/"${i}".gif
+    ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i "${i}_%03d.png" -i ${i}_palette.png -filter_complex "[0]scale=590:-1:flags=lanczos[j];[j][1]paletteuse=new=1"  ../../gifs/"${i}".gif
 
     rm ${i}_palette.png
     

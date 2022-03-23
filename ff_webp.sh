@@ -3,7 +3,7 @@ mkdir videos
 mkdir gifs
 cd raw_shifted || exit
 
-for i in {1..10}
+for i in {1..2}
 do
     cd "${i}" || exit
     # ffmpeg -y -r 24 -start_number 0 -stream_loop 1 -thread_queue_size 512 -i "${i}_%03d.png"  -c:v libx264 -crf 8 -pix_fmt yuv420p ../../videos/"${i}".mp4 
@@ -18,7 +18,7 @@ do
     
     # ffmpeg -y -f image2 -framerate 24  ${i}_%03d.png -plays 0 ../../gifs/"${i}".apng
 
-    ffmpeg -r 24 -y -thread_queue_size 512  -i "${i}_%03d.png"  -filter_complex "scale=590:-1:flags=bicubic,setpts=PTS-STARTPTS" -plays 0   -f  apng   ../../gifs/"${i}_animatedpng".png
+    ffmpeg -r 24 -y -thread_queue_size 512  -i "${i}_%03d.png"  -filter_complex "scale=800:-1,setpts=PTS-STARTPTS" -lossless 1    ../../gifs/"${i}_main".webp
 
     cd ..
     done

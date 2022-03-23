@@ -221,14 +221,15 @@ def combine_attributes(frames: Frames, prefix: str):
 
 
 
-        # background = Image.open(frames.background_frame[0]) # use chosen background from DNA
+        background = Image.open(frames.background_frame[0]) # use chosen background from DNA
 
-        background = Image.new('RGBA', (1180, 1180))
+        # background = Image.new('RGBA', (1180, 1180))
         # background = background.crop((40, 40, 1140, 1140))
         # background.paste(frame, box=(20, 70), mask=frame)
         
                 
-
+        # all black cryptid
+        
         # alpha = frame.getchannel('A')
         # frame = Image.new('RGBA', frame.size, color='black')
         # frame.putalpha(alpha) 

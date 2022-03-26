@@ -2,9 +2,8 @@ import os
 from PIL import Image, ImageFont, ImageDraw
 import fnmatch
 from pathlib import Path
-from matplotlib import image, scale 
 import math
- 
+
 def gridSize(n):
      
     grid = []
@@ -29,7 +28,9 @@ def gridSize(n):
     return grid
 
 def main():
+    
     dir_path = os.path.dirname(os.path.realpath(__file__))
+    os.makedirs(f"{dir_path}/output/collage_still", exist_ok=True)
 
     still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
 

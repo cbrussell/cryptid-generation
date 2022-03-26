@@ -1,12 +1,3 @@
-venv/**
-output/*.mp4
-output/*.png
-RENDERS/*
-.DS_Store
-output/**
-test_archive/**
-*.DS_Store
-assets/*
+output/
+RENDERS/
 __pycache__/
-*.pyc
-.tmp.driveupload/

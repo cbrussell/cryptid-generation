@@ -278,7 +278,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         # print(tail_category)
         # print(animal)
 
-        if torsopattern_category == 'stripes' and tail_category in ['scorpion', 'lion', 'horse']:
+        if torsopattern_category == 'stripes' and tail_category in ['scorpion', 'lion', 'horse', 'snake']:
             tailpattern, tailpattern_frames = get_trait_category_color(trait_manifest, "1a_tail_pattern_stripes", tail_category, torsopattern_color)[0:4:3]
             data.update(tailpattern)
             # print(tailpattern)

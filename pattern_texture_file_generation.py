@@ -9,7 +9,7 @@ from pathlib import Path
 from multiprocessing import Process, Manager
 
 def main():
-    color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.05], 'yellow': ['#Dc7F12', 0.2]}
+    color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.15], 'yellow': ['#Dc7F12', 0.2]}
 
     ##### user input for folder names to combine #####
     animals = ['lion']
@@ -17,9 +17,9 @@ def main():
     start_time = datetime.now()
     for animal in animals:
     # animal = 'eagle'
-        base_folder_name = f'rightfrontlegpattern_stripes_{animal}_color'
-        texture_folder_name = f'rightfrontlegpattern_stripes_{animal}_texture'
-        combined_name = f'rightfrontleg_stripes_{animal}'
+        base_folder_name = f'torsopattern_stripes_color'                  # color folder
+        texture_folder_name = f'torsopattern_stripes_texture'  # texture folder
+        combined_name = f'torsopattern_stripes'
 
         # define location of base and texture folder names 
 

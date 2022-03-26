@@ -3,15 +3,16 @@ import numpy as np
 from datetime import datetime
 from numpy.core.multiarray import array
 from PIL import Image, ImageFont, ImageDraw, ImageFilter
-from background import get_gradient, get_gradient_3d
+from deprecated.background import get_gradient, get_gradient_3d
 from dna import Frames
 from time import sleep
-from background_2d_generator import get_2d_gradient
 from collections import deque
 from pathlib import Path 
 import fnmatch
 import shutil
 import random
+
+
 
 def combine_attributes(frames: Frames, prefix: str):
     # R = np.random.randint(0, 256)
@@ -34,7 +35,7 @@ def combine_attributes(frames: Frames, prefix: str):
     # for (n, background) in enumerate(frames.background_frames):
     # print("Generating frames...")
 
-    for n in range(0, 72): #0,72
+    for n in range(0, 1): #0,72
 
         # use this is background color
         # frame = Image.open(background) # background of data

@@ -76,34 +76,9 @@ incompatible_list = [
     { "base_color": "red", "background": "apricot"},
     { "base_color": "red", "background": "varsity"},
     { "base_color": "red", "background": "purp2"},
-
     { "base_color": "white", "background": "super_tan"},
-
     { "base_color": "red", "background": "125"},
 
-    # tail and background clashes with black tips (scorpion, kitsune, lion)
-
-
-    # { "1_tail": "tail_kitsune_orange","background":     "black"},
-    # { "1_tail": "tail_kitsune_brown","background":     "black"},
-    # { "1_tail": "tail_kitsune_purple","background":     "black"},
-    # { "1_tail": "tail_kitsune_white","background":     "black"},
-    # { "1_tail": "tail_lion_red", "background":          "black"},
-    # { "1_tail": "tail_lion_yellow", "background":          "black"},
-    # { "1_tail": "tail_kitsune_red","background":        "black"},
-    # { "1_tail": "tail_lion_orange", "background":       "black"},
-    # { "1_tail": "tail_scorpion_orange", "background":    "black"},
-    # { "1_tail": "tail_scorpion_red", "background":       "black"},
-    # { "1_tail": "tail_scorpion_white", "background":       "black"},
-
-    # { "1_tail": "tail_kitsune_orange","background":     "navy"},
-    # { "1_tail": "tail_kitsune_brown","background":     "navy"},
-    # { "1_tail": "tail_lion_red", "background":          "navy"},
-    #  { "1_tail": "tail_lion_yellow", "background":          "navy"},
-    # { "1_tail": "tail_kitsune_red","background":        "navy"},
-    # { "1_tail": "tail_lion_orange", "background":       "navy"},
-    # { "1_tail": "tail_scorpion_orange", "background":   "navy"},
-    # { "1_tail": "tail_scorpion_red", "background":      "navy"},
 
     # avoid orange base and apricot background
     { "base_color": "orange", "background": "apricot"},

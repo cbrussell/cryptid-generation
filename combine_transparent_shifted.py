@@ -1,20 +1,10 @@
 import os
-import numpy as np
-from datetime import datetime
-from numpy.core.multiarray import array
-from PIL import Image, ImageFont, ImageDraw, ImageFilter
-from deprecated.background import get_gradient, get_gradient_3d
+from PIL import Image
 from dna import Frames
-from time import sleep
 from collections import deque
-from pathlib import Path 
-import fnmatch
-import shutil
 import random
 
-
-
-def combine_attributes(frames: Frames, prefix: str):
+def combine_attributes(frames: Frames, prefix: str, frame_count: int):
    
     # generate list of 72 then rotate it from random integer
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -23,15 +13,10 @@ def combine_attributes(frames: Frames, prefix: str):
     deque_list.rotate(shift_amount)
     shifted_list = list(deque_list)
 
-    for n in range(0, 72): #0,72
+    for n in range(0, frame_count): #0,72
 
 
         # frame = Image.new('RGB', (1180, 1180), (R, G, B)) # random solid
-        
-
-        # frame = Image.open(frames.background_frame[0]) # use chosen background from DNA
-
-        # frame = Image.new('RGB', (1180, 1180), (0, 177, 64)) # green bg for transparency
 
         frame = Image.new('RGBA', (1100, 1100)) # make transparent background
         

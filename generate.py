@@ -16,8 +16,10 @@ def main():
     os.makedirs(f"{dir_path}/output/bg", exist_ok=True)
 
     start_time = datetime.now()
-    procs = 10
-    n = 20 # collection size
+
+    procs = 10  # number of processors
+    n = 100 # collection size
+    frame_count = 1 # 1 for stills, 72 for animation
     increment = int(n / procs)
     jobs = []
     start = 1
@@ -28,7 +30,7 @@ def main():
         duplicates = manager.Value('duplicates', 0)
         size = manager.Value('size', n)
         for i in range(0, procs):
-            process = Process(target=worker, args=(start, stop, hashlist, duplicates, trait_manifest, color_manifest, background_manifest, size))
+            process = Process(target=worker, args=(start, stop, hashlist, duplicates, trait_manifest, color_manifest, background_manifest, size, frame_count))
             start = stop
             stop += increment
             jobs.append(process)
@@ -43,7 +45,7 @@ def main():
      
     return
 
-def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifest: TraitManifest, color_manifest: ColorManifest, background_manifest: BackgroundManifest, size: int):
+def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifest: TraitManifest, color_manifest: ColorManifest, background_manifest: BackgroundManifest, size: int, frame_count: int):
     number = 0
     unique_dna_tolerance = 100000
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -72,7 +74,7 @@ def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifes
             os.makedirs(f"{dir_path}/output/metadata", exist_ok=True)
             with open(f"{dir_path}/output/metadata/{str(edition)}.json", "w") as f:
                 json.dump(dna, f, indent=4)
-                combine_attributes(images, str(edition))
+                combine_attributes(images, str(edition), frame_count)
                 number += 1
                 print(f"Completed edition #{edition}/{stop - 1}")
 
@@ -81,4 +83,5 @@ def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifes
 
 if __name__ == "__main__":
     main()
+    
 

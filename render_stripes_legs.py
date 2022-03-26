@@ -17,7 +17,7 @@ def main():
 
     jobs = []
     with Manager() as manager:
-        # color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.15], 'yellow': ['#Dc7F12', 0.2]}
+        color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.15], 'yellow': ['#Dc7F12', 0.2]}
         # color_opacity = {'white': ['#FDF7F2', 0.10]}
 
         # list = ['neckpattern_stripes', 'torsopattern_stripes', 'tailpattern_stripes_snake', 'tailpattern_stripes_lion', 'tailpattern_stripes_horse', 'tailpattern_stripes_scorpion']

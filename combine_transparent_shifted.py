@@ -1,57 +1,22 @@
 import os
-import numpy as np
-from datetime import datetime
-from numpy.core.multiarray import array
-from PIL import Image, ImageFont, ImageDraw, ImageFilter
-from deprecated.background import get_gradient, get_gradient_3d
+from PIL import Image
 from dna import Frames
-from time import sleep
 from collections import deque
-from pathlib import Path 
-import fnmatch
-import shutil
 import random
 
-
-
-def combine_attributes(frames: Frames, prefix: str):
-    # R = np.random.randint(0, 256)
-    # G = np.random.randint(0, 256)
-    # B = np.random.randint(0, 256)
-
-    # R1 = np.random.randint(0, 256)
-    # G1 = np.random.randint(0, 256)
-    # B1 = np.random.randint(0, 256)
-    
-    # array = get_gradient_3d(1100, 1100, (R1, G1, B1), (R, G, B), (True, False, False)) # 4 way gradient
-
-    # array = get_gradient()
-
-    # use for 2d gradient
-    # array = get_2d_gradient(R, G, B, R1, G1, B1)
-    
+def combine_attributes(frames: Frames, prefix: str, frame_count: int):
+   
+    # generate list of 72 then rotate it from random integer
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    # use this for metadatabackground
-    # for (n, background) in enumerate(frames.background_frames):
-    # print("Generating frames...")
+    shift_amount = random.randint(0, 72)
+    deque_list = deque(list(range(72)))
+    deque_list.rotate(shift_amount)
+    shifted_list = list(deque_list)
 
-    for n in range(0, 1): #0,72
+    for n in range(0, frame_count): #0,72
 
-        # use this is background color
-        # frame = Image.open(background) # background of data
-
-        # 2d array
-        # frame = Image.fromarray(np.uint8(array)).rotate(270)
-    
-        # 4 way gradient
-        # frame = Image.fromarray(np.uint8(array))
 
         # frame = Image.new('RGB', (1180, 1180), (R, G, B)) # random solid
-        
-
-        # frame = Image.open(frames.background_frame[0]) # use chosen background from DNA
-
-        # frame = Image.new('RGB', (1180, 1180), (0, 177, 64)) # green bg for transparency
 
         frame = Image.new('RGBA', (1100, 1100)) # make transparent background
         
@@ -236,35 +201,12 @@ def combine_attributes(frames: Frames, prefix: str):
         # frame.putalpha(alpha) 
         background.paste(frame, box=(20, 70), mask=frame)
 
-
-
-        # print("Almost there...")
-
-        # watermark settings
-        # find texts with "find {/System,}/Library/Fonts -name *ttf"
-        ######
-
-        # Width, Height = frame.size 
-        # drawn = ImageDraw.Draw(frame) 
-        # text = "test mint"
-        # font = ImageFont.truetype("Arial Black", 138)
-        # textwidth, textheight = drawn.textsize(text, font)
-        # margin = 5
-        # x = Width - textwidth
-        # y = Height - textheight
-        # drawn.text(((x/2), (y/2)), text, font=font) 
-
-      
-      
-
         frame = frame.convert("RGB")  
 
-        background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}.png", format="png") 
+        background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{shifted_list[n]:03}.png", format="png") 
 
         if n == 0:
             # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-    
 
             # draw = ImageDraw.Draw(background)
            
@@ -286,34 +228,3 @@ def combine_attributes(frames: Frames, prefix: str):
             # frame = Image.new('RGB', (1180, 1180), (R, G, B)).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R}_{G}_{B}.png", "PNG")
            
             # frame = Image.fromarray(np.uint8(array)).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R1}_{G1}_{B1}_{R}_{G}_{B}.png", "PNG")
-
-  
-    os.makedirs(f"{dir_path}/output/raw_shifted/{prefix}", exist_ok=True)
-    # Determine image path
-    json_path = Path(__file__).resolve().parents[1] / f"{dir_path}/output/raw/{prefix}"
-    new_path = Path(__file__).resolve().parents[1] / f"{dir_path}/output/raw_shifted/{prefix}"
-
-    # Renames image directory based on community generated shift-value
-    shift_amount = random.randint(0, 72)
-    print(f"Random shift amount for cryptid {prefix} is {shift_amount}.")
-    
-    json_list = fnmatch.filter(os.listdir(json_path), '*.png')
-    sorted_json_list = sorted(json_list, key=lambda x: int(os.path.splitext(x)[0]))
-    json_count = len(sorted_json_list)
-
-    # Rotate list using deque
-    deque_sorted_json_list = deque(sorted_json_list)
-    deque_sorted_json_list.rotate(shift_amount)
-    rotated_deque = list(deque_sorted_json_list)
-
-    print(f"\nOriginal list is: {sorted_json_list}\n")
-    print(f"\nShifted list is: {rotated_deque}\n")
-    print(f"\nShift amount is: {shift_amount}\n")
-
-
-
-    # Replace original files for new name (changing folders)
-    for i in range(json_count):
-        new_name = Path(new_path / rotated_deque[i]) #file
-        original_name = Path(json_path / sorted_json_list[i]) #location
-        shutil.copy(original_name, new_name)

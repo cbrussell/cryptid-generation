@@ -2,9 +2,8 @@ import os
 from PIL import Image, ImageFont, ImageDraw
 import fnmatch
 from pathlib import Path
-from matplotlib import image, scale 
 import math
- 
+
 def gridSize(n):
      
     grid = []
@@ -14,7 +13,6 @@ def gridSize(n):
         
         print("Trying again, not integer..")
         a = math.floor(a)
-        n % a != 0
         if n % a != 0:
             a -= 1
         else: break
@@ -23,286 +21,94 @@ def gridSize(n):
     grid.append(int(b))
     grid.append(int(a))
 
-
-
     print(f'Highest two divisible factors are {int(b)} and {int(a)}')
     return grid
 
 def main():
+    
     dir_path = os.path.dirname(os.path.realpath(__file__))
+    os.makedirs(f"{dir_path}/output/collage_still", exist_ok=True)
 
     still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
 
-    still_list = fnmatch.filter(os.listdir(still_path), '*transparent.png')
+    still_list = [ 'solid', 'transparent', 'transparent_pfp', 'solid_pfp']
 
-    colors_file = open("deep_names.txt", "r")
-    data = colors_file.read()
-    colors_list = data.split("\n")
-    colors_file.close()
+    for type in still_list:
+        
+        still_list = fnmatch.filter(os.listdir(still_path), f'*{type}.png')
 
-    still_count = len(still_list)
+        colors_file = open("deep_names.txt", "r")
+        data = colors_file.read()
+        colors_list = data.split("\n")
+        colors_file.close()
 
-    # grid = [4, 8] #[x,y]
+        still_count = len(still_list)
 
-    # print(grid)
+        # grid = [4, 8] #[x,y]
 
-    grid = gridSize(still_count)
+        grid = gridSize(still_count)
 
-    # print(grid)
 
-    image = Image.open(f"{dir_path}/output/stills/1_transparent.png")
+        image = Image.open(f"{dir_path}/output/stills/1_{type}.png")
 
-    width, height = image.size
+        width, height = image.size
 
-    frame = Image.new('RGBA', (width*grid[0], height*grid[1]))# random solid
+        frame = Image.new('RGBA', (width*grid[0], height*grid[1]))  # random solid
 
-    frame_count = 1
-    for y in range(grid[1]):
-        for x in range(grid[0]):
-            still = Image.open(f"{dir_path}/output/stills/{frame_count}_transparent.png")
-            frame.paste(still, box=(height * x, height * y))
+        frame_count = 1
+        for y in range(grid[1]):
+            for x in range(grid[0]):
+                still = Image.open(f"{dir_path}/output/stills/{frame_count}_{type}.png")
+                frame.paste(still, box=(height * x, height * y))
 
-                    # watermark settings
-            # find texts with "find {/System,}/Library/Fonts -name *ttf"
-            ######
-    
-            Width, Height = frame.size 
-            drawn = ImageDraw.Draw(frame) 
-            text = f"{frame_count}, {colors_list[frame_count -1 ]}"
-            font = ImageFont.truetype("Arial Black", 60)
-            textwidth, textheight = drawn.textsize(text, font)
-         
-         
-            
-            drawn.text((height * x + 30, height * y + 10), text, font=font, fill="white") 
-    
-            #####
+                # watermark settings
+                # find texts with "find {/System,}/Library/Fonts -name *ttf"
+                ######
 
+                # get brightness of frame for font color selection
+                try:
+                    r, g, b = still.getpixel((5, 5))
+                except:
+                    r, g, b, a = still.getpixel((5, 5))
+                luma = 0.2126 * r + 0.7152 * g + 0.0722 * b
 
-            print(f"Pasted frame #{frame_count}! Only {still_count - frame_count} more frames left to go!")
-            frame_count += 1
+                
+                Width, Height = frame.size 
+                drawn = ImageDraw.Draw(frame) 
+                text = f"{frame_count}, {colors_list[frame_count -1 ]}"
+                font = ImageFont.truetype("Arial Black", 60)
+                textwidth, textheight = drawn.textsize(text, font)
+                if luma < 150:
+                    drawn.text((height * x + 30, height * y + 10), text, font=font, fill="white") 
+                else:
+                    drawn.text((height * x + 30, height * y + 10), text, font=font, fill="black")
 
+                #####
 
 
-    # ***************     paste to color      ***************     
+                print(f"Pasted frame #{frame_count}! Only {still_count - frame_count} more frames left to go!")
+                frame_count += 1
 
 
-    finished_width, finished_height = frame.size
 
-    # ***************     scale      ***************     
+        # ***************     paste to color      ***************     
 
-    basewidth = 7000
-    resize_scale = (basewidth)/(width*grid[0])
-    frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 
-    # ***************     scale      ***************
+        finished_width, finished_height = frame.size
 
-    print("Saving transparent collage...")
-    frame.save(f"{dir_path}/output/collage_still/full_collage_{grid[0]}_x_{grid[1]}_transparent.png", format="png")  
-    print(f'Completed Collage!')
+        # ***************     scale      ***************     
 
-  ###### head pfp collage
+        if grid[0] * width > 7000:
 
-    still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
+            basewidth = 7000
+            resize_scale = (basewidth)/(width*grid[0])
+            frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 
-    still_list = fnmatch.filter(os.listdir(still_path), '*transparent_pfp.png')
+        # ***************     scale      ***************
 
-
-    still_count = len(still_list)
-
-    # grid = [4, 8] #[x,y]
-
-    # print(grid)
-
-    grid = gridSize(still_count)
-
-    # print(grid)
-
-    image = Image.open(f"{dir_path}/output/stills/1_transparent_pfp.png")
-
-    width, height = image.size
-
-    frame = Image.new('RGBA', (width*grid[0], height*grid[1]))# random solid
-
-    frame_count = 1
-    for y in range(grid[1]):
-        for x in range(grid[0]):
-            still = Image.open(f"{dir_path}/output/stills/{frame_count}_transparent_pfp.png")
-            frame.paste(still, box=(height * x, height * y))
-
-                    # watermark settings
-            # find texts with "find {/System,}/Library/Fonts -name *ttf"
-            ######
-    
-            Width, Height = frame.size 
-            drawn = ImageDraw.Draw(frame) 
-            text = f"{frame_count}, {colors_list[frame_count -1 ]}"
-            font = ImageFont.truetype("Arial Black", 60)
-            textwidth, textheight = drawn.textsize(text, font)
-         
-            
-            drawn.text((height * x + 30, height * y + 10), text, font=font, fill="white") 
-    
-            #####
-
-
-            print(f"Pasted frame #{frame_count}! Only {still_count - frame_count} more frames left to go!")
-            frame_count += 1
-
-
-
-    # ***************     paste to color      ***************     
-
-
-    finished_width, finished_height = frame.size
-
-    # ***************     scale      ***************     
-
-    basewidth = 7000
-    resize_scale = (basewidth)/(width*grid[0])
-    frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
-
-    # ***************     scale      ***************
-
-    print("Saving solid pfp collage...")
-    frame.save(f"{dir_path}/output/collage_still/full_collage_{grid[0]}_x_{grid[1]}_transparent_pfp.png", format="png")  
-    print(f'Completed transparent pfp collage!')
-
-    ###
-    still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
-
-    still_list = fnmatch.filter(os.listdir(still_path), '*solid.png')
-
-
-    still_count = len(still_list)
-
-    # grid = [4, 8] #[x,y]
-
-    # print(grid)
-
-    grid = gridSize(still_count)
-
-    # print(grid)
-
-    image = Image.open(f"{dir_path}/output/stills/1_solid.png")
-
-    width, height = image.size
-
-    frame = Image.new('RGBA', (width*grid[0], height*grid[1]))# random solid
-
-    frame_count = 1
-    for y in range(grid[1]):
-        for x in range(grid[0]):
-            still = Image.open(f"{dir_path}/output/stills/{frame_count}_solid.png")
-            frame.paste(still, box=(height * x, height * y))
-
-                    # watermark settings
-            # find texts with "find {/System,}/Library/Fonts -name *ttf"
-            ######
-    
-            Width, Height = frame.size 
-            drawn = ImageDraw.Draw(frame) 
-            text = f"{frame_count}, {colors_list[frame_count -1 ]}"
-            font = ImageFont.truetype("Arial Black", 60)
-            textwidth, textheight = drawn.textsize(text, font)
-         
-            
-            drawn.text((height * x + 30, height * y + 10), text, font=font, fill="white") 
-    
-            #####
-
-
-            print(f"Pasted frame #{frame_count}! Only {still_count - frame_count} more frames left to go!")
-            frame_count += 1
-
-
-
-    # ***************     paste to color      ***************     
-
-
-    finished_width, finished_height = frame.size
-
-    # ***************     scale      ***************     
-
-    basewidth = 7000
-    resize_scale = (basewidth)/(width*grid[0])
-    frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
-
-    # ***************     scale      ***************
-
-    print("Saving solid collage...")
-    frame.save(f"{dir_path}/output/collage_still/full_collage_{grid[0]}_x_{grid[1]}_solid.png", format="png")  
-    print(f'Completed solid collage!')
-
-
-    ###### head pfp collage
-
-    still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
-
-    still_list = fnmatch.filter(os.listdir(still_path), '*solid_pfp.png')
-
-
-    still_count = len(still_list)
-
-    # grid = [4, 8] #[x,y]
-
-    # print(grid)
-
-    grid = gridSize(still_count)
-
-    # print(grid)
-
-    image = Image.open(f"{dir_path}/output/stills/1_solid_pfp.png")
-
-    width, height = image.size
-
-    frame = Image.new('RGBA', (width*grid[0], height*grid[1]))# random solid
-
-    frame_count = 1
-    for y in range(grid[1]):
-        for x in range(grid[0]):
-            still = Image.open(f"{dir_path}/output/stills/{frame_count}_solid_pfp.png")
-            frame.paste(still, box=(height * x, height * y))
-
-                    # watermark settings
-            # find texts with "find {/System,}/Library/Fonts -name *ttf"
-            ######
-    
-            Width, Height = frame.size 
-            drawn = ImageDraw.Draw(frame) 
-            text = f"{frame_count}, {colors_list[frame_count -1 ]}"
-            font = ImageFont.truetype("Arial Black", 60)
-            textwidth, textheight = drawn.textsize(text, font)
-         
-            
-            drawn.text((height * x + 30, height * y + 10), text, font=font, fill="white") 
-    
-            #####
-
-
-            print(f"Pasted frame #{frame_count}! Only {still_count - frame_count} more frames left to go!")
-            frame_count += 1
-
-
-
-    # ***************     paste to color      ***************     
-
-
-    finished_width, finished_height = frame.size
-
-    # ***************     scale      ***************     
-
-    basewidth = 7000
-    resize_scale = (basewidth)/(width*grid[0])
-    frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
-
-    # ***************     scale      ***************
-
-    print("Saving solid pfp collage...")
-    frame.save(f"{dir_path}/output/collage_still/full_collage_{grid[0]}_x_{grid[1]}_solid_pfp.png", format="png")  
-    print(f'Completed solid pfp collage!')
-
-
+        print(f"Saving {type} collage...")
+        frame.save(f"{dir_path}/output/collage_still/full_collage_{grid[0]}_x_{grid[1]}_{type}.png", format="png")  
+        print(f'Completed {type} collage!')
 
 
 if __name__ == "__main__":

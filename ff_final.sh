@@ -1,7 +1,7 @@
 cd output || exit
 mkdir videos
 mkdir gifs
-cd raw_shifted || exit
+cd raw || exit
 
 for i in {1..20}
 do

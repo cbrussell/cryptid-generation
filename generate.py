@@ -4,24 +4,11 @@ from datetime import datetime
 from multiprocessing import Process, Manager, Value
 from dna import get_dna, to_hash
 from traits import TraitManifest, ColorManifest, BackgroundManifest
-# from combine import combine_attributes
-
-# from combine_transparent import combine_attributes
-
 from combine_transparent_shifted import combine_attributes
-
-# from combine_solid_transparent import combine_attributes
-# from combine_transparent_accent import combine_attributes
-# from combine_transparent_accent_texture import combine_attributes
-# from combine_transparent_accent_texture import combine_attributes
-# from combine_transparent_black import combine_attributes
 
 def main():
 
-    # open('colors.txt', 'w').close()
-
     dir_path = os.path.dirname(os.path.realpath(__file__))
-
     trait_manifest = TraitManifest(json.load(open(f'{dir_path}/trait_manifest.json')))
     color_manifest = ColorManifest(json.load(open(f'{dir_path}/color_manifest.json')))
     background_manifest = BackgroundManifest(json.load(open(f'{dir_path}/background_manifest_solid.json')))
@@ -29,8 +16,10 @@ def main():
     os.makedirs(f"{dir_path}/output/bg", exist_ok=True)
 
     start_time = datetime.now()
-    procs = 10
+
+    procs = 10  # number of processors
     n = 100 # collection size
+    frame_count = 1 # 1 for stills, 72 for animation
     increment = int(n / procs)
     jobs = []
     start = 1
@@ -41,7 +30,7 @@ def main():
         duplicates = manager.Value('duplicates', 0)
         size = manager.Value('size', n)
         for i in range(0, procs):
-            process = Process(target=worker, args=(start, stop, hashlist, duplicates, trait_manifest, color_manifest, background_manifest, size))
+            process = Process(target=worker, args=(start, stop, hashlist, duplicates, trait_manifest, color_manifest, background_manifest, size, frame_count))
             start = stop
             stop += increment
             jobs.append(process)
@@ -56,7 +45,7 @@ def main():
      
     return
 
-def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifest: TraitManifest, color_manifest: ColorManifest, background_manifest: BackgroundManifest, size: int):
+def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifest: TraitManifest, color_manifest: ColorManifest, background_manifest: BackgroundManifest, size: int, frame_count: int):
     number = 0
     unique_dna_tolerance = 100000
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -85,7 +74,7 @@ def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifes
             os.makedirs(f"{dir_path}/output/metadata", exist_ok=True)
             with open(f"{dir_path}/output/metadata/{str(edition)}.json", "w") as f:
                 json.dump(dna, f, indent=4)
-                combine_attributes(images, str(edition))
+                combine_attributes(images, str(edition), frame_count)
                 number += 1
                 print(f"Completed edition #{edition}/{stop - 1}")
 
@@ -94,4 +83,5 @@ def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifes
 
 if __name__ == "__main__":
     main()
+    
 

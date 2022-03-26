@@ -4,22 +4,22 @@ from datetime import datetime
 from multiprocessing import Process, Manager, Value
 from dna import get_dna, to_hash
 from traits import TraitManifest, ColorManifest, BackgroundManifest
-from combine_transparent_shifted import combine_attributes
+from combine import combine_attributes
 
 def main():
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
     trait_manifest = TraitManifest(json.load(open(f'{dir_path}/trait_manifest.json')))
     color_manifest = ColorManifest(json.load(open(f'{dir_path}/color_manifest.json')))
-    background_manifest = BackgroundManifest(json.load(open(f'{dir_path}/background_manifest_solid.json')))
+    background_manifest = BackgroundManifest(json.load(open(f'{dir_path}/background_manifest.json')))
     os.makedirs(f"{dir_path}/output/stills", exist_ok=True)
     os.makedirs(f"{dir_path}/output/bg", exist_ok=True)
 
     start_time = datetime.now()
 
     procs = 10  # number of processors
-    n = 100 # collection size
-    frame_count = 1 # 1 for stills, 72 for animation
+    n = 30 # collection size
+    frame_count = 72 # 1 for stills, 72 for animation
     increment = int(n / procs)
     jobs = []
     start = 1

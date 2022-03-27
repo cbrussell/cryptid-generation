@@ -3461,7 +3461,7 @@
     },
     {
         "attribute": "5c_torsopattern",
-        "rarity": 1,
+        "rarity": 0.25,
         "categories": [
             {
                 "category": "stripes",
@@ -3539,7 +3539,7 @@
                     },
                     {
                         "color": "white",
-                        "weight": 10000,
+                        "weight": 1,
                         "traits": [
                             {
                                 "trait": "torsopattern_stripes_white",

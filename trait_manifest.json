@@ -8263,7 +8263,7 @@
     },
     {
         "attribute": "11c_headpattern_stripes",
-        "rarity": 0.5,
+        "rarity": 0.3,
         "categories": [
             {
                 "category": "lion",
@@ -9040,7 +9040,7 @@
         ]
     },
     {
-        "attribute": "14_eyes",
+        "attribute": "14a_eyes_eyeline_left",
         "rarity": 1,
         "categories": [
             {
@@ -9048,101 +9048,27 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "blue",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_beast_blue",
+                                "trait": "eyes_beast_eyeline_left",
                                 "weight": 1
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
                     {
-                        "color": "brown",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_beast_brown",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "gray",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_beast_gray",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "green",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_beast_green",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "orange",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_beast_orange",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "pink",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_beast_pink",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "purple",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_beast_purple",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "red",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_beast_red",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "yellow",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_beast_yellow",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "white",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_beast_white",
+                                "trait": "eyes_goat_eyeline_left",
                                 "weight": 1
                             }
                         ]
@@ -9154,207 +9080,11 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "blue",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_predator_blue",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "brown",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_predator_brown",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "gray",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_predator_gray",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "green",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_predator_green",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "orange",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_predator_orange",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "pink",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_predator_pink",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "purple",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_predator_purple",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "red",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_predator_red",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "yellow",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_predator_yellow",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "white",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_predator_white",
-                                "weight": 1
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "category": "prey",
-                "weight": 1,
-                "colors": [
-                    {
-                        "color": "blue",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_prey_blue",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "brown",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_prey_brown",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "gray",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_prey_gray",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "green",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_prey_green",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "orange",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_prey_orange",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "pink",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_prey_pink",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "purple",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_prey_purple",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "red",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_prey_red",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "yellow",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_prey_yellow",
-                                "weight": 1
-                            }
-                        ]
-                    },
-                    {
-                        "color": "white",
-                        "weight": 1,
-                        "traits": [
-                            {
-                                "trait": "eyes_prey_white",
+                                "trait": "eyes_predator_eyeline_left",
                                 "weight": 1
                             }
                         ]
@@ -9366,101 +9096,361 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "blue",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_blue",
+                                "trait": "eyes_wise_eyeline_left",
                                 "weight": 1
                             }
                         ]
-                    },
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "attribute": "14b_eyes_iris_left",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "beast",
+                "weight": 1,
+                "colors": [
                     {
-                        "color": "brown",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_brown",
+                                "trait": "eyes_beast_iris_left",
                                 "weight": 1
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
                     {
-                        "color": "gray",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_gray",
+                                "trait": "eyes_goat_iris_left",
                                 "weight": 1
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "category": "predator",
+                "weight": 1,
+                "colors": [
                     {
-                        "color": "green",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_green",
+                                "trait": "eyes_predator_iris_left",
                                 "weight": 1
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "category": "wise",
+                "weight": 1,
+                "colors": [
                     {
-                        "color": "orange",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_orange",
+                                "trait": "eyes_wise_iris_left",
                                 "weight": 1
                             }
                         ]
-                    },
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "attribute": "14c_eyes_pupil_left",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "beast",
+                "weight": 1,
+                "colors": [
                     {
-                        "color": "pink",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_pink",
+                                "trait": "eyes_beast_pupil_left",
                                 "weight": 1
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
                     {
-                        "color": "purple",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_purple",
+                                "trait": "eyes_goat_pupil_left",
                                 "weight": 1
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "category": "predator",
+                "weight": 1,
+                "colors": [
                     {
-                        "color": "red",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_red",
+                                "trait": "eyes_predator_pupil_left",
                                 "weight": 1
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "category": "wise",
+                "weight": 1,
+                "colors": [
                     {
-                        "color": "yellow",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_yellow",
+                                "trait": "eyes_wise_pupil_left",
                                 "weight": 1
                             }
                         ]
-                    },
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "attribute": "14d_eyes_eyeline_right",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "beast",
+                "weight": 1,
+                "colors": [
                     {
-                        "color": "white",
+                        "color": "black",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_white",
+                                "trait": "eyes_beast_eyeline_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_eyeline_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "predator",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_eyeline_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "wise",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_eyeline_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "attribute": "14e_eyes_iris_right",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "beast",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "predator",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "wise",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "attribute": "14f_eyes_pupil_right",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "beast",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_pupil_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_pupil_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "predator",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_pupil_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "wise",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_pupil_right",
                                 "weight": 1
                             }
                         ]

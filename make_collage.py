@@ -37,10 +37,15 @@ def main():
         
         still_list = fnmatch.filter(os.listdir(still_path), f'*{type}.png')
 
-        colors_file = open("deep_names.txt", "r")
-        data = colors_file.read()
-        colors_list = data.split("\n")
-        colors_file.close()
+        name_file = open("deep_names.txt", "r")
+        data = name_file.read()
+        name_list = data.split("\n")
+        name_file.close()
+
+        iris_colors_file = open("iris_colors.txt", "r")
+        data = iris_colors_file.read()
+        iris_colors_list = data.split("\n")
+        iris_colors_file.close()
 
         still_count = len(still_list)
 
@@ -75,8 +80,8 @@ def main():
                 
                 Width, Height = frame.size 
                 drawn = ImageDraw.Draw(frame) 
-                text = f"{frame_count}, {colors_list[frame_count -1 ]}"
-                font = ImageFont.truetype("Arial Black", 60)
+                text = f"{frame_count}, {name_list[frame_count -1 ]}, {iris_colors_list[frame_count -1 ]}" 
+                font = ImageFont.truetype("Arial Black", 50)
                 textwidth, textheight = drawn.textsize(text, font)
                 if luma < 150:
                     drawn.text((height * x + 30, height * y + 10), text, font=font, fill="white") 
@@ -85,14 +90,10 @@ def main():
 
                 #####
 
-
                 print(f"Pasted frame #{frame_count}! Only {still_count - frame_count} more frames left to go!")
                 frame_count += 1
 
-
-
         # ***************     paste to color      ***************     
-
 
         finished_width, finished_height = frame.size
 

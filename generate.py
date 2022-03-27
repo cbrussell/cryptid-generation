@@ -4,9 +4,11 @@ from datetime import datetime
 from multiprocessing import Process, Manager, Value
 from dna import get_dna, to_hash
 from traits import TraitManifest, ColorManifest, BackgroundManifest
-from combine import combine_attributes
+from combine_eyes import combine_attributes
 
 def main():
+
+    os.remove("iris_colors.txt")
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
     trait_manifest = TraitManifest(json.load(open(f'{dir_path}/trait_manifest.json')))
@@ -18,7 +20,7 @@ def main():
     start_time = datetime.now()
 
     procs = 10  # number of processors
-    n = 50 # collection size
+    n = 20 # collection size
     frame_count = 72 # 1 for stills, 72 for animation
     increment = int(n / procs)
     jobs = []

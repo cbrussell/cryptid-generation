@@ -1,11 +1,34 @@
 import os
+import numpy as np
 from PIL import Image
 from dna import Frames
 from collections import deque
 import random
+from background_2d_generator import get_2d_gradient
 
 def combine_attributes(frames: Frames, prefix: str, frame_count: int):
-   
+    R = np.random.randint(0, 256)
+    G = np.random.randint(0, 256)
+    B = np.random.randint(0, 256)
+
+    R1 = np.random.randint(0, 256)
+    G1 = np.random.randint(0, 256)
+    B1 = np.random.randint(0, 256)
+
+    R2 = np.random.randint(0, 256)
+    G2 = np.random.randint(0, 256)
+    B2 = np.random.randint(0, 256)
+
+    iris_color = (R, G, B)
+
+    bg_color_1 = (R1, G1, B1)
+
+    bg_color_2 = (R2, G2, B2)
+
+    outFile = open('iris_colors.txt', 'a')
+    outFile.write(f'{iris_color}\n')
+    outFile.close()
+
     # generate list of 72 then rotate it from random integer
     dir_path = os.path.dirname(os.path.realpath(__file__))
     shift_amount = random.randint(0, 72)
@@ -13,13 +36,19 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
     deque_list.rotate(shift_amount)
     shifted_list = list(deque_list)
 
+    array = get_2d_gradient(R1, G1, B1, R2, G2, B2)
+    background_big = Image.fromarray(np.uint8(array)).rotate(135)
+   
+
+    background = background_big.crop((500, 500, 1680, 1680))
+    background.save(f"{dir_path}/output/bg/{prefix}_bg_{R1}_{G1}_{B1}_{R2}_{G2}_{B2}.png", "PNG")
+
     for n in range(0, frame_count): #0,72
 
 
         # frame = Image.new('RGB', (1180, 1180), (R, G, B)) # random solid
 
         frame = Image.new('RGBA', (1100, 1100)) # make transparent background
-        
        
         print(f'Generating frame {n}...')
         if frames.tail_frames:
@@ -138,9 +167,39 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
             horns = Image.open(frames.horns_frames[n])
             frame = Image.alpha_composite(frame, horns)
         
-        if frames.eyes_frames:
-            eyes = Image.open(frames.eyes_frames[n])
-            frame = Image.alpha_composite(frame, eyes)
+        if frames.eyes_iris_left_frames:
+            eyes_iris_left = Image.open(frames.eyes_iris_left_frames[n])
+            
+            alpha = eyes_iris_left.getchannel('A')
+            eyes_iris_left = Image.new('RGBA', eyes_iris_left.size, color=iris_color)
+            eyes_iris_left.putalpha(alpha) 
+
+            frame = Image.alpha_composite(frame, eyes_iris_left)
+        
+        if frames.eyes_pupil_left_frames:
+            eyes_pupil_left = Image.open(frames.eyes_pupil_left_frames[n])
+            frame = Image.alpha_composite(frame, eyes_pupil_left)
+
+        if frames.eyes_eyeline_left_frames:
+            eyes_eyeline_left = Image.open(frames.eyes_eyeline_left_frames[n])
+            frame = Image.alpha_composite(frame, eyes_eyeline_left)
+
+        if frames.eyes_iris_right_frames:
+            eyes_iris_right = Image.open(frames.eyes_iris_right_frames[n])
+            
+            alpha = eyes_iris_right.getchannel('A')
+            eyes_iris_right = Image.new('RGBA', eyes_iris_right.size, color=iris_color)
+            eyes_iris_right.putalpha(alpha) 
+
+            frame = Image.alpha_composite(frame, eyes_iris_right)
+        
+        if frames.eyes_pupil_right_frames:
+            eyes_pupil_right = Image.open(frames.eyes_pupil_right_frames[n])
+            frame = Image.alpha_composite(frame, eyes_pupil_right)
+
+        if frames.eyes_eyeline_right_frames:
+            eyes_eyeline_right = Image.open(frames.eyes_eyeline_right_frames[n])
+            frame = Image.alpha_composite(frame, eyes_eyeline_right)
 
         if n == 0:
             # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -184,12 +243,11 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
             transparent_resize_crop.save(f"{dir_path}/output/stills/{prefix}_transparent_pfp.png")
 
 
-        # frame.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{shifted_list[n]:03}_t.png", format="png") # shifted 
+        # frame.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{shifted_list[n]:03}_t.png", format="png") # shifted
+        frame.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}_t.png", format="png") 
 
-        frame.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}_t.png", format="png") #not shifted
 
-
-        background = Image.open(frames.background_frame[0]) # use chosen background from DNA
+        # background = Image.open(frames.background_frame[0]) # use chosen background from DNA #removing for eyes with random bg
 
         # background = Image.new('RGBA', (1180, 1180))
         # background = background.crop((40, 40, 1140, 1140))
@@ -205,8 +263,8 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
 
         frame = frame.convert("RGB")  
 
-        # background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{shifted_list[n]:03}.png", format="png") # shifted 
-        background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}.png", format="png") # not shifted
+        # background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{shifted_list[n]:03}.png", format="png") # shifted
+        background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}.png", format="png") 
 
         if n == 0:
             # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -226,7 +284,7 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
             background_crop.save(f"{dir_path}/output/stills/{prefix}_solid_pfp.png")
 
 
-            # frame = Image.fromarray(np.uint8(array)).rotate(270).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R1}_{G1}_{B1}_{R}_{G}_{B}.png", "PNG")
+            # frame = Image.fromarray(np.uint8(array)).rotate(270).save(f"{dir_path}/output/bg/{prefix}_bg_{R1}_{G1}_{B1}_{R2}_{G2}_{B2}.png", "PNG")
            
             # frame = Image.new('RGB', (1180, 1180), (R, G, B)).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R}_{G}_{B}.png", "PNG")
            

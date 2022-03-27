@@ -80,7 +80,7 @@ def main():
                 
                 Width, Height = frame.size 
                 drawn = ImageDraw.Draw(frame) 
-                text = f"{frame_count}, {name_list[frame_count -1 ]}, {iris_colors_list[frame_count -1 ]}" 
+                text = f"{frame_count}, {name_list[frame_count -1 ]}, {iris_colors_list[frame_count -1 ]}"  # {name_list[frame_count -1 ]}
                 font = ImageFont.truetype("Arial Black", 50)
                 textwidth, textheight = drawn.textsize(text, font)
                 if luma < 150:

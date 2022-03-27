@@ -21,10 +21,6 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
 
     iris_color = (R, G, B)
 
-    bg_color_1 = (R1, G1, B1)
-
-    bg_color_2 = (R2, G2, B2)
-
     outFile = open('iris_colors.txt', 'a')
     outFile.write(f'{iris_color}\n')
     outFile.close()

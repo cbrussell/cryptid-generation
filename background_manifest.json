@@ -54,5 +54,9 @@
     {
         "color": "tan_egg_light",
         "weight": 1
+    },
+    {
+        "color": "18_bg_105_48_158_54_42_66",
+        "weight": 1
     }
 ]

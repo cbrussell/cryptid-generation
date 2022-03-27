@@ -184,7 +184,7 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
             transparent_resize_crop.save(f"{dir_path}/output/stills/{prefix}_transparent_pfp.png")
 
 
-
+        frame.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{shifted_list[n]:03}_t.png", format="png") 
 
 
         background = Image.open(frames.background_frame[0]) # use chosen background from DNA

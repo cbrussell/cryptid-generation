@@ -17,8 +17,8 @@ def main():
 
     start_time = datetime.now()
 
-    procs = 20  # number of processors
-    n = 20 # collection size
+    procs = 10  # number of processors
+    n = 50 # collection size
     frame_count = 72 # 1 for stills, 72 for animation
     increment = int(n / procs)
     jobs = []
@@ -78,7 +78,7 @@ def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifes
                 number += 1
                 print(f"Completed edition #{edition}/{stop - 1}")
 
-        
+
     print(f'Multiprocess job complete! For process ID {os.getpid()}, {number} generated. Found {duplicates.value} duplicates.')
 
 if __name__ == "__main__":

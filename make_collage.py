@@ -31,7 +31,7 @@ def main():
 
     still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
 
-    still_list = [ 'solid', 'transparent', 'transparent_pfp', 'solid_pfp']
+    still_list = [ 'solid', 'transparent'] #, 'transparent_pfp', 'solid_pfp']
 
     for type in still_list:
         

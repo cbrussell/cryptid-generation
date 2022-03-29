@@ -17,24 +17,25 @@ def main():
 
     jobs = []
     with Manager() as manager:
-        # color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.15], 'yellow': ['#Dc7F12', 0.2]}
-        color_opacity = {'white': ['#FDF7F2', 0.10]}
+        color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.10], 'yellow': ['#Dc7F12', 0.2]}
+        # color_opacity = {'white': ['#FDF7F2', 0.10]}
 
-        # list = ['neckpattern_stripes', 'torsopattern_stripes', 'tailpattern_stripes_snake', 'tailpattern_stripes_lion', 'tailpattern_stripes_horse', 'tailpattern_stripes_scorpion']
+        list = ['tailpattern_stripes_silky', 'tailpattern_stripes_brush']
         
-        list = ['headpattern']
+        # list = ['headpattern']
 
         ##### user input for folder names to combine #####
-        animals = ['lion_stripes', 'horse_stripes', 'wolf_stripes', 'bear_stripes', 'eagle_stripes']
+        # animals = ['lion_stripes', 'horse_stripes', 'wolf_stripes', 'bear_stripes', 'eagle_stripes']
+        animals = ['lion'] # 'lion_stripes', 'horse_stripes', 'wolf_stripes', 'bear_stripes', 'eagle_stripes']
         # define name of folders for combining
         start_time = datetime.now()
         for item in list:
             for animal in animals:
                 for color in color_opacity:
                 # animal = 'eagle'
-                    base_folder_name = f'{item}_{animal}_color'                  # color folder
-                    texture_folder_name = f'{item}_{animal}_texture'  # texture folder
-                    combined_name = f'{item}_{animal}'  #f'torsopattern_stripes'
+                    base_folder_name = f'{item}_color'                  # color folder
+                    texture_folder_name = f'{item}_texture'  # texture folder
+                    combined_name = f'{item}'  #f'torsopattern_stripes'
 
                     # define location of base and texture folder names 
 

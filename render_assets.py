@@ -11,7 +11,7 @@ def main():
     start_time = datetime.now()
 
     procs = 10  # number of processors
-    n = 20 # collection size
+    n = 30 # collection size
     increment = int(n / procs)
     jobs = []
     start = 1
@@ -50,7 +50,7 @@ def worker(start, stop):
         gif = f'ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png -i output/raw/{id}/{id}_palette.png -filter_complex "scale=750:-1:flags=lanczos,paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle"  output/gifs/{id}.gif'
         subprocess.call(gif,shell=True)
 
-        png = f'ffmpeg -r 24 -y -thread_queue_size 512  -i output/raw/{id}/{id}_%03d.png  -filter_complex "scale=750:-1:flags=lanczos,setpts=PTS-STARTPTS" -plays 0 -f apng output/gifs/{id}.png'
+        png = f'ffmpeg -r 24 -y -thread_queue_size 512  -i output/raw/{id}/{id}_%03d_t.png  -filter_complex "scale=750:-1:flags=lanczos,setpts=PTS-STARTPTS" -plays 0 -f apng output/gifs/{id}.png'
         subprocess.call(png,shell=True)
 
         number += 1

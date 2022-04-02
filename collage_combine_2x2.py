@@ -3,14 +3,14 @@ from PIL import Image
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-tl = 9 # top left
-tr = 8 # top right
-bl = 19 # bottom left
-br = 3 # bottom right
+tl = 7 # top left
+tr = 11 # top right
+bl = 140 # bottom left
+br = 91 # bottom right
 
 def main():
-    for n in range(0, 72): #0,72
-
+    for n in range(0, 1): #0,72
+        os.makedirs(f"{dir_path}/output/collage", exist_ok=True)
         frame = Image.new('RGB', (2360, 2360))# random solid
 
         tl_img = Image.open(f"{dir_path}/output/raw/{tl}/{tl}_{n:03}.png")

@@ -3,7 +3,7 @@ import json
 import hashlib
 from dataclasses import dataclass
 from typing import Union
-from traits import TraitManifest, ColorManifest, BackgroundManifest, get_trait, get_trait_category, get_trait_category_color, get_trait_color, get_trait_color_avoid_category
+from traits import TraitManifest, ColorManifest, BackgroundManifest, get_trait, get_trait_category, get_trait_category_color, get_trait_color
 from incompatible import incompatible_list
 from traits import chance
 
@@ -51,7 +51,7 @@ def to_hash(data):
     return hashlib.sha256(json.dumps(data).encode('utf-8')).hexdigest()
 
 def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, background_manifest: BackgroundManifest) -> Union[Frames, dict]:
-    print("Getting new DNA...")
+    # print("Getting new DNA...")
     while True:
         data = {}
 
@@ -78,34 +78,15 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
             leftbacklegshadow, leftbacklegshadow_frames = get_trait_category(trait_manifest, "2b_leftbackleg_shadow_shaggy", backanimalleg)[0:4:3]
             data.update(leftbacklegshadow)
 
-        # torso accent needs to relate to torso base, input type
+        
         torsoaccent, torsoaccent_category, torsoaccent_color, torsoaccent_frames = get_trait_category(trait_manifest, "5b_torsoaccent", torsotype)
         data.update(torsoaccent)
-        
-        # if backcolor:
 
-        #     torsopattern, torsopattern_category, torsopattern_color, torsopattern_frames = get_trait_color(trait_manifest, "5c_torsopattern", backcolor)
-        #     data.update(torsopattern)
-        # else:
-        #     torsopattern, torsopattern_category, torsopattern_color, torsopattern_frames = get_trait(trait_manifest, "5c_torsopattern")
-        #     data.update(torsopattern)
-
-
-        torsopattern, torsopattern_category, torsopattern_color, torsopattern_frames = get_trait(trait_manifest, "5c_torsopattern") #blue, black, yellow, white, red, purple, orange, gray, brown
+        torsopattern, torsopattern_category, torsopattern_color, torsopattern_frames = get_trait(trait_manifest, "5c_torsopattern") 
         data.update(torsopattern)
-
-        # if backcolor:
-        #     fur, fur_type, fur_color, fur_frames = get_trait_color(trait_manifest, "7_fur", backcolor)
-        #     data.update(fur) 
-        # elif torsopattern_color:
-        #     fur, fur_type, fur_color, fur_frames = get_trait_color(trait_manifest, "7_fur", torsopattern_color)
-        #     data.update(fur) 
-        # else:
 
         fur, fur_type, fur_color, fur_frames = get_trait(trait_manifest, "7_fur")
         data.update(fur) 
-
-
 
         if fur:
 
@@ -158,9 +139,6 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
 
         headaccent, headaccent_frames = get_trait_category(trait_manifest, "11b_headaccent", animal)[0:4:3]
         data.update(headaccent)
-        
-        # print(torsopattern_category)
-        # print(animal)
 
         if torsopattern_category == 'stripes':
             headpattern, headpattern_frames = get_trait_category_color(trait_manifest, "11c_headpattern_stripes", animal, torsopattern_color)[0:4:3]
@@ -195,11 +173,6 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
             else:
                 neckpattern_frames = []
 
-            # no neckshadow on eagle
-            # if animal == 'eagle':
-                # neckshadow_frames = []
-            # else:
-
             neckshadow, neckshadow_frames = get_trait_category(trait_manifest, "6d_neckshadow", animal)[0:4:3]
             data.update(neckshadow)
 
@@ -209,15 +182,12 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
             else:
                 neckshadow_teeth_frames = []
 
-        # print(fur)
-        # print(mouth_type)
-        # print(animal)
+   
         if fur and mouth_type == 'teeth':
             fur_shadow_teeth, fur_shadow_teeth_frames = get_trait_category_color(trait_manifest, "7e_fur_shadow_teeth", animal, mouth_type)[0:4:3]
             data.update(fur_shadow_teeth)
         else:
             fur_shadow_teeth_frames = []
-
 
 
         rightbackleg, rightbackleg_frames = get_trait_category_color(trait_manifest, "8_rightbackleg", backanimalleg, color)[0:4:3]
@@ -227,7 +197,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         if torsopattern_category == 'stripes':
             rightbackleg_pattern, rightbackleg_pattern_frames = get_trait_category_color(trait_manifest, "8a_rightbackleg_pattern_stripes", backanimalleg, torsopattern_color)[0:4:3]
             data.update(rightbackleg_pattern)
-            # print(rightbackleg_pattern)
+          
         else:
             rightbackleg_pattern_frames = []
 
@@ -237,11 +207,10 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         if torsopattern_category == 'stripes':
             rightfrontleg_pattern, rightfrontleg_pattern_frames = get_trait_category_color(trait_manifest, "9a_rightfrontleg_pattern_stripes", frontanimalleg, torsopattern_color)[0:4:3]
             data.update(rightfrontleg_pattern)
-            # print(rightfrontleg_pattern)
+     
         else:
             rightfrontleg_pattern_frames = []
 
-        
         ears, ear_type, ear_color, ears_frames = get_trait_color(trait_manifest, "10_ears", color)
         data.update(ears)
 
@@ -264,8 +233,6 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
 
        
         if (ear_type, fur_type) in ear_fur_combos:
-            # print(ear_type)
-            # print(fur_type)
             ear_shadow_fur, ear_shadow_fur_frames = get_trait_category_color(trait_manifest, "10a_ear_shadow_fur", ear_type, fur_type)[0:4:3]
             data.update(ear_shadow_fur)
         else:
@@ -280,13 +247,9 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         tail, tail_category, tail_color, tail_frames = get_trait_color(trait_manifest, "1_tail", color)
         data.update(tail)
 
-        # print(tail_category)
-        # print(animal)
-
-        if torsopattern_category == 'stripes' and tail_category in ['scorpion', 'lion', 'horse', 'snake', 'brush', 'silky']:
+        if torsopattern_category == 'stripes' and tail_category in ['scorpion', 'lion', 'horse', 'snake', 'brush', 'silky', 'fluffy']:
             tailpattern, tailpattern_frames = get_trait_category_color(trait_manifest, "1a_tail_pattern_stripes", tail_category, torsopattern_color)[0:4:3]
             data.update(tailpattern)
-            # print(tailpattern)
         else:
             tailpattern_frames = []
 
@@ -299,8 +262,12 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         eyes_eyeline_left, eyes_eyeline_left_category, eyes_eyeline_left_color, eyes_eyeline_left_frames = get_trait_category(trait_manifest, "14a_eyes_eyeline_left", eyes_iris_left_category)
         data.update(eyes_eyeline_left)
 
-        eyes_iris_right, eyes_iris_right_category, eyes_iris_right_color, eyes_iris_right_frames = get_trait_category(trait_manifest, "14e_eyes_iris_right", eyes_iris_left_category)
-        data.update(eyes_iris_right)
+        if chance(0.025):
+            eyes_iris_right, eyes_iris_right_category, eyes_iris_right_color, eyes_iris_right_frames = get_trait_category(trait_manifest, "14e_eyes_iris_right", eyes_iris_left_category)
+            data.update(eyes_iris_right)
+        else:
+            eyes_iris_right, eyes_iris_right_category, eyes_iris_right_color, eyes_iris_right_frames = get_trait_category_color(trait_manifest, "14e_eyes_iris_right", eyes_iris_left_category, eyes_iris_left_color)
+            data.update(eyes_iris_right)
 
         eyes_pupil_right, eyes_pupil_right_category, eyes_pupil_right_color, eyes_pupil_right_frames = get_trait_category(trait_manifest, "14f_eyes_pupil_right", eyes_iris_left_category)
         data.update(eyes_pupil_right)

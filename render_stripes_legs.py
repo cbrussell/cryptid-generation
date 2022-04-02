@@ -20,7 +20,7 @@ def main():
         color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.10], 'yellow': ['#Dc7F12', 0.2]}
         # color_opacity = {'white': ['#FDF7F2', 0.10]}
 
-        list = ['tailpattern_stripes_silky', 'tailpattern_stripes_brush']
+        list = ['tailpattern_stripes_fluffy']
         
         # list = ['headpattern']
 

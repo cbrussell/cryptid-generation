@@ -9,8 +9,8 @@ def main():
     start_time = datetime.now()
     frames = 72
     # select files for collage
-    files = [3, 11, 19]
-
+    files = [20, 8, 13, 18]
+ #20
     # frame/file check
     if frames % len(files) != 0:
         sys.exit("Files not divisible into frame count")  

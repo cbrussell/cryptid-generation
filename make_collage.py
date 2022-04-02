@@ -31,7 +31,7 @@ def main():
 
     still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
 
-    still_list = [ 'solid', 'transparent'] #, 'transparent_pfp', 'solid_pfp']
+    still_list = [ 'solid', 'transparent', 'transparent_pfp', 'solid_pfp']
 
     for type in still_list:
         
@@ -42,10 +42,6 @@ def main():
         name_list = data.split("\n")
         name_file.close()
 
-        iris_colors_file = open("iris_colors.txt", "r")
-        data = iris_colors_file.read()
-        iris_colors_list = data.split("\n")
-        iris_colors_file.close()
 
         still_count = len(still_list)
 
@@ -80,7 +76,7 @@ def main():
                 
                 Width, Height = frame.size 
                 drawn = ImageDraw.Draw(frame) 
-                text = f"{frame_count}, {name_list[frame_count -1 ]}, {iris_colors_list[frame_count -1 ]}"  
+                text = f"{frame_count}, {name_list[frame_count -1 ]}"  
                 font = ImageFont.truetype("Arial Black", 50)
                 textwidth, textheight = drawn.textsize(text, font)
                 if luma < 150:

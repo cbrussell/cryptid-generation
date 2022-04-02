@@ -8,7 +8,8 @@ from combine_eyes import combine_attributes
 
 def main():
 
-    os.remove("iris_colors.txt")
+    if os.path.exists("iris_colors.txt"):
+        os.remove("iris_colors.txt")
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
     trait_manifest = TraitManifest(json.load(open(f'{dir_path}/trait_manifest.json')))
@@ -16,7 +17,6 @@ def main():
     background_manifest = BackgroundManifest(json.load(open(f'{dir_path}/background_manifest.json')))
     os.makedirs(f"{dir_path}/output/stills", exist_ok=True)
     os.makedirs(f"{dir_path}/output/bg", exist_ok=True)
-
     start_time = datetime.now()
 
     procs = 10  # number of processors
@@ -80,10 +80,7 @@ def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifes
                 number += 1
                 print(f"Completed edition #{edition}/{stop - 1}")
 
-
     print(f'Multiprocess job complete! For process ID {os.getpid()}, {number} generated. Found {duplicates.value} duplicates.')
 
 if __name__ == "__main__":
     main()
-    
-

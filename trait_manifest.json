@@ -1355,7 +1355,7 @@
             },
             {
                 "category": "silky",
-                "weight": 1000,
+                "weight": 1,
                 "colors": [
                     {
                         "color": "yellow",
@@ -1451,7 +1451,7 @@
             },
             {
                 "category": "brush",
-                "weight": 1000,
+                "weight": 1,
                 "colors": [
                     {
                         "color": "yellow",
@@ -1539,6 +1539,102 @@
                         "traits": [
                             {
                                 "trait": "tailpattern_stripes_brush_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "fluffy",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_fluffy_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_fluffy_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_fluffy_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_fluffy_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_fluffy_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_fluffy_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_fluffy_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_fluffy_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tailpattern_stripes_fluffy_black",
                                 "weight": 1
                             }
                         ]
@@ -3653,7 +3749,7 @@
     },
     {
         "attribute": "5c_torsopattern",
-        "rarity": 1,
+        "rarity": 0.25,
         "categories": [
             {
                 "category": "stripes",
@@ -9310,11 +9406,101 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "green",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_beast_iris_left",
+                                "trait": "eyes_beast_iris_left_green",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_left_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_left_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_left_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_left_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_left_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_left_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_left_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_left_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "pink",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_left_pink",
                                 "weight": 1
                             }
                         ]
@@ -9326,11 +9512,101 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "green",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_goat_iris_left",
+                                "trait": "eyes_goat_iris_left_green",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_left_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_left_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_left_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_left_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_left_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_left_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_left_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_left_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "pink",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_left_pink",
                                 "weight": 1
                             }
                         ]
@@ -9342,11 +9618,101 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "green",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_predator_iris_left",
+                                "trait": "eyes_predator_iris_left_green",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_left_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_left_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_left_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_left_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_left_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_left_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_left_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_left_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "pink",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_left_pink",
                                 "weight": 1
                             }
                         ]
@@ -9358,11 +9724,101 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "green",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_iris_left",
+                                "trait": "eyes_wise_iris_left_green",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_left_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_left_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_left_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_left_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_left_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_left_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_left_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_left_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "pink",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_left_pink",
                                 "weight": 1
                             }
                         ]
@@ -9520,11 +9976,101 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "green",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_beast_iris_right",
+                                "trait": "eyes_beast_iris_right_green",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_right_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_right_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_right_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_right_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_right_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_right_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_right_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_right_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "pink",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_beast_iris_right_pink",
                                 "weight": 1
                             }
                         ]
@@ -9536,11 +10082,101 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "green",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_goat_iris_right",
+                                "trait": "eyes_goat_iris_right_green",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_right_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_right_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_right_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_right_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_right_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_right_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_right_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_right_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "pink",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_goat_iris_right_pink",
                                 "weight": 1
                             }
                         ]
@@ -9552,11 +10188,101 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "green",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_predator_iris_right",
+                                "trait": "eyes_predator_iris_right_green",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_right_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_right_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_right_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_right_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_right_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_right_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_right_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_right_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "pink",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_predator_iris_right_pink",
                                 "weight": 1
                             }
                         ]
@@ -9568,11 +10294,101 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "green",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_wise_iris_right",
+                                "trait": "eyes_wise_iris_right_green",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_right_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_right_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_right_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_right_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_right_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_right_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_right_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_right_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "pink",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_wise_iris_right_pink",
                                 "weight": 1
                             }
                         ]

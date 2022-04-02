@@ -23,28 +23,28 @@
         "weight": 1
     },
     {
-        "color": "80",
+        "color": "deep",
         "weight": 1
     },
     {
-        "color": "89",
+        "color": "sandy",
         "weight": 1
     },
     {
-        "color": "125",
+        "color": "steel",
         "weight": 1
     },
 
     {
-        "color": "293",
+        "color": "purpish",
         "weight": 1
     },
     {
-        "color": "391",
+        "color": "rust",
         "weight": 1
     },
     {
-        "color": "409",
+        "color": "rain",
         "weight": 1
     },
     {
@@ -56,7 +56,7 @@
         "weight": 1
     },
     {
-        "color": "18_bg_105_48_158_54_42_66",
+        "color": "yellow",
         "weight": 1
     }
 ]

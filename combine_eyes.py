@@ -6,16 +6,7 @@ from collections import deque
 import random
 
 def combine_attributes(frames: Frames, prefix: str, frame_count: int):
-    R = np.random.randint(0, 256)
-    G = np.random.randint(0, 256)
-    B = np.random.randint(0, 256)
-
-    iris_color = (R, G, B)
-
-    outFile = open('iris_colors.txt', 'a')
-    outFile.write(f'{iris_color}\n')
-    outFile.close()
-
+   
     # generate list of 72 then rotate it from random integer
     dir_path = os.path.dirname(os.path.realpath(__file__))
     shift_amount = random.randint(0, 72)
@@ -24,9 +15,6 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
     shifted_list = list(deque_list)
 
     for n in range(0, frame_count): #0,72
-
-
-        # frame = Image.new('RGB', (1180, 1180), (R, G, B)) # random solid
 
         frame = Image.new('RGBA', (1100, 1100)) # make transparent background
        
@@ -149,11 +137,6 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
         
         if frames.eyes_iris_left_frames:
             eyes_iris_left = Image.open(frames.eyes_iris_left_frames[n])
-            
-            alpha = eyes_iris_left.getchannel('A')
-            eyes_iris_left = Image.new('RGBA', eyes_iris_left.size, color=iris_color)
-            eyes_iris_left.putalpha(alpha) 
-
             frame = Image.alpha_composite(frame, eyes_iris_left)
         
         if frames.eyes_pupil_left_frames:
@@ -166,11 +149,6 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
 
         if frames.eyes_iris_right_frames:
             eyes_iris_right = Image.open(frames.eyes_iris_right_frames[n])
-            
-            alpha = eyes_iris_right.getchannel('A')
-            eyes_iris_right = Image.new('RGBA', eyes_iris_right.size, color=iris_color)
-            eyes_iris_right.putalpha(alpha) 
-
             frame = Image.alpha_composite(frame, eyes_iris_right)
         
         if frames.eyes_pupil_right_frames:
@@ -200,22 +178,6 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
             right = x + width/2
             bottom = y + height/2 
 
-            
-
-            # draw = ImageDraw.Draw(transparent_resize)
-            # leftUpPoint = (left, top)
-            # rightDownPoint = (right, bottom)
-
-            # twoPointList = [leftUpPoint, rightDownPoint]
-
-            # draw.ellipse(twoPointList, fill=None, outline='yellow', width=5)
-
-            # draw.line([(x, top + 5), (x, bottom - 5)], fill='black', width=5)
-
-            # draw.line([(left + 5, y), (right - 5, y)], fill='black', width=5)
-
-
-
             transparent_resize.save(f"{dir_path}/output/stills/{prefix}_transparent.png")
 
             transparent_resize_crop = transparent_resize.crop((left, top, right, bottom))
@@ -223,47 +185,21 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
             transparent_resize_crop.save(f"{dir_path}/output/stills/{prefix}_transparent_pfp.png")
 
 
-        frame.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{shifted_list[n]:03}_t.png", format="png") 
+        frame.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}_t.png", format="png") 
 
 
         background = Image.open(frames.background_frame[0]) # use chosen background from DNA
 
-        # background = Image.new('RGBA', (1180, 1180))
-        # background = background.crop((40, 40, 1140, 1140))
-        # background.paste(frame, box=(20, 70), mask=frame)
-        
-                
-        # all black cryptid
-        
-        # alpha = frame.getchannel('A')
-        # frame = Image.new('RGBA', frame.size, color='black')
-        # frame.putalpha(alpha) 
         background.paste(frame, box=(20, 70), mask=frame)
 
         frame = frame.convert("RGB")  
 
-        background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{shifted_list[n]:03}.png", format="png") 
+        background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{n:03}.png", format="png") 
 
         if n == 0:
-            # time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-            # draw = ImageDraw.Draw(background)
-           
-            # draw.ellipse(twoPointList, fill=None, outline='yellow', width=5)
-
-            # draw.line([(x, top + 5), (x, bottom -5)], fill='black', width=5)
-
-            # draw.line([(left +5, y), (right -5, y)], fill='black', width=5)
 
             background.save(f"{dir_path}/output/stills/{prefix}_solid.png")
 
             background_crop = background.crop((left, top, right, bottom))
 
             background_crop.save(f"{dir_path}/output/stills/{prefix}_solid_pfp.png")
-
-
-            # frame = Image.fromarray(np.uint8(array)).rotate(270).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R1}_{G1}_{B1}_{R}_{G}_{B}.png", "PNG")
-           
-            # frame = Image.new('RGB', (1180, 1180), (R, G, B)).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R}_{G}_{B}.png", "PNG")
-           
-            # frame = Image.fromarray(np.uint8(array)).save(f"{dir_path}/output/bg/{prefix}_bg_{time}_{R1}_{G1}_{B1}_{R}_{G}_{B}.png", "PNG")

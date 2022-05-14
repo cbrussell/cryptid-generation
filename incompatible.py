@@ -182,6 +182,15 @@ incompatible_list = [
     { "base_color": "purple","background": "80"},
     { "base_color": "blue","background": "80"},
 
+    # yellow background conflict
+    { "base_color": "yellow","background": "yellow"},
+    { "4_back": "back_spike_yellow", "background": "yellow"},   
+    {"7_fur": "fur_silky_yellow", "background": "yellow"},
+    {"7_fur": "fur_bushy_yellow", "background": "yellow"},
+    {"7_fur": "fur_windy_yellow", "background": "yellow"},
+    {"4_back": "back_featherwings_yellow","background": "yellow"},
+    {"4_back": "back_dragonwings_yellow", "background": "yellow"},
+
     # blue base on varisty/navy
     { "base_color": "blue", "background": "varsity"},
     { "base_color": "blue", "background": "navy"},

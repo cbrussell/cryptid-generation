@@ -20,8 +20,8 @@ def main():
     start_time = datetime.now()
 
     procs = 10  # number of processors
-    n = 30 # collection size
-    frame_count = 72 # 1 for stills, 72 for animation
+    n = 120 # collection size
+    frame_count = 1 # 1 for stills, 72 for animation
     increment = int(n / procs)
     jobs = []
     start = 1

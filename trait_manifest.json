@@ -485,7 +485,7 @@
             },
             {
                 "category": "kitsune",
-                "weight": 1,
+                "weight": 1000,
                 "colors": [
                     {
                         "color": "red",
@@ -957,6 +957,876 @@
                         "traits": [
                             {
                                 "trait": "tail_unicorn_blue",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "attribute": "1b_tail_pattern_stripes_kitsune",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "yellow",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_yellow_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_yellow_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_yellow_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_yellow_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_yellow_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_yellow_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_yellow_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_yellow_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_yellow_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "gray",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_gray_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_gray_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_gray_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_gray_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_gray_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_gray_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_gray_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_gray_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_gray_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "white",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_white_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_white_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_white_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_white_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_white_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_white_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_white_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_white_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_white_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "purple",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_purple_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_purple_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_purple_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_purple_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_purple_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_purple_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_purple_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_purple_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_purple_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "orange",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_orange_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_orange_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_orange_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_orange_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_orange_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_orange_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_orange_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_orange_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_orange_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "brown",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_brown_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_brown_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_brown_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_brown_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_brown_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_brown_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_brown_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_brown_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_brown_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "blue",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_blue_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_blue_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_blue_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_blue_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_blue_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_blue_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_blue_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_blue_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_blue_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "black",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_black_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_black_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_black_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_black_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_black_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_black_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_black_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_black_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_black_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "red",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_red_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_red_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_red_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_red_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_red_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_red_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_red_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_red_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "tail_kitsune_red_stripes_red",
                                 "weight": 1
                             }
                         ]
@@ -3941,7 +4811,7 @@
     },
     {
         "attribute": "5c_torsopattern",
-        "rarity": 0.25,
+        "rarity": 1,
         "categories": [
             {
                 "category": "stripes",

@@ -245,7 +245,18 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         data["background"] = background
 
         tail, tail_category, tail_color, tail_frames = get_trait_color(trait_manifest, "1_tail", color)
-        data.update(tail)
+        
+        # special case for kitsune tail with stripes
+        if torsopattern_category == 'stripes' and tail_category == 'kitsune':
+            tail, tail_frames = get_trait_category_color(trait_manifest, "1b_tail_pattern_stripes_kitsune", color, torsopattern_color)[0:4:3]
+            data.update(tail)
+        else:
+            data.update(tail)
+
+        # if torsopattern_category == 'stripes' and tail_category == 'kitsune': 
+        #     tail, tail_frames = get_trait_category_color(trait_manifest, "99a_tail_pattern_stripes_kitsune", color, torsopattern_color)[0:4:3]
+        #     data.update(tail)
+
 
         if torsopattern_category == 'stripes' and tail_category in ['scorpion', 'lion', 'horse', 'snake', 'brush', 'silky', 'fluffy', 'devil', 'unicorn']:
             tailpattern, tailpattern_frames = get_trait_category_color(trait_manifest, "1a_tail_pattern_stripes", tail_category, torsopattern_color)[0:4:3]

@@ -20,7 +20,7 @@ def main():
     start_time = datetime.now()
 
     procs = 10  # number of processors
-    n = 120 # collection size
+    n = 100 # collection size
     frame_count = 1 # 1 for stills, 72 for animation
     increment = int(n / procs)
     jobs = []
@@ -29,7 +29,7 @@ def main():
 
     with Manager() as manager:
         hashlist = manager.list()
-        duplicates = manager.Value('duplicates', 0)
+        duplicates = manager.Value('duplicates', 0) 
         size = manager.Value('size', n)
         for i in range(0, procs):
             process = Process(target=worker, args=(start, stop, hashlist, duplicates, trait_manifest, color_manifest, background_manifest, size, frame_count))

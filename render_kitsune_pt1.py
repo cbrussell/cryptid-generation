@@ -83,7 +83,7 @@ def worker(key, combined_path, color_opacity, base_path, base_file_name, texture
     os.makedirs(color_path, exist_ok=True)
     for i in range(1, 73):
         print(f'Making frame {i} for {key}.')
-        background_img_raw = Image.open(base_path / f'{base_file_name}_{i:03}.png').convert('RGBA')
+        background_img_raw = Image.open(base_path / f'{base_file_name}_{i:03}.png')
         alpha = background_img_raw.getchannel('A')
 
         # give frame color
@@ -94,7 +94,7 @@ def worker(key, combined_path, color_opacity, base_path, base_file_name, texture
         background_img_float = background_img.astype(float)  # Inputs to blend_modes need to be floats.
         # Import foreground image
 
-        foreground_img_raw = Image.open(texture_path / f'{texture_file_name}_{i:03}.png').convert('RGBA')  # RGBA image
+        foreground_img_raw = Image.open(texture_path / f'{texture_file_name}_{i:03}.png')  # RGBA image
         # foreground_img_raw.putalpha(255) 
         foreground_img = np.array(foreground_img_raw)
         
@@ -127,11 +127,11 @@ def worker_combine(color, combined_path):
         base_path_2 = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/tail_kitsune2/tail_kitsune2_{color}/"
         base_path_1 = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/tail_kitsune1/tail_kitsune1_{color}/"
 
-        tail_layer_5 = Image.open(base_path_5 / f'tail_kitsune5_{color}_{i:03}.png').convert('RGBA')
-        tail_layer_4 = Image.open(base_path_4 / f'tail_kitsune4_{color}_{i:03}.png').convert('RGBA')
-        tail_layer_3 = Image.open(base_path_3 / f'tail_kitsune3_{color}_{i:03}.png').convert('RGBA')
-        tail_layer_2 = Image.open(base_path_2 / f'tail_kitsune2_{color}_{i:03}.png').convert('RGBA')
-        tail_layer_1 = Image.open(base_path_1 / f'tail_kitsune1_{color}_{i:03}.png').convert('RGBA')
+        tail_layer_5 = Image.open(base_path_5 / f'tail_kitsune5_{color}_{i:03}.png')
+        tail_layer_4 = Image.open(base_path_4 / f'tail_kitsune4_{color}_{i:03}.png')
+        tail_layer_3 = Image.open(base_path_3 / f'tail_kitsune3_{color}_{i:03}.png')
+        tail_layer_2 = Image.open(base_path_2 / f'tail_kitsune2_{color}_{i:03}.png')
+        tail_layer_1 = Image.open(base_path_1 / f'tail_kitsune1_{color}_{i:03}.png')
 
         com1 = Image.alpha_composite(tail_layer_5, tail_layer_4)
         com2 = Image.alpha_composite(com1, tail_layer_3)

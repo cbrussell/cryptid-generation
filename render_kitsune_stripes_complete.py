@@ -48,17 +48,17 @@ def worker_combine(color, stripe_color, combined_path):
         base_stripe_1 = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/tailpattern_stripes_kitsune1/tailpattern_stripes_kitsune1_{stripe_color}/"
 
 
-        tail_layer_5 = Image.open(base_tail_5 / f'tail_kitsune5_{color}_{i:03}.png').convert('RGBA')
-        tail_layer_4 = Image.open(base_tail_4 / f'tail_kitsune4_{color}_{i:03}.png').convert('RGBA')
-        tail_layer_3 = Image.open(base_tail_3 / f'tail_kitsune3_{color}_{i:03}.png').convert('RGBA')
-        tail_layer_2 = Image.open(base_tail_2 / f'tail_kitsune2_{color}_{i:03}.png').convert('RGBA')
-        tail_layer_1 = Image.open(base_tail_1 / f'tail_kitsune1_{color}_{i:03}.png').convert('RGBA')
+        tail_layer_5 = Image.open(base_tail_5 / f'tail_kitsune5_{color}_{i:03}.png')
+        tail_layer_4 = Image.open(base_tail_4 / f'tail_kitsune4_{color}_{i:03}.png')
+        tail_layer_3 = Image.open(base_tail_3 / f'tail_kitsune3_{color}_{i:03}.png')
+        tail_layer_2 = Image.open(base_tail_2 / f'tail_kitsune2_{color}_{i:03}.png')
+        tail_layer_1 = Image.open(base_tail_1 / f'tail_kitsune1_{color}_{i:03}.png')
 
-        tail_stripe_5 = Image.open(base_stripe_5 / f'tailpattern_stripes_kitsune5_{stripe_color}_{i:03}.png').convert('RGBA')
-        tail_stripe_4 = Image.open(base_stripe_4 / f'tailpattern_stripes_kitsune4_{stripe_color}_{i:03}.png').convert('RGBA')
-        tail_stripe_3 = Image.open(base_stripe_3 / f'tailpattern_stripes_kitsune3_{stripe_color}_{i:03}.png').convert('RGBA')
-        tail_stripe_2 = Image.open(base_stripe_2 / f'tailpattern_stripes_kitsune2_{stripe_color}_{i:03}.png').convert('RGBA')
-        tail_stripe_1 = Image.open(base_stripe_1 / f'tailpattern_stripes_kitsune1_{stripe_color}_{i:03}.png').convert('RGBA')
+        tail_stripe_5 = Image.open(base_stripe_5 / f'tailpattern_stripes_kitsune5_{stripe_color}_{i:03}.png')
+        tail_stripe_4 = Image.open(base_stripe_4 / f'tailpattern_stripes_kitsune4_{stripe_color}_{i:03}.png')
+        tail_stripe_3 = Image.open(base_stripe_3 / f'tailpattern_stripes_kitsune3_{stripe_color}_{i:03}.png')
+        tail_stripe_2 = Image.open(base_stripe_2 / f'tailpattern_stripes_kitsune2_{stripe_color}_{i:03}.png')
+        tail_stripe_1 = Image.open(base_stripe_1 / f'tailpattern_stripes_kitsune1_{stripe_color}_{i:03}.png')
 
         tail_5_combined = Image.alpha_composite(tail_layer_5, tail_stripe_5)
         tail_4_combined = Image.alpha_composite(tail_layer_4, tail_stripe_4)

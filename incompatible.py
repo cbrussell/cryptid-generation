@@ -33,6 +33,28 @@ incompatible_list = [
     {"4_back": "back_dragonwings_black", "background": "sky"},
     {"4_back": "back_spike_black",       "background": "sky"},
 
+    # no stars with unicorn
+    {  "11b_headaccent": "headaccent_goat_star_white",      "13_horns": "horns_unicorn_light"},
+    {  "11b_headaccent": "headaccent_lion_star_white",      "13_horns": "horns_unicorn_light"},
+    {  "11b_headaccent": "headaccent_eagle_star_white",     "13_horns": "horns_unicorn_light"},
+    {  "11b_headaccent": "headaccent_horse_star_white",     "13_horns": "horns_unicorn_light"},
+    {  "11b_headaccent": "headaccent_bear_star_white",      "13_horns": "horns_unicorn_light"},
+    {  "11b_headaccent": "headaccent_wolf_star_white",      "13_horns": "horns_unicorn_light"},
+
+    {  "11b_headaccent": "headaccent_goat_star_white",      "13_horns": "horns_unicorn_medium"},
+    {  "11b_headaccent": "headaccent_lion_star_white",      "13_horns": "horns_unicorn_medium"},
+    {  "11b_headaccent": "headaccent_eagle_star_white",     "13_horns": "horns_unicorn_medium"},
+    {  "11b_headaccent": "headaccent_horse_star_white",     "13_horns": "horns_unicorn_medium"},
+    {  "11b_headaccent": "headaccent_bear_star_white",      "13_horns": "horns_unicorn_medium"},
+    {  "11b_headaccent": "headaccent_wolf_star_white",      "13_horns": "horns_unicorn_medium"},
+
+    {  "11b_headaccent": "headaccent_goat_star_white",      "13_horns": "horns_unicorn_dark"},
+    {  "11b_headaccent": "headaccent_lion_star_white",      "13_horns": "horns_unicorn_dark"},
+    {  "11b_headaccent": "headaccent_eagle_star_white",     "13_horns": "horns_unicorn_dark"},
+    {  "11b_headaccent": "headaccent_horse_star_white",     "13_horns": "horns_unicorn_dark"},
+    {  "11b_headaccent": "headaccent_bear_star_white",      "13_horns": "horns_unicorn_dark"},
+    {  "11b_headaccent": "headaccent_wolf_star_white",      "13_horns": "horns_unicorn_dark"},
+
     # purple spike clashes with purple bacjground
     { "4_back": "back_spike_purple", "background": "purp2" },          
 

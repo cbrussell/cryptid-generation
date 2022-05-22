@@ -5720,6 +5720,22 @@
                 ]
             },
             {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_goat_silky",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "category": "eagle",
                 "weight": 1,
                 "colors": [
@@ -5815,6 +5831,22 @@
                         "traits": [
                             {
                                 "trait": "furshadow_bear_bushy",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_goat_bushy",
                                 "weight": 1
                             }
                         ]
@@ -5924,6 +5956,22 @@
                 ]
             },
             {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_goat_windy",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "category": "eagle",
                 "weight": 1,
                 "colors": [
@@ -6019,6 +6067,22 @@
                         "traits": [
                             {
                                 "trait": "furshadow_bear_wooly",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "furshadow_goat_wooly",
                                 "weight": 1
                             }
                         ]
@@ -11777,6 +11841,50 @@
                         "traits": [
                             {
                                 "trait": "eyes_wise_pupil_right",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "attribute": "14g_eyes_special_left",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "scar",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_scar_left",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "attribute": "14h_eyes_special_right",
+        "rarity": 1,
+        "categories": [
+            {
+                "category": "scar",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "eyes_scar_right",
                                 "weight": 1
                             }
                         ]

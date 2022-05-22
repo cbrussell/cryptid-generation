@@ -134,7 +134,12 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
         if frames.horns_frames:
             horns = Image.open(frames.horns_frames[n])
             frame = Image.alpha_composite(frame, horns)
+
         
+        if frames.eyes_special_left_frames:
+            eyes_special_left = Image.open(frames.eyes_special_left_frames[n])
+            frame = Image.alpha_composite(frame, eyes_special_left)
+
         if frames.eyes_iris_left_frames:
             eyes_iris_left = Image.open(frames.eyes_iris_left_frames[n])
             frame = Image.alpha_composite(frame, eyes_iris_left)
@@ -146,6 +151,10 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
         if frames.eyes_eyeline_left_frames:
             eyes_eyeline_left = Image.open(frames.eyes_eyeline_left_frames[n])
             frame = Image.alpha_composite(frame, eyes_eyeline_left)
+
+        if frames.eyes_special_right_frames:
+            eyes_special_right = Image.open(frames.eyes_special_right_frames[n])
+            frame = Image.alpha_composite(frame, eyes_special_right)
 
         if frames.eyes_iris_right_frames:
             eyes_iris_right = Image.open(frames.eyes_iris_right_frames[n])

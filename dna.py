@@ -40,6 +40,8 @@ class Frames:
     background_frame: list
     tail_frames: list
     tailpattern_frames: list
+    eyes_special_left_frames: list
+    eyes_special_right_frames: list
     eyes_iris_left_frames: list
     eyes_pupil_left_frames: list
     eyes_eyeline_left_frames: list
@@ -264,27 +266,75 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         else:
             tailpattern_frames = []
 
-        eyes_iris_left, eyes_iris_left_category, eyes_iris_left_color, eyes_iris_left_frames = get_trait(trait_manifest, "14b_eyes_iris_left")
-        data.update(eyes_iris_left)
+        # scars 
 
-        eyes_pupil_left, eyes_pupil_left_category, eyes_pupil_left_color, eyes_pupil_left_frames = get_trait_category(trait_manifest, "14c_eyes_pupil_left", eyes_iris_left_category)
-        data.update(eyes_pupil_left)
+        if chance(0.5):
+            if chance(0.5):
+                eyes_special_left, eyes_special_left_category, eyes_special_left_color, eyes_special_left_frames = get_trait(trait_manifest, "14g_eyes_special_left")
+                data.update(eyes_special_left)
+                eyes_special_right_frames = []
+                eyes_iris_left_frames = []
+                eyes_pupil_left_frames = []
+                eyes_eyeline_left_frames = []
 
-        eyes_eyeline_left, eyes_eyeline_left_category, eyes_eyeline_left_color, eyes_eyeline_left_frames = get_trait_category(trait_manifest, "14a_eyes_eyeline_left", eyes_iris_left_category)
-        data.update(eyes_eyeline_left)
+                eyes_iris_right, eyes_iris_right_category, eyes_iris_right_color, eyes_iris_right_frames = get_trait(trait_manifest, "14e_eyes_iris_right")
+                data.update(eyes_iris_right)
 
-        if chance(0.025):
-            eyes_iris_right, eyes_iris_right_category, eyes_iris_right_color, eyes_iris_right_frames = get_trait_category(trait_manifest, "14e_eyes_iris_right", eyes_iris_left_category)
-            data.update(eyes_iris_right)
+                eyes_pupil_right, eyes_pupil_right_category, eyes_pupil_right_color, eyes_pupil_right_frames = get_trait_category(trait_manifest, "14f_eyes_pupil_right", eyes_iris_right_category)
+                data.update(eyes_pupil_right)
+
+
+                eyes_eyeline_right, eyes_eyeline_right_category, eyes_eyeline_right_color, eyes_eyeline_right_frames = get_trait_category(trait_manifest, "14d_eyes_eyeline_right", eyes_iris_right_category)
+                data.update(eyes_eyeline_right)
+
+
+            
+
+            else:
+                eyes_special_right, eyes_special_right_category, eyes_special_right_color, eyes_special_right_frames = get_trait(trait_manifest, "14h_eyes_special_right")
+                data.update(eyes_special_right)
+                eyes_special_left_frames = []
+                eyes_iris_right_frames = []
+                eyes_pupil_right_frames = []
+                eyes_eyeline_right_frames = []
+
+                eyes_iris_left, eyes_iris_left_category, eyes_iris_left_color, eyes_iris_left_frames = get_trait(trait_manifest, "14b_eyes_iris_left")
+                data.update(eyes_iris_left)
+
+                eyes_pupil_left, eyes_pupil_left_category, eyes_pupil_left_color, eyes_pupil_left_frames = get_trait_category(trait_manifest, "14c_eyes_pupil_left", eyes_iris_left_category)
+                data.update(eyes_pupil_left)
+
+
+                eyes_eyeline_left, eyes_eyeline_left_category, eyes_eyeline_left_color, eyes_eyeline_left_frames = get_trait_category(trait_manifest, "14a_eyes_eyeline_left", eyes_iris_left_category)
+                data.update(eyes_eyeline_left)
+
+ 
         else:
-            eyes_iris_right, eyes_iris_right_category, eyes_iris_right_color, eyes_iris_right_frames = get_trait_category_color(trait_manifest, "14e_eyes_iris_right", eyes_iris_left_category, eyes_iris_left_color)
-            data.update(eyes_iris_right)
+            eyes_special_left_frames = []
+            eyes_special_right_frames = []
 
-        eyes_pupil_right, eyes_pupil_right_category, eyes_pupil_right_color, eyes_pupil_right_frames = get_trait_category(trait_manifest, "14f_eyes_pupil_right", eyes_iris_left_category)
-        data.update(eyes_pupil_right)
-        
-        eyes_eyeline_right, eyes_eyeline_right_category, eyes_eyeline_right_color, eyes_eyeline_right_frames = get_trait_category(trait_manifest, "14d_eyes_eyeline_right", eyes_iris_left_category)
-        data.update(eyes_eyeline_right)
+            eyes_iris_left, eyes_iris_left_category, eyes_iris_left_color, eyes_iris_left_frames = get_trait(trait_manifest, "14b_eyes_iris_left")
+            data.update(eyes_iris_left)
+
+            eyes_pupil_left, eyes_pupil_left_category, eyes_pupil_left_color, eyes_pupil_left_frames = get_trait_category(trait_manifest, "14c_eyes_pupil_left", eyes_iris_left_category)
+            data.update(eyes_pupil_left)
+
+
+            eyes_eyeline_left, eyes_eyeline_left_category, eyes_eyeline_left_color, eyes_eyeline_left_frames = get_trait_category(trait_manifest, "14a_eyes_eyeline_left", eyes_iris_left_category)
+            data.update(eyes_eyeline_left)
+
+            if chance(0.025):
+                eyes_iris_right, eyes_iris_right_category, eyes_iris_right_color, eyes_iris_right_frames = get_trait_category(trait_manifest, "14e_eyes_iris_right", eyes_iris_left_category)
+                data.update(eyes_iris_right)
+            else:
+                eyes_iris_right, eyes_iris_right_category, eyes_iris_right_color, eyes_iris_right_frames = get_trait_category_color(trait_manifest, "14e_eyes_iris_right", eyes_iris_left_category, eyes_iris_left_color)
+                data.update(eyes_iris_right)
+
+            eyes_pupil_right, eyes_pupil_right_category, eyes_pupil_right_color, eyes_pupil_right_frames = get_trait_category(trait_manifest, "14f_eyes_pupil_right", eyes_iris_left_category)
+            data.update(eyes_pupil_right)
+
+            eyes_eyeline_right, eyes_eyeline_right_category, eyes_eyeline_right_color, eyes_eyeline_right_frames = get_trait_category(trait_manifest, "14d_eyes_eyeline_right", eyes_iris_left_category)
+            data.update(eyes_eyeline_right)
 
         for i in range(len(incompatible_list)):
             if data == data | incompatible_list[i]:
@@ -324,6 +374,8 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
                     , background_frame
                     , tail_frames
                     , tailpattern_frames
+                    , eyes_special_left_frames
+                    , eyes_special_right_frames
                     , eyes_iris_left_frames
                     , eyes_pupil_left_frames
                     , eyes_eyeline_left_frames

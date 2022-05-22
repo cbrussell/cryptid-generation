@@ -485,7 +485,7 @@
             },
             {
                 "category": "kitsune",
-                "weight": 1000,
+                "weight": 1,
                 "colors": [
                     {
                         "color": "red",
@@ -4811,7 +4811,7 @@
     },
     {
         "attribute": "5c_torsopattern",
-        "rarity": 1,
+        "rarity": 0.2,
         "categories": [
             {
                 "category": "stripes",
@@ -5183,6 +5183,22 @@
                         "traits": [
                             {
                                 "trait": "neckshadow_bear",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "neckshadow_goat",
                                 "weight": 1
                             }
                         ]
@@ -9060,6 +9076,102 @@
                 ]
             },
             {
+                "category": "goat",
+                "weight": 10000,
+                "colors": [
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headbase_goat_black",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headbase_goat_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headbase_goat_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headbase_goat_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headbase_goat_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headbase_goat_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headbase_goat_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headbase_goat_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headbase_goat_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "category": "eagle",
                 "weight": 1,
                 "colors": [
@@ -9482,6 +9594,38 @@
                 ]
             },
             {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headaccent_goat_blaze_white",
+                                "weight": 1
+                            },
+                            {
+                                "trait": "headaccent_goat_face_white",
+                                "weight": 1
+                            },
+                            {
+                                "trait": "headaccent_goat_mask_white",
+                                "weight": 1
+                            },
+                            {
+                                "trait": "headaccent_goat_points_white",
+                                "weight": 1
+                            },
+                            {
+                                "trait": "headaccent_goat_star_white",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "category": "eagle",
                 "weight": 1,
                 "colors": [
@@ -9705,6 +9849,102 @@
                         "traits": [
                             {
                                 "trait": "headpattern_lion_stripes_black",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "yellow",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_goat_stripes_yellow",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "white",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_goat_stripes_white",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "red",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_goat_stripes_red",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "purple",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_goat_stripes_purple",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "orange",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_goat_stripes_orange",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "gray",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_goat_stripes_gray",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "brown",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_goat_stripes_brown",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "blue",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_goat_stripes_blue",
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "color": "black",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "headpattern_goat_stripes_black",
                                 "weight": 1
                             }
                         ]
@@ -10111,6 +10351,22 @@
                         "traits": [
                             {
                                 "trait": "mouth_bear_empty",
+                                "weight": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "category": "goat",
+                "weight": 1,
+                "colors": [
+                    {
+                        "color": "empty",
+                        "weight": 1,
+                        "traits": [
+                            {
+                                "trait": "mouth_goat_empty",
                                 "weight": 1
                             }
                         ]

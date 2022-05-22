@@ -50,7 +50,8 @@ incompatible_list = [
     { "4_back": "back_spike_white", "background":               "super_tan" },           
     { "4_back": "back_dragonwings_white", "background":         "super_tan" },
     { "4_back": "back_featherwings_white", "background":        "super_tan" },
-    { "4_back": "back_spike_white", "background":               "super_tan" },              
+    { "4_back": "back_spike_white", "background":               "super_tan" },  
+    {"5c_torsopattern": "torsopattern_stripes_white", "background": "super_tan"},            
     
     # orange featherwing clashes
     { "4_back": "back_featherwings_orange", "background": "sand2"},

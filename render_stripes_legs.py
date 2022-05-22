@@ -17,10 +17,14 @@ def main():
 
     jobs = []
     with Manager() as manager:
-        color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.10], 'yellow': ['#Dc7F12', 0.2]}
+        color_opacity_stripes = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.10], 'yellow': ['#Dc7F12', 0.2]}
         # color_opacity = {'white': ['#FDF7F2', 0.10]}
+        # color_opacity_head = {'black': ['#2A3A3F', 0.3] ,'blue': ['#0196C7', 0.2], 'brown': ['#C35824', 0.2], 'gray': ['#7C92A2', 0.2], 'orange': ['#F47813', 0.2], 'purple': ['#7037D9', 0.3], 'red': ['#DC0017', 0.2], 'white': ['#FFF1E6', 0.15], 'yellow': ['#F5B722', 0.2]}
+       
+        # for stripes - color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.10], 'yellow': ['#Dc7F12', 0.2]}
 
-        list = ['tailpattern_stripes_unicorn', 'tailpattern_stripes_devil']
+
+        list = ['headpattern_goat_stripes']
         
         # list = ['headpattern']
 
@@ -31,7 +35,7 @@ def main():
         start_time = datetime.now()
         for item in list:
             for animal in animals:
-                for color in color_opacity:
+                for color in color_opacity_stripes:
                 # animal = 'eagle'
                     base_folder_name = f'{item}_color'                  # color folder
                     texture_folder_name = f'{item}_texture'  # texture folder
@@ -61,7 +65,7 @@ def main():
                     os.makedirs(combined_path, exist_ok=True)
 
                     
-                    process = Process(target=worker, args=(color, combined_path, color_opacity, base_path, base_folder_name, texture_path, texture_folder_name, combined_name))
+                    process = Process(target=worker, args=(color, combined_path, color_opacity_stripes, base_path, base_folder_name, texture_path, texture_folder_name, combined_name))
                     jobs.append(process)
         [j.start() for j in jobs]
         [j.join() for j in jobs]

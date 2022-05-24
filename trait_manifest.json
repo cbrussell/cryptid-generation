@@ -485,7 +485,7 @@
             },
             {
                 "category": "kitsune",
-                "weight": 1,
+                "weight": 1000,
                 "colors": [
                     {
                         "color": "red",
@@ -509,7 +509,7 @@
                     },
                     {
                         "color": "black",
-                        "weight": 1,
+                        "weight": 100,
                         "traits": [
                             {
                                 "trait": "tail_kitsune_black",
@@ -529,7 +529,7 @@
                     },
                     {
                         "color": "purple",
-                        "weight": 1,
+                        "weight": 100,
                         "traits": [
                             {
                                 "trait": "tail_kitsune_purple",
@@ -4281,7 +4281,7 @@
     },
     {
         "attribute": "4_back",
-        "rarity": 0.6,
+        "rarity": 0.4,
         "categories": [
             {
                 "category": "featherwings",
@@ -5311,7 +5311,7 @@
     },
     {
         "attribute": "7_fur",
-        "rarity": 0.45,
+        "rarity": 0.4,
         "categories": [
             {
                 "category": "bushy",
@@ -9141,7 +9141,7 @@
             },
             {
                 "category": "goat",
-                "weight": 10000,
+                "weight": 1,
                 "colors": [
                     {
                         "color": "black",
@@ -10525,11 +10525,11 @@
     },
     {
         "attribute": "13_horns",
-        "rarity": 0.5,
+        "rarity": 0.35,
         "categories": [
             {
                 "category": "ram",
-                "weight": 1,
+                "weight": 0.8,
                 "colors": [
                     {
                         "color": "light",

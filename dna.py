@@ -266,9 +266,11 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         else:
             tailpattern_frames = []
 
-        # scars 
+        # scar logic
+        # 4% of scar
+        # 50% chance left or right
 
-        if chance(0.5):
+        if chance(0.04):
             if chance(0.5):
                 eyes_special_left, eyes_special_left_category, eyes_special_left_color, eyes_special_left_frames = get_trait(trait_manifest, "14g_eyes_special_left")
                 data.update(eyes_special_left)

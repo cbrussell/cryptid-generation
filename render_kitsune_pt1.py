@@ -11,14 +11,18 @@ from multiprocessing import Process, Manager
 def main():
     color_opacity = { 
         'brown':    [['#c35824', 0.2], ['#a9431e', 0.25],['#a9431e', 0.40],['#a9431e', 0.7], ['#813513', 0.85]],
-        'purple':   [['#7037D9', 0.2], ['#572CA2', 0.25], ['#572CA2', 0.40], ['#572CA2', 0.7], ['#3E2566', 0.85]],
-        'black':    [['#2A3A3F', 0.2], ['#1E2D37', 0.25], ['#1E2D37', 0.40], ['#1E2D37', 0.7], ['#121A24', 0.85]],
+
+        'purple':   [['#7037D9', 0.4], ['#572CA2', 0.45], ['#572CA2', 0.60], ['#572CA2', 0.9], ['#3E2566', 1]],
+        'black':    [['#2A3A3F', 0.4], ['#1E2D37', 0.45], ['#1E2D37', 0.60], ['#1E2D37', 0.9], ['#121A24', 1]],
+
+
         'blue':     [['#0196C7', 0.2], ['#0178B7', 0.25], ['#0178B7', 0.40], ['#0178B7', 0.7], ['#0257A5', 0.85]],
         'red':      [['#DC0017', 0.2], ['#B00010', 0.25], ['#B00010', 0.40], ['#B00010', 0.7], ['#85000A', 0.85]],
         'orange':   [['#F47813', 0.2], ['#EA5F14', 0.25], ['#EA5F14', 0.40], ['#EA5F14', 0.7], ['#E24211', 0.85]],
         'gray':     [['#7C92A2', 0.2], ['#5C7081', 0.25], ['#5C7081', 0.40], ['#5C7081', 0.7], ['#3E4C5E', 0.85]],
         'yellow':   [['#F5B722', 0.2], ['#E69B18', 0.25], ['#E69B18', 0.40], ['#E69B18', 0.7], ['#DC7F12', 0.85]],
-        'white':    [['#FFF1E6', 0.2], ['#E9D8CF', 0.25], ['#E9D8CF', 0.40], ['#E9D8CF', 0.7], ['#B8A49A', 0.85]],
+        'white':    [['#FFF1E6', 0.1], ['#E9D8CF', 0.15], ['#E9D8CF', 0.30], ['#E9D8CF', 0.6], ['#B8A49A', 0.75]],
+
     }
 
 
@@ -57,18 +61,18 @@ def main():
         # combine kitsunes into one frame, no color adding, just layt
         
 
-    jobs = []
-    with Manager() as manager:
-        # color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.10], 'yellow': ['#Dc7F12', 0.2]}
-        # color_opacity = {'brown': ['#813513', 0.2]}
-        start_time = datetime.now()
-        for color in color_opacity:
-            combined_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/tail_kitsune_{color}/"
-            os.makedirs(combined_path, exist_ok=True)
-            process = Process(target=worker_combine, args=(color, combined_path))
-            jobs.append(process)
-        [j.start() for j in jobs]
-        [j.join() for j in jobs]
+    # jobs = []
+    # with Manager() as manager:
+    #     # color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.10], 'yellow': ['#Dc7F12', 0.2]}
+    #     # color_opacity = {'brown': ['#813513', 0.2]}
+    #     start_time = datetime.now()
+    #     for color in color_opacity:
+    #         combined_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/tail_kitsune_{color}/"
+    #         os.makedirs(combined_path, exist_ok=True)
+    #         process = Process(target=worker_combine, args=(color, combined_path))
+    #         jobs.append(process)
+    #     [j.start() for j in jobs]
+    #     [j.join() for j in jobs]
 
     end_time = datetime.now()
     elapsed_time = end_time - start_time
@@ -133,7 +137,9 @@ def worker_combine(color, combined_path):
         tail_layer_2 = Image.open(base_path_2 / f'tail_kitsune2_{color}_{i:03}.png')
         tail_layer_1 = Image.open(base_path_1 / f'tail_kitsune1_{color}_{i:03}.png')
 
-        com1 = Image.alpha_composite(tail_layer_5, tail_layer_4)
+        frame = Image.new('RGBA', (1100, 1100)) # make transparent background
+        com0 = Image.alpha_composite(frame, tail_layer_5)
+        com1 = Image.alpha_composite(com0, tail_layer_4)
         com2 = Image.alpha_composite(com1, tail_layer_3)
         com3 = Image.alpha_composite(com2, tail_layer_2)
         com4 = Image.alpha_composite(com3, tail_layer_1)

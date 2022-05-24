@@ -18,7 +18,6 @@ def main():
     stop = increment + 1    
 
     with Manager() as manager:
-      
        
         for i in range(0, procs):
             process = Process(target=worker, args=(start, stop))

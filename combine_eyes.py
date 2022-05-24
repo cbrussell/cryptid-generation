@@ -201,7 +201,7 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
 
         background.paste(frame, box=(20, 70), mask=frame)
 
-        frame = frame.convert("RGB")  
+        # frame = frame.convert("RGB")  
 
         background.save(f"{dir_path}/output/raw/{prefix}/{prefix}_{shifted_list[n]:03}.png", format="png") 
 

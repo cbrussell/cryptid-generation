@@ -15,7 +15,8 @@ def gridSize(n):
         a = math.floor(a)
         if n % a != 0:
             a -= 1
-        else: break
+        else: 
+            break
     b = n/a
 
     grid.append(int(b))

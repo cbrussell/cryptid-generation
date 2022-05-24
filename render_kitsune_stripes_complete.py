@@ -60,13 +60,25 @@ def worker_combine(color, stripe_color, combined_path):
         tail_stripe_2 = Image.open(base_stripe_2 / f'tailpattern_stripes_kitsune2_{stripe_color}_{i:03}.png')
         tail_stripe_1 = Image.open(base_stripe_1 / f'tailpattern_stripes_kitsune1_{stripe_color}_{i:03}.png')
 
-        tail_5_combined = Image.alpha_composite(tail_layer_5, tail_stripe_5)
-        tail_4_combined = Image.alpha_composite(tail_layer_4, tail_stripe_4)
-        tail_3_combined = Image.alpha_composite(tail_layer_3, tail_stripe_3)
-        tail_2_combined = Image.alpha_composite(tail_layer_2, tail_stripe_2)
-        tail_1_combined = Image.alpha_composite(tail_layer_1, tail_stripe_1)
+        frame = Image.new('RGBA', (1100, 1100)) # make transparent background
 
-        com1 = Image.alpha_composite(tail_5_combined, tail_4_combined)
+        tail_5_frame = Image.alpha_composite(frame, tail_layer_5)
+        tail_5_combined = Image.alpha_composite(tail_5_frame, tail_stripe_5)
+        
+        tail_4_frame = Image.alpha_composite(frame, tail_layer_4)
+        tail_4_combined = Image.alpha_composite(tail_4_frame, tail_stripe_4)
+
+        tail_3_frame = Image.alpha_composite(frame, tail_layer_3)
+        tail_3_combined = Image.alpha_composite(tail_3_frame, tail_stripe_3)
+
+        tail_2_frame = Image.alpha_composite(frame, tail_layer_2)
+        tail_2_combined = Image.alpha_composite(tail_2_frame, tail_stripe_2)
+
+        tail_1_frame = Image.alpha_composite(frame, tail_layer_1)
+        tail_1_combined = Image.alpha_composite(tail_1_frame, tail_stripe_1)
+
+        com0 = Image.alpha_composite(frame, tail_5_combined)
+        com1 = Image.alpha_composite(com0, tail_4_combined)
         com2 = Image.alpha_composite(com1, tail_3_combined)
         com3 = Image.alpha_composite(com2, tail_2_combined)
         com4 = Image.alpha_composite(com3, tail_1_combined)

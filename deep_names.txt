@@ -34,6 +34,8 @@ Cella
 Celenie
 Jelazar
 Xor
+Artemis
+Odysseus
 Lemuel
 Nadira
 Isalina
@@ -54,7 +56,6 @@ Ilka
 Roela
 Delyna
 Phonin
-Jada
 Moata
 Bretadis
 Oran
@@ -435,7 +436,6 @@ Jeren
 Jemma
 Careon
 Keela
-Jylsyn
 Ule
 Chelen
 Hute
@@ -470,7 +470,6 @@ Wallon
 Elena
 Paola
 Kevlar
-Yam
 Haroun
 Naysa
 Edon
@@ -771,7 +770,7 @@ Ylela
 Wiloann
 Devanna
 Calarethare
-Quin
+Caladan
 Yndel
 Wouen
 Hollsfyr
@@ -1145,7 +1144,6 @@ Zelak
 Eresyn
 Ilaadre
 Jellana
-Vittorea
 Wistllen
 Nadilia
 Nepisa
@@ -1297,7 +1295,6 @@ Melara
 Lothar
 Careemur
 Drubina
-Morvagen
 Piedyn
 Arica
 Dedly
@@ -1851,7 +1848,6 @@ Wedon
 Wetlil
 Vidanyn
 Karlen
-Vagyr
 Bakir
 Lelle
 Bryti
@@ -1958,6 +1954,7 @@ Aearellen
 Daran
 Isakuri
 Moenan
+Elwynn
 Fedros
 Fadelyn
 Xartor
@@ -2281,7 +2278,6 @@ Tennin
 Tarih
 Belilit
 Isana
-Berobitcrel
 Quela
 Henda
 Varesawith
@@ -2343,7 +2339,6 @@ Aeathal
 Ursoba
 Borram
 Wynan
-Vagera
 Wyden
 Toemas
 Welanne
@@ -2381,7 +2376,7 @@ Urena
 Padrion
 Bandar
 Querenpalln
-Doras
+Doras 
 Barth
 Fenaerken
 Shensa
@@ -2665,7 +2660,6 @@ Undenu
 Wilona
 Jelora
 Valelia
-Xer
 Malewyn
 Giratt
 Torrid
@@ -3091,7 +3085,7 @@ Thona
 Palia
 Qmiravye
 Sarylona
-Yrass
+Ygritte
 Bryntae
 Issacue
 Jerlana
@@ -3104,6 +3098,8 @@ Aree
 Arayt
 Bertylla
 Arana
+Astrid
+
 Borrosken
 Bandire
 Boraa
@@ -3246,6 +3242,7 @@ Uterdan
 Xasalsia
 Yenaus
 Kimchriss
+
 Kalliamie
 Hanare
 Kyta
@@ -4257,7 +4254,6 @@ Hamisun
 Chedly
 Wynana
 Conelin
-Fucte
 Tormare
 Ilaadda
 Fuexnoin
@@ -4596,7 +4592,6 @@ Wiret
 Nepisu
 Hemresa
 Kalliveri
-Vager
 Cervil
 Valenyn
 Galgane
@@ -4683,7 +4678,6 @@ Yasasta
 Lillyn
 Villana
 Gurel
-Vagish
 Korreni
 Wiryn
 Kiselia
@@ -5420,7 +5414,6 @@ Quennar
 Vasilian
 Dalobisa
 Utererhyna
-Vaggan
 Teishiss
 Yasin
 Farnam
@@ -5767,7 +5760,6 @@ Irandie
 Istria
 Belenys
 Delalyen
-Vageric
 Lovar
 Pithriss
 Jalida
@@ -6288,7 +6280,6 @@ Nollana
 Irick
 Xashardynn
 Zelah
-Vagyi
 Jolelle
 Brilella
 Veryana
@@ -6479,7 +6470,6 @@ Nail
 Vorion
 Arilian
 Fandere
-Vaggar
 Ganoan
 Merara
 Quertonth
@@ -6757,7 +6747,6 @@ Conilla
 Rolram
 Portil
 Bericlla
-Vagin
 Esson
 Earissa
 Xafesl
@@ -6959,7 +6948,7 @@ Amoclana
 Malina
 Jinnya
 Tolia
-Quenesuc
+Quinn
 Bender
 Joemclere
 Jelsaen
@@ -7044,7 +7033,6 @@ Lavana
 Delalylec
 Belaradnia
 Vasodo
-Vagis
 Vasilolla
 Tamelis
 Gind
@@ -7764,6 +7752,9 @@ Kahrel
 Issacia
 Inoren
 Hollsentel
+Sentella
+Kris
+Solo
 Gaetar
 Terlu
 Falronne
@@ -7825,7 +7816,7 @@ Tudeor
 Raishale
 Moracy
 Quesun
-Ametilll
+Ametill
 Qronda
 Imoran
 Fadelda
@@ -7955,7 +7946,6 @@ Fenaragal
 Zekmun
 Hollundir
 Beladua
-Vageri
 Jaye
 Anubl
 Meralis
@@ -7974,7 +7964,6 @@ Thano
 Ingab
 Odtavanthen
 Borracis
-Fucta
 Calline
 Caradd
 Jelesa
@@ -8023,7 +8012,6 @@ Xyla
 Onore
 Cerviell
 Pethora
-Querennulinnera
 Zinven
 Celaddyn
 Hilenne
@@ -8089,7 +8077,6 @@ Callondan
 Borros
 Ceorrin
 Quercardyn
-Donothanshan
 Joelln
 Gelwyn
 Savet
@@ -8870,8 +8857,8 @@ Joles
 Zerag
 Halasta
 Gureo
-Fucch
-Belolweyn
+
+Belowyn
 Holldod
 Sarraee
 Qronen
@@ -8885,11 +8872,9 @@ Tuverevla
 Vordren
 Merilie
 Darai
-Daengundile
 Birr
 Joelll
 Meraylua
-Futct
 Amtost
 Areedi
 Javler
@@ -9212,7 +9197,6 @@ Zerigin
 Huscte
 Kallielthelle
 Livor
-Vagim
 Yneriaell
 Pellorian
 Kallivael
@@ -9560,7 +9544,6 @@ Tomal
 Vittharafi
 Fedrael
 Aretunna
-Vageyna
 Ilson
 Jadlin
 Maram
@@ -9928,6 +9911,7 @@ Lemwa
 Zekmon
 Corlessiss
 Hutr
+Lieuline
 Weladen
 Hoenic
 Kalmor
@@ -10215,7 +10199,6 @@ Sadalen
 Hamoura
 Nesau
 Tamafa
-Vagena
 Valeniu
 Celelide
 Darnar
@@ -10799,7 +10782,6 @@ Vasosansh
 Calamymee
 Varodlyn
 Hollsfelen
-Vaggana
 Fretha
 Gerlica
 Aeldon
@@ -10844,7 +10826,6 @@ Gendare
 Mhraetve
 Toela
 Ariannd
-Aesuc
 Undyn
 Zhelsa
 Lilsy
@@ -10898,7 +10879,6 @@ Brogden
 Hollderessll
 Varelle
 Merelan
-Vaggari
 Vasille
 Hoenna
 Norisha
@@ -10941,7 +10921,7 @@ Barsadwyn
 Dedre
 Zorithas
 Carimiel
-Morvag
+
 Terlil
 Cavar
 Kelinia
@@ -11243,7 +11223,6 @@ Jayil
 Fister
 Wistrell
 Teisthona
-Vaggal
 Holansy
 Moerag
 Caledori
@@ -11328,7 +11307,6 @@ Valery
 Elmay
 Shaera
 Bornue
-Vaggora
 Torrini
 Caladrim
 Lilennena
@@ -11368,6 +11346,7 @@ Gerishal
 Kallivil
 Vasodla
 Uexer
+Xert
 Zircinn
 Aetall
 Tarielia

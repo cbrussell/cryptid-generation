@@ -20,3 +20,17 @@ Genrate Cryptids
 9. At reveal, upload mix of final and pre-reveal jsons to IPFS
 10. Update baseURI
 11. Once sold out, freeze baseURI.
+
+## Dry run
+1. Mint 1,111
+2. Upload data for 1,111
+3. Upload contract
+4. Upload placeholder to IPFS
+5. Merkle root for final collection
+6. Airdrops
+7. Mint whitelist
+8. Mint secondary
+9. Mint team supply
+10. Mint public
+11. Complete mint
+12. Upload metadata

@@ -8,10 +8,11 @@ def main():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     os.makedirs(f"{dir_path}/output/gifs", exist_ok=True)
     os.makedirs(f"{dir_path}/output/videos", exist_ok=True)
+    os.makedirs(f"{dir_path}/output/apngs", exist_ok=True)
     start_time = datetime.now()
 
     procs = 10  # number of processors
-    n = 20 # collection size
+    n = 40 # collection size
     increment = int(n / procs)
     jobs = []
     start = 1
@@ -49,8 +50,11 @@ def worker(start, stop):
         gif = f'ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png -i output/raw/{id}/{id}_palette.png -filter_complex "scale=750:-1:flags=lanczos,paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle"  output/gifs/{id}.gif'
         subprocess.call(gif,shell=True)
 
-        # png = f'ffmpeg -r 24 -y -thread_queue_size 512  -i output/raw/{id}/{id}_%03d_t.png  -filter_complex "scale=750:-1:flags=lanczos,setpts=PTS-STARTPTS" -plays 0 -f apng output/gifs/{id}.png'
+        # png = f'ffmpeg -r 24 -y -thread_queue_size 512  -i output/raw/{id}/{id}_%03d_t.png  -filter_complex "scale=750:-1:flags=lanczos,setpts=PTS-STARTPTS" -plays 0 -f apng output/apngs/{id}.png'
         # subprocess.call(png,shell=True)
+
+        png = f'ffmpeg -r 24 -y -thread_queue_size 512  -i output/raw/{id}/{id}_%03d_t.png  -filter_complex "setpts=PTS-STARTPTS" -plays 0 -f apng output/apngs/{id}.png'
+        subprocess.call(png,shell=True)
 
         number += 1
 

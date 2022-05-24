@@ -103,6 +103,7 @@ incompatible_list = [
     { "base_color": "blue", "background": "rust"},
 
     { "base_color": "red", "background": "rust"},
+        { "base_color": "gray", "background": "rust"},
 
     # avoid dark backround and medium/dark horns 
     { "background": "navy", "13_horns": "horns_ram_medium"},
@@ -232,7 +233,11 @@ incompatible_list = [
 
     {"7_fur": "fur_silky_white","background": "tan_egg_light"},
     {"7_fur": "fur_wooly_white","background": "tan_egg_dark"},
+    {"7_fur": "fur_wooly_white","background": "supertan"},
+
     {"7_fur": "fur_silky_white","background": "tan_egg_dark"},
+    {"7_fur": "fur_silky_white","background": "tan_egg_light"},
+    {"7_fur": "fur_silky_white","background": "supertan"},
     
     # no black on black/navy
     {"base_color": "black", "background": "navy"},

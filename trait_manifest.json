@@ -485,7 +485,7 @@
             },
             {
                 "category": "kitsune",
-                "weight": 1000,
+                "weight": 1,
                 "colors": [
                     {
                         "color": "red",
@@ -4811,7 +4811,7 @@
     },
     {
         "attribute": "5c_torsopattern",
-        "rarity": 0.2,
+        "rarity": 0.3,
         "categories": [
             {
                 "category": "stripes",

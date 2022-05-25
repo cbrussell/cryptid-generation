@@ -22,6 +22,7 @@ Genrate Cryptids
 11. Once sold out, freeze baseURI.
 
 ## Dry run
+
 1. Mint 1,111
 2. Upload data for 1,111
 3. Upload contract
@@ -34,3 +35,4 @@ Genrate Cryptids
 10. Mint public
 11. Complete mint
 12. Upload metadata
+13. Figure out how to host own IPFS - need at least 5 tb

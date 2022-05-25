@@ -167,6 +167,7 @@ incompatible_list = [
     { "base_color": "purple","background": "black"},
     { "base_color": "purple","background": "80"},
     { "base_color": "purple","background": "sandy"},
+    { "base_color": "red","background": "sandy"},
     { "base_color": "blue","background": "sandy"},
 
     # white stripes on sandy bg
@@ -186,6 +187,8 @@ incompatible_list = [
     { "base_color": "red","background": "rain"},
     { "base_color": "red","background": "turq"},
     { "4_back": "back_spike_red","background": "turq"},
+
+     {"4_back": "back_spike_purple","background": "purpish"},
     
     
 

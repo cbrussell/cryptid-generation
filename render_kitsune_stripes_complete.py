@@ -60,7 +60,7 @@ def worker_combine(color, stripe_color, combined_path):
         tail_stripe_2 = Image.open(base_stripe_2 / f'tailpattern_stripes_kitsune2_{stripe_color}_{i:03}.png')
         tail_stripe_1 = Image.open(base_stripe_1 / f'tailpattern_stripes_kitsune1_{stripe_color}_{i:03}.png')
 
-        frame = Image.new('RGBA', (1100, 1100)) # make transparent background
+        frame = Image.new('RGB', (1100, 1100)) # make transparent background
 
         tail_5_frame = Image.alpha_composite(frame, tail_layer_5)
         tail_5_combined = Image.alpha_composite(tail_5_frame, tail_stripe_5)

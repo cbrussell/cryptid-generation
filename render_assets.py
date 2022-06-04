@@ -12,7 +12,7 @@ def main():
     start_time = datetime.now()
 
     procs = 10  # number of processors
-    n = 40 # collection size
+    n = 70 # collection size
     increment = int(n / procs)
     jobs = []
     start = 1

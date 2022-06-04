@@ -61,18 +61,18 @@ def main():
         # combine kitsunes into one frame, no color adding, just layt
         
 
-    # jobs = []
-    # with Manager() as manager:
-    #     # color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.10], 'yellow': ['#Dc7F12', 0.2]}
-    #     # color_opacity = {'brown': ['#813513', 0.2]}
-    #     start_time = datetime.now()
-    #     for color in color_opacity:
-    #         combined_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/tail_kitsune_{color}/"
-    #         os.makedirs(combined_path, exist_ok=True)
-    #         process = Process(target=worker_combine, args=(color, combined_path))
-    #         jobs.append(process)
-    #     [j.start() for j in jobs]
-    #     [j.join() for j in jobs]
+    jobs = []
+    with Manager() as manager:
+        # color_opacity = {'black': ['#121A24', 0.4] ,'blue': ['#0257A5', 0.2], 'brown': ['#813513', 0.2], 'gray': ['#3E4C5E', 0.2], 'orange': ['#E24211', 0.2], 'purple': ['#3E2566', 0.4], 'red': ['#85000A', 0.2], 'white': ['#FDF7F2', 0.10], 'yellow': ['#Dc7F12', 0.2]}
+        # color_opacity = {'brown': ['#813513', 0.2]}
+        start_time = datetime.now()
+        for color in color_opacity:
+            combined_path = Path(__file__).resolve().parents[1] / f"cryptid-generation/output/to_be_combined/tail_kitsune_{color}/"
+            os.makedirs(combined_path, exist_ok=True)
+            process = Process(target=worker_combine, args=(color, combined_path))
+            jobs.append(process)
+        [j.start() for j in jobs]
+        [j.join() for j in jobs]
 
     end_time = datetime.now()
     elapsed_time = end_time - start_time
@@ -137,14 +137,14 @@ def worker_combine(color, combined_path):
         tail_layer_2 = Image.open(base_path_2 / f'tail_kitsune2_{color}_{i:03}.png')
         tail_layer_1 = Image.open(base_path_1 / f'tail_kitsune1_{color}_{i:03}.png')
 
-        frame = Image.new('RGBA', (1100, 1100)) # make transparent background
-        com0 = Image.alpha_composite(frame, tail_layer_5)
-        com1 = Image.alpha_composite(com0, tail_layer_4)
-        com2 = Image.alpha_composite(com1, tail_layer_3)
-        com3 = Image.alpha_composite(com2, tail_layer_2)
-        com4 = Image.alpha_composite(com3, tail_layer_1)
+        frame = Image.new('RGB', (1100, 1100)) # make transparent background
+        frame = Image.alpha_composite(frame, tail_layer_5)
+        frame = Image.alpha_composite(frame, tail_layer_4)
+        frame = Image.alpha_composite(frame, tail_layer_3)
+        frame = Image.alpha_composite(frame, tail_layer_2)
+        frame = Image.alpha_composite(frame, tail_layer_1)
 
-        com4.save(combined_path / f'tail_kitsune_{color}_{i:03}.png', format="png")
+        frame.save(combined_path / f'tail_kitsune_{color}_{i:03}.png', format="png")
 
     print(f'Multiprocess job complete! Process ID is {os.getpid()}.')
 

@@ -18,7 +18,7 @@ def combine_attributes(frames: Frames, prefix: str, frame_count: int):
 
         # frame = Image.new('RGB', (1180, 1180), (R, G, B)) # random solid
 
-        frame = Image.new('RGBA', (1100, 1100)) # make transparent background
+        frame = Image.new('RGB', (1100, 1100)) # make transparent background
         
        
         print(f'Generating frame {n}...')

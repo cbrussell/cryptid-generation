@@ -16,19 +16,28 @@ def main():
     color_manifest = ColorManifest(json.load(open(f'{dir_path}/color_manifest.json')))
     background_manifest = BackgroundManifest(json.load(open(f'{dir_path}/background_manifest.json')))
     os.makedirs(f"{dir_path}/output/stills", exist_ok=True)
-    os.makedirs(f"{dir_path}/output/bg", exist_ok=True)
     start_time = datetime.now()
 
-    procs = 10  # number of processors
-    n = 30 # collection size
-    frame_count = 72 # 1 for stills, 72 for animation
-    increment = int(n / procs)
-    jobs = []
-    start = 1
-    stop = increment + 1
+
 
     with Manager() as manager:
-        hashlist = manager.list()
+        if os.path.exists("hash_list.txt"):
+            hash_list = [line.strip() for line in open('hash_list.txt')]
+            hashlist = manager.list(hash_list)
+        else:
+            hashlist = manager.list()
+
+        beginning_index = len(hashlist)
+
+
+        procs = 10  # number of processors
+        n = 50 # collection size
+        frame_count = 1 # 1 for stills, 72 for animation
+        increment = int(n / procs)
+        jobs = []
+        start = beginning_index
+        stop = beginning_index + increment
+
         duplicates = manager.Value('duplicates', 0) 
         size = manager.Value('size', n)
         for i in range(0, procs):
@@ -42,8 +51,13 @@ def main():
 
         end_time = datetime.now()
         elapsed_time = end_time - start_time
-        collection_total = (len(hashlist))
-        print(f'{collection_total} of {n} cryptids generated in {elapsed_time}. {duplicates.value} duplicates found.')
+        collection_total = len(hashlist)
+        with open('hash_list.txt', 'w') as f:
+            for item in hashlist:
+                f.write("%s\n" % item)
+        
+        newly_created = collection_total - beginning_index
+        print(f'{newly_created} of {n} cryptids generated in {elapsed_time}. Total number of cryptids generated is now {collection_total}. {duplicates.value} duplicates found.')
      
     return
 

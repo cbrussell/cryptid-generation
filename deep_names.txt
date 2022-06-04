@@ -10,7 +10,6 @@ Giran
 Zindi
 Sanura
 Inanna
-Vagir
 Ferra
 Brysne
 Qwin
@@ -2103,8 +2102,6 @@ Onyna
 Parri
 Nisalda
 Fiar
-Verlenianven
-Xythnshenwel
 Zagran
 Nety
 Keladad
@@ -2297,7 +2294,6 @@ Isiarisa
 Welmae
 Fella
 Rafh
-Caladriemu
 Quercar
 Basislla
 Onohela
@@ -11486,7 +11482,6 @@ Welddia
 Yrasth
 Bithalell
 Palanta
-Vagisha
 Kaherene
 Brillor
 Qwannan

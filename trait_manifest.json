@@ -509,7 +509,7 @@
                     },
                     {
                         "color": "black",
-                        "weight": 100,
+                        "weight": 1,
                         "traits": [
                             {
                                 "trait": "tail_kitsune_black",
@@ -529,7 +529,7 @@
                     },
                     {
                         "color": "purple",
-                        "weight": 100,
+                        "weight": 1,
                         "traits": [
                             {
                                 "trait": "tail_kitsune_purple",
@@ -4811,7 +4811,7 @@
     },
     {
         "attribute": "5c_torsopattern",
-        "rarity": 0.3,
+        "rarity": 0.35,
         "categories": [
             {
                 "category": "stripes",

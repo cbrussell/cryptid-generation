@@ -8,7 +8,7 @@ import pandas as pd
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 image_path = Path(__file__).resolve().parents[1] / "output/stills/"
-image_list = fnmatch.filter(os.listdir(image_path), '*.png')
+image_list = fnmatch.filter(os.listdir(image_path), '*_solid.png')
 image_count = len(image_list)
 shift_value = 589123
 
@@ -17,7 +17,7 @@ table = []
 
 
 for i in range(1, (image_count + 1)):
-    new_path = image_path / f"{i}.png"
+    new_path = image_path / f"{i}_solid.png"
     f = open(new_path, "rb")
     bytes = f.read()
     readable_hash = hashlib.sha256(bytes).hexdigest()

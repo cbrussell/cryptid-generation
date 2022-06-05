@@ -23,7 +23,7 @@ Genrate Cryptids
 
 ## Dry run
 
-1. Mint 1,111
+1. Mint 777
 2. Upload data for 1,111
 3. Upload contract
 4. Upload placeholder to IPFS
@@ -36,3 +36,7 @@ Genrate Cryptids
 11. Complete mint
 12. Upload metadata
 13. Figure out how to host own IPFS - need at least 5 tb
+
+```shell
+scp -i "/Users/chrisrussell/.ssh/ec2/cryptids_keypair_may_21.pem" -r mp4  ec2-user@ec2-3-144-154-159.us-east-2.compute.amazonaws.com:/home/ec2-user/cryptids-assets 
+```

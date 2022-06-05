@@ -1,8 +1,8 @@
 import json
 
-trait_manifest = json.load(open("/Users/chrisrussell/CryptidToken/cryptid-generation/trait_manifest.json"))
-color_manifest = json.load(open("/Users/chrisrussell/CryptidToken/cryptid-generation/color_manifest.json"))
-background_manifest = json.load(open("/Users/chrisrussell/CryptidToken/cryptid-generation/background_manifest.json"))
+trait_manifest = json.load(open("/Users/chrisrussell/Cryptids/cryptid-generation/trait_manifest.json"))
+color_manifest = json.load(open("/Users/chrisrussell/Cryptids/cryptid-generation/color_manifest.json"))
+background_manifest = json.load(open("/Users/chrisrussell/Cryptids/cryptid-generation/background_manifest.json"))
 data = {}
 
 # get trait names

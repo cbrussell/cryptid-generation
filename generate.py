@@ -31,12 +31,13 @@ def main():
 
 
         procs = 10  # number of processors
-        n = 50 # collection size
-        frame_count = 1 # 1 for stills, 72 for animation
+        n = 90 # collection size
+        frame_count = 72 # 1 for stills, 72 for animation
+
         increment = int(n / procs)
         jobs = []
-        start = beginning_index
-        stop = beginning_index + increment
+        start = beginning_index + 1
+        stop = beginning_index + 1 + increment
 
         duplicates = manager.Value('duplicates', 0) 
         size = manager.Value('size', n)
@@ -87,8 +88,8 @@ def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifes
         else:
             print(f'Building edition #{edition}/{stop - 1}')
             os.makedirs(f"{dir_path}/output/raw/{str(edition)}", exist_ok=True)
-            os.makedirs(f"{dir_path}/output/metadata", exist_ok=True)
-            with open(f"{dir_path}/output/metadata/{str(edition)}.json", "w") as f:
+            # os.makedirs(f"{dir_path}/output/metadata", exist_ok=True)
+            with open(f"{dir_path}/output/stills/{str(edition)}.json", "w") as f:
                 json.dump(dna, f, indent=4)
                 combine_attributes(images, str(edition), frame_count)
                 number += 1

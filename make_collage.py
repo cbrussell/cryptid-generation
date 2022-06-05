@@ -47,6 +47,8 @@ def main():
         name_list = data.split("\n")
         name_file.close()
 
+        
+
 
         still_count = len(still_list)
 

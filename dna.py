@@ -143,7 +143,13 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
         data.update(headaccent)
 
         if torsopattern_category == 'stripes':
+            # 30% chance of getting headstripes to match, 10% chance of that to get 1/9 color difference (3%)
+            # if chance(0.10):
+            #     headpattern, headpattern_frames = get_trait_category(trait_manifest, "11c_headpattern_stripes", animal)[0:4:3]
+            # else:
+
             headpattern, headpattern_frames = get_trait_category_color(trait_manifest, "11c_headpattern_stripes", animal, torsopattern_color)[0:4:3]
+            
             data.update(headpattern)
             # print(headpattern)
         else:
@@ -328,6 +334,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
             if chance(0.025):
                 eyes_iris_right, eyes_iris_right_category, eyes_iris_right_color, eyes_iris_right_frames = get_trait_category(trait_manifest, "14e_eyes_iris_right", eyes_iris_left_category)
                 data.update(eyes_iris_right)
+                data.update({"eye_special":"multi"})
             else:
                 eyes_iris_right, eyes_iris_right_category, eyes_iris_right_color, eyes_iris_right_frames = get_trait_category_color(trait_manifest, "14e_eyes_iris_right", eyes_iris_left_category, eyes_iris_left_color)
                 data.update(eyes_iris_right)

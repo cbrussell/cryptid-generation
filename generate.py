@@ -31,7 +31,7 @@ def main():
 
 
         procs = 10  # number of processors
-        n = 90 # collection size
+        n = 1000 # collection size
         frame_count = 72 # 1 for stills, 72 for animation
 
         increment = int(n / procs)

@@ -38,5 +38,5 @@ Genrate Cryptids
 13. Figure out how to host own IPFS - need at least 5 tb
 
 ```shell
-scp -i "/Users/chrisrussell/.ssh/ec2/cryptids_keypair_may_21.pem" -r mp4  ec2-user@ec2-3-144-154-159.us-east-2.compute.amazonaws.com:/home/ec2-user/cryptids-assets 
+scp -i "/Users/chrisrussell/.ssh/ec2/cryptids_keypair_may_21.pem" -r mp4  ubuntu@ec2-3-21-33-226.us-east-2.compute.amazonaws.com:~
 ```

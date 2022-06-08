@@ -12,7 +12,7 @@ def main():
     start_time = datetime.now()
 
     procs = 10  # number of processors
-    n = 10 # collection size
+    n = 100 # collection size
     increment = int(n / procs)
     jobs = []
     start = 1
@@ -44,14 +44,14 @@ def worker(start, stop):
         mp4 = f"ffmpeg -y -r 24 -start_number 0 -stream_loop 1 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png  -c:v libx264 -crf 8 -pix_fmt yuv420p output/stills/{id}_video.mp4"
         subprocess.call(mp4,shell=True)
 
-        palette = f' ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png -vf "scale=750:-1:flags=lanczos,palettegen=stats_mode=diff" -y output/raw/{id}/{id}_palette.png'
-        subprocess.call(palette,shell=True)
+        # palette = f' ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png -vf "scale=750:-1:flags=lanczos,palettegen=stats_mode=diff" -y output/raw/{id}/{id}_palette.png'
+        # subprocess.call(palette,shell=True)
 
-        gif = f'ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png -i output/raw/{id}/{id}_palette.png -filter_complex "scale=750:-1:flags=lanczos,paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle"  output/stills/{id}_gif.gif'
-        subprocess.call(gif,shell=True)
+        # gif = f'ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png -i output/raw/{id}/{id}_palette.png -filter_complex "scale=750:-1:flags=lanczos,paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle"  output/stills/{id}_gif.gif'
+        # subprocess.call(gif,shell=True)
 
-        png = f'ffmpeg -r 24 -y -thread_queue_size 512  -i output/raw/{id}/{id}_%03d_t.png  -filter_complex "setpts=PTS-STARTPTS" -plays 0 -f apng output/stills/{id}_apng.png'
-        subprocess.call(png,shell=True)
+        # png = f'ffmpeg -r 24 -y -thread_queue_size 512  -i output/raw/{id}/{id}_%03d_t.png  -filter_complex "setpts=PTS-STARTPTS" -plays 0 -f apng output/stills/{id}_apng.png'
+        # subprocess.call(png,shell=True)
 
         number += 1
 

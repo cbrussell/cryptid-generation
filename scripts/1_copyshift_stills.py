@@ -7,7 +7,7 @@ import shutil
 dir_path = os.path.dirname(os.path.realpath(__file__))
 os.makedirs(f"{dir_path}/output/stills", exist_ok=True)
 
-shift_amount = 589123
+shift_amount = 0
 
 files = {"_solid.png": "image", "_transparent.png": "image_t", "_solid_pfp.png": "pfp", "_transparent_pfp.png": "pfp_t", "_apng.png": "apng", ".mp4": "mp4", ".gif": "gif", ".json": "metadata"}
 

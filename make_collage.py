@@ -3,6 +3,7 @@ from PIL import Image, ImageFont, ImageDraw
 import fnmatch
 from pathlib import Path
 import math
+import random
 
 def gridSize(n):
      
@@ -34,9 +35,9 @@ def main():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     os.makedirs(f"{dir_path}/output/collage_still", exist_ok=True)
 
-    still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
+    still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/shifted/image/"
 
-    still_list = [ 'solid', 'transparent', 'transparent_pfp', 'solid_pfp']
+    still_list = [ 'solid'] #, 'transparent', 'transparent_pfp', 'solid_pfp']
 
     for type in still_list:
         
@@ -57,7 +58,7 @@ def main():
         grid = gridSize(still_count)
 
 
-        image = Image.open(f"{dir_path}/output/stills/1_{type}.png")
+        image = Image.open(f"{dir_path}/output/shifted/image/1_{type}.png")
 
         width, height = image.size
 
@@ -66,7 +67,7 @@ def main():
         frame_count = 1
         for y in range(grid[1]):
             for x in range(grid[0]):
-                still = Image.open(f"{dir_path}/output/stills/{frame_count}_{type}.png")
+                still = Image.open(f"{dir_path}/output/shifted/image/{frame_count}_{type}.png")
                 frame.paste(still, box=(height * x, height * y))
 
                 # watermark settings
@@ -80,10 +81,11 @@ def main():
                     r, g, b, a = still.getpixel((5, 5))
                 luma = 0.2126 * r + 0.7152 * g + 0.0722 * b
 
-                
+                name = name_list.pop(random.randrange(len(name_list)))
+
                 Width, Height = frame.size 
                 drawn = ImageDraw.Draw(frame) 
-                text = f"{frame_count}, {name_list[frame_count -1 ]}"  
+                text = f"{frame_count}, {name}"  
                 font = ImageFont.truetype("Arial Black", 50)
                 textwidth, textheight = drawn.textsize(text, font)
                 if luma < 150:
@@ -102,9 +104,9 @@ def main():
 
         # ***************     scale      ***************     
 
-        if grid[0] * width > 7000:
+        if grid[0] * width > 70000:
 
-            basewidth = 7000
+            basewidth = 70000
             resize_scale = (basewidth)/(width*grid[0])
             frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 

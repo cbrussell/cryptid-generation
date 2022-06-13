@@ -3,42 +3,44 @@ import subprocess
 from datetime import datetime
 from multiprocessing import Process, Manager
 
-def main():
+# def main():
 
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    # os.makedirs(f"{dir_path}/output/gifs", exist_ok=True)
-    # os.makedirs(f"{dir_path}/output/videos", exist_ok=True)
-    # os.makedirs(f"{dir_path}/output/apngs", exist_ok=True)
-    start_time = datetime.now()
+#     dir_path = os.path.dirname(os.path.realpath(__file__))
+#     # os.makedirs(f"{dir_path}/output/gifs", exist_ok=True)
+#     # os.makedirs(f"{dir_path}/output/videos", exist_ok=True)
+#     # os.makedirs(f"{dir_path}/output/apngs", exist_ok=True)
+#     start_time = datetime.now()
 
-    procs = 10  # number of processors
-    n = 1000 # collection size
-    increment = int(n / procs)
-    jobs = []
-    start = 10000
-    stop = increment + 10000   
+#     procs = 10  # number of processors
+#     n = 1000 # collection size
+#     increment = int(n / procs)
+#     jobs = []
+#     start = 1
+#     stop = increment + 1    
 
-    with Manager() as manager:
+#     with Manager() as manager:
        
-        for i in range(0, procs):
-            process = Process(target=worker, args=(start, stop))
-            start = stop
-            stop += increment
-            jobs.append(process)
+#         for i in range(0, procs):
+#             process = Process(target=worker, args=(start, stop))
+#             start = stop
+#             stop += increment
+#             jobs.append(process)
 
-        [j.start() for j in jobs]
-        [j.join() for j in jobs]
+#         [j.start() for j in jobs]
+#         [j.join() for j in jobs]
 
-        end_time = datetime.now()
-        elapsed_time = end_time - start_time
+#         end_time = datetime.now()
+#         elapsed_time = end_time - start_time
       
-        print(f'{n} cryptids generated in {elapsed_time}.')
+#         print(f'{n} cryptids generated in {elapsed_time}.')
      
-    return
+#     return
 
-def worker(start, stop):
+def main():
+    # list = ['101', '201', '301', '401', '501', '601', '701', '801', '901']
+    list =['11453','11087','11175','11136','11382','11418','11399','11464','11453','12258','12286','12293','12375','12410','12499','12495','12557','12718','12813','11709','11703','11964','12174','12189','12599']
 
-    for id in range(start, stop):
+    for id in list:
         number = 0
 
         mp4 = f"ffmpeg -y -r 24 -start_number 0 -stream_loop 1 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png  -c:v libx264 -crf 8 -pix_fmt yuv420p output/stills/{id}_video.mp4"

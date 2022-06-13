@@ -35,7 +35,7 @@ def main():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     os.makedirs(f"{dir_path}/output/collage_still", exist_ok=True)
 
-    still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/shifted/image/"
+    still_path = Path(__file__).resolve().parents[1] / "cryptid-generation/output/stills/"
 
     still_list = [ 'solid'] #, 'transparent', 'transparent_pfp', 'solid_pfp']
 
@@ -43,79 +43,84 @@ def main():
         
         still_list = fnmatch.filter(os.listdir(still_path), f'*{type}.png')
 
-        name_file = open("deep_names.txt", "r")
+        name_file = open("deep_names_shuffle.txt", "r")
         data = name_file.read()
         name_list = data.split("\n")
         name_file.close()
 
-        
-
-
         still_count = len(still_list)
 
-        # grid = [4, 8] #[x,y]
+        grid = [25, 25] #[x,y]
 
-        grid = gridSize(still_count)
+        # grid = gridSize(still_count)
 
 
-        image = Image.open(f"{dir_path}/output/shifted/image/1_{type}.png")
+        image = Image.open(f"{dir_path}/output/stills/1_{type}.png")
 
         width, height = image.size
 
-        frame = Image.new('RGBA', (width*grid[0], height*grid[1]))  # random solid
-
+        # frame = Image.new('RGBA', (width*grid[0], height*grid[1]))  # random solid
         frame_count = 1
-        for y in range(grid[1]):
-            for x in range(grid[0]):
-                still = Image.open(f"{dir_path}/output/shifted/image/{frame_count}_{type}.png")
-                frame.paste(still, box=(height * x, height * y))
+        for collage_number in range(13):
+            frame = Image.new('RGBA', (width*grid[0], height*grid[1]))  # random solid
+            
+            
+            for y in range(grid[1]):
+                for x in range(grid[0]):
+                    try:
 
-                # watermark settings
-                # find texts with "find {/System,}/Library/Fonts -name *ttf"
-                ######
+                        still = Image.open(f"{dir_path}/output/stills/{frame_count}_{type}.png")
+                        frame.paste(still, box=(height * x, height * y))
 
-                # get brightness of frame for font color selection
-                try:
-                    r, g, b = still.getpixel((5, 5))
-                except:
-                    r, g, b, a = still.getpixel((5, 5))
-                luma = 0.2126 * r + 0.7152 * g + 0.0722 * b
+                        # watermark settings
+                        # find texts with "find {/System,}/Library/Fonts -name *ttf"
+                        ######
 
-                name = name_list.pop(random.randrange(len(name_list)))
+                        # get brightness of frame for font color selection
+                        try:
+                            r, g, b = still.getpixel((5, 5))
+                        except:
+                            r, g, b, a = still.getpixel((5, 5))
+                        luma = 0.2126 * r + 0.7152 * g + 0.0722 * b
 
-                Width, Height = frame.size 
-                drawn = ImageDraw.Draw(frame) 
-                text = f"{frame_count}, {name}"  
-                font = ImageFont.truetype("Arial Black", 50)
-                textwidth, textheight = drawn.textsize(text, font)
-                if luma < 150:
-                    drawn.text((height * x + 30, height * y + 10), text, font=font, fill="white") 
-                else:
-                    drawn.text((height * x + 30, height * y + 10), text, font=font, fill="black")
+                        name = name_list.pop(0)
 
-                #####
+                        Width, Height = frame.size 
+                        drawn = ImageDraw.Draw(frame) 
+                        text = f"{frame_count}, {name}"  
+                        font = ImageFont.truetype("Arial Black", 50)
+                        textwidth, textheight = drawn.textsize(text, font)
+                        if luma < 150:
+                            drawn.text((height * x + 30, height * y + 10), text, font=font, fill="white") 
+                        else:
+                            drawn.text((height * x + 30, height * y + 10), text, font=font, fill="black")
 
-                print(f"Pasted frame #{frame_count}! Only {still_count - frame_count} more frames left to go!")
-                frame_count += 1
+                        #####
 
-        # ***************     paste to color      ***************     
+                        print(f"Pasted frame #{frame_count}! Only {still_count - frame_count} more frames left to go!")
+                        frame_count += 1
 
-        finished_width, finished_height = frame.size
+                    except:
+                        break
 
-        # ***************     scale      ***************     
+            # ***************     paste to color      ***************     
 
-        if grid[0] * width > 70000:
+            finished_width, finished_height = frame.size
 
-            basewidth = 70000
-            resize_scale = (basewidth)/(width*grid[0])
-            frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
+            # ***************     scale      ***************     
 
-        # ***************     scale      ***************
+            if grid[0] * width > 7000:
 
-        print(f"Saving {type} collage...")
-        frame.save(f"{dir_path}/output/collage_still/full_collage_{grid[0]}_x_{grid[1]}_{type}.png", format="png")  
-        print(f'Completed {type} collage!')
+                basewidth = 7000
+                resize_scale = (basewidth)/(width*grid[0])
+                frame = frame.resize((basewidth, int(float(height*grid[1]) * resize_scale)))
 
+            # ***************     scale      ***************
+
+            print(f"Saving {type} collage...\n")
+            print(f"Collage #{collage_number}...\n")
+            frame.save(f"{dir_path}/output/collage_still/full_collage_{grid[0]}_x_{grid[1]}_{type}_{collage_number}_new.png", format="png")  
+            print(f'Completed {type} collage!')
 
 if __name__ == "__main__":
     main()

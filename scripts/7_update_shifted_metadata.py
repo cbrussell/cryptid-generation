@@ -1,15 +1,16 @@
 import json
 import os
 import numpy as np
-import random
 
 
-image_cid = "QmZ1JpvWzpEZNVYYVgRe2X6AAMBbWLb2yAF1RJp4LeUvez"
+image_cid = "QmX6SN6gRmF7kKRDLXvp6rAqo6HkaZxdrc7pYTp9q351s9"
+image_t_cid = "QmcwCrjDgNX3EWwSn1ZaR2VihkEbQffbvcmBsP8QNpMemu"
 
-pfp_cid = "QmWyincg4PWhoN4vufoG37LAEw654Aq32ThKCYsteJ2xjk"
-
-mp4_cid = "QmNnGUUHJFD8YnDD8cj6yD5wfdC23V8r8th1S9Bb3s3ti5"
-
+pfp_cid = "QmRwbovydPoU3odMWL2Ddsa5YXthjtdJEoK8P97eXZaMPj"
+pfp_t_cid = "QmSggdushskLXn8dXHyVuNtKNRoNU2vvTa65cnGv7Kffxy"
+mp4_cid = "QmRDeRLPcCB3nyfh2kZijxpArVZMyWc9VtxcKr3HYSCHoe"
+apng_cid = "Qmc2SDBHdMJkQi12jisFcwj3YPMsXHn89d5cMZZ4CTk8TE"
+gif_cid = "QmVZrnLkZxWHoCkoCaS53xj1cS2MxEUtMxMC2Xcb1AoJkd"
 
 os.makedirs("/Users/chrisrussell/Cryptids/cryptid-generation/output/shifted/metadata_final", exist_ok=True)
 
@@ -19,7 +20,7 @@ def main():
     names = json.load(open("/Users/chrisrussell/Cryptids/cryptid-generation/scripts/names.json"))
 
         
-    name_file = open("/Users/chrisrussell/Cryptids/cryptid-generation/deep_names.txt", "r")
+    name_file = open("/Users/chrisrussell/Cryptids/cryptid-generation/deep_names_shuffle.txt", "r")
     data = name_file.read()
     name_list = data.split("\n")
     name_file.close()
@@ -28,7 +29,7 @@ def main():
 
 
     for filename in os.scandir("/Users/chrisrussell/Cryptids/cryptid-generation/output/shifted/metadata"):
-        name = name_list.pop(random.randrange(len(name_list)))
+        name = name_list.pop(0)
         if len(filename.name.split(".")) != 2:
             continue
         file_name = filename.name.split(".")[0]
@@ -42,10 +43,14 @@ def transform_json(data, names, file_name, cryptid_name):
     # print(file_name)
     metadata = {
         "name": f"{cryptid_name}",
-        "description": "Part fantasy, part science-fiction. Cryptids is a generative art collection of 7,777 fantastic mythical creatures. Art by @no__solo.",
+        "description": "Part fantasy, part science-fiction. Cryptids is a generative art collection of 7,777 fantastic mythical creatures. Created by @no__solo and @chrisrusselljr.",
         "image": f"ipfs://{image_cid}/{file_name}_solid.png",
+        "image_t": f"ipfs://{image_t_cid}/{file_name}_transparent.png",
         "animation_url": f"ipfs://{mp4_cid}/{file_name}.mp4",
+        "gif": f"ipfs://{gif_cid}/{file_name}.gif",
+        "apng": f"ipfs://{apng_cid}/{file_name}_apng.png",
         "pfp": f"ipfs://{pfp_cid}/{file_name}_solid_pfp.png",
+        "pfp_t": f"ipfs://{pfp_t_cid}/{file_name}_transparent_pfp.png",
         "attributes": []
 
     }

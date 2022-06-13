@@ -31,7 +31,7 @@ def main():
 
 
         procs = 10  # number of processors
-        n = 1000 # collection size
+        n = 2000 # collection size
         frame_count = 72 # 1 for stills, 72 for animation
 
         increment = int(n / procs)
@@ -71,16 +71,22 @@ def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifes
        
         
         images, dna  = get_dna(trait_manifest, color_manifest, background_manifest)
+        base_color_pop = dna.pop('base_color')
+
         hashed_dna = to_hash(dna)   
+        dna['base_color'] = base_color_pop
         
         while duplicates.value < unique_dna_tolerance:
             if hashed_dna not in hashlist:
                 hashlist.append(hashed_dna)
+
                 break
             else:
                 duplicates.value += 1
                 images, dna  = get_dna()
+                base_color_pop = dna.pop('base_color')
                 hashed_dna = to_hash(dna)
+                dna['base_color'] = base_color_pop
                 print(f'Duplicate DNA found... {duplicates.value}/{unique_dna_tolerance}')   
         if duplicates.value >= unique_dna_tolerance:
             print('Found {duplicates.values} duplicates (MAX). Tolerance is set to {unique_dna_tolerance}.')

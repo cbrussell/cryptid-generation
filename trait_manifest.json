@@ -11858,11 +11858,11 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "dark",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_scar_left",
+                                "trait": "eyes_scar_left_dark",
                                 "weight": 1
                             }
                         ]
@@ -11880,11 +11880,11 @@
                 "weight": 1,
                 "colors": [
                     {
-                        "color": "black",
+                        "color": "dark",
                         "weight": 1,
                         "traits": [
                             {
-                                "trait": "eyes_scar_right",
+                                "trait": "eyes_scar_right_dark",
                                 "weight": 1
                             }
                         ]

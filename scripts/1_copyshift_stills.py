@@ -32,7 +32,7 @@ for file_type in files:
 
     #normalize files if any were deleted
     
-    for i in range(image_count):
+    for i in range(5):
  
         
         new_name = Path(normalized_still_path / (str(i + 1) + file_type )) #file
@@ -54,7 +54,7 @@ for file_type in files:
     print(f"\nShifted list is: {shifted_list}\n")
 
     # Replace original files for new name (changing folders)
-    for i in range(normal_image_count):
+    for i in range(5):
 
         new_name = Path(shifted_still_path / shifted_list[i]) #file
 

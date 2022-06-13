@@ -473,7 +473,6 @@ Ares
 Aresl
 Aret
 Aretanue
-Aretanus
 Arethalli
 Arethelia
 Arethenir
@@ -726,10 +725,6 @@ Belaland
 Belalay
 Belalayw
 Belana
-Belanalan
-Belanalar
-Belanalun
-Belanalus
 Belanar
 Belanaragl
 Belanarall
@@ -1441,13 +1436,7 @@ Calamalred
 Calamaludia
 Calamamon
 Calamara
-Calamaria
-Calamarima
-Calamarion
-Calamariona
-Calamarioni
-Calamariorith
-Calamarmar
+Calamar
 Calamarmir
 Calamarol
 Calamaron
@@ -2290,7 +2279,6 @@ Danail
 Danair
 Danais
 Danait
-Danal
 Danar
 Danara
 Dania
@@ -3391,7 +3379,6 @@ Feragun
 Feragus
 Feramus
 Ferana
-Feranal
 Ferdaa
 Ferdae
 Ferdia
@@ -4389,7 +4376,6 @@ Hillal
 Hillalyn
 Hillel
 Hillen
-Hiller
 Hirel
 Hirg
 Hirich
@@ -4976,10 +4962,6 @@ Isania
 Isaniur
 Isanmia
 Isanua
-Isanus
-Isanusa
-Isanuse
-Isanuss
 Isarda
 Isarden
 Isardi
@@ -5095,7 +5077,6 @@ Issela
 Isserin
 Istalel
 Istalen
-Istalin
 Istelin
 Isteline
 Istellen
@@ -6809,11 +6790,9 @@ Monar
 Monda
 Monia
 Monta
-Montanal
 Montanar
 Montanara
 Montanast
-Montanus
 Montasa
 Montasun
 Morac
@@ -8206,7 +8185,6 @@ Queralla
 Queralle
 Querallyn
 Querana
-Queranal
 Queranel
 Queranvall
 Queranya
@@ -8782,7 +8760,6 @@ Sadrilil
 Sadrilithurell
 Saduk
 Sadulil
-Sanal
 Sanara
 Sanare
 Sanarell
@@ -8982,6 +8959,7 @@ Selren
 Selwen
 Sentella
 Sepelle
+Seneca
 Sepen
 Sepenia
 Seper
@@ -9221,7 +9199,6 @@ Talud
 Taludia
 Talufha
 Talufia
-Talufnantanus
 Talum
 Talumah
 Talun
@@ -9769,7 +9746,6 @@ Undenuia
 Undere
 Undh
 Undia
-Undie
 Undina
 Undine
 Undini
@@ -9887,8 +9863,6 @@ Utereray
 Utererhar
 Utererholet
 Utererhoral
-Utererhoria
-Utererhus
 Utererhyna
 Uterra
 Uterrech
@@ -10367,7 +10341,6 @@ Vidania
 Vidanie
 Vidanis
 Vidaniu
-Vidanus
 Vidany
 Vidanya
 Vidanyn
@@ -10741,7 +10714,6 @@ Weyll
 Weyllna
 Weyln
 Weylnna
-Weylnnarealane
 Weyn
 Weyt
 Weyth
@@ -10891,6 +10863,7 @@ Wyren
 Wyrl
 Wyro
 Wyrt
+Xaphoon
 Xafel
 Xafell
 Xafese
@@ -10938,7 +10911,6 @@ Xafryr
 Xafryth
 Xana
 Xanah
-Xanal
 Xanasa
 Xanna
 Xanne
@@ -11213,7 +11185,6 @@ Yeniale
 Yenialela
 Yenialele
 Yenialli
-Yenianala
 Yenianaur
 Yeniansa
 Yenianva
@@ -11589,7 +11560,7 @@ Zekkul
 Zeklana
 Zeklanc
 Zeklane
-Zeklanelgiss
+Zekl
 Zeklanerer
 Zeklanv
 Zeklanvene
@@ -11874,7 +11845,6 @@ Zoeta
 Zoete
 Zoeth
 Zoethal
-Zoethantansa
 Zoeti
 Zoeva
 Zolaed
@@ -11886,7 +11856,7 @@ Zonena
 Zonethan
 Zonethvyne
 Zorae
-Zoriarfanvesk
+Zoriar
 Zoriell
 Zorit
 Zorithan

@@ -278,7 +278,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
 
         if chance(0.04):
             if chance(0.5):
-                eyes_special_left, eyes_special_left_category, eyes_special_left_color, eyes_special_left_frames = get_trait(trait_manifest, "14g_eyes_special_left")
+                eyes_special_left, eyes_special_left_category, eyes_special_left_color, eyes_special_left_frames = get_trait_category_color(trait_manifest, "14g_eyes_special_left", "scar", "dark")
                 data.update(eyes_special_left)
                 eyes_special_right_frames = []
                 eyes_iris_left_frames = []
@@ -299,7 +299,7 @@ def get_dna(trait_manifest: TraitManifest, color_manifest: ColorManifest, backgr
             
 
             else:
-                eyes_special_right, eyes_special_right_category, eyes_special_right_color, eyes_special_right_frames = get_trait(trait_manifest, "14h_eyes_special_right")
+                eyes_special_right, eyes_special_right_category, eyes_special_right_color, eyes_special_right_frames = get_trait_category_color(trait_manifest, "14h_eyes_special_right", "scar", "dark")
                 data.update(eyes_special_right)
                 eyes_special_left_frames = []
                 eyes_iris_right_frames = []

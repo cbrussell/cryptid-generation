@@ -22,13 +22,13 @@ print(f" \nGo to folder: {final_url}\n")
 base_uri = 'ipfs://' + ipfs_hash_directory
 print(f" \nBase URI for contract is: {base_uri}\n")
 
-api_key = os.environ.get("PINATA_API_KEY")
-secret_key = os.environ.get("PINATA_SECRET_API_KEY")
-if api_key and secret_key:
-    pinata = PinataPy(api_key, secret_key)
-else:
-    raise ValueError("No API keys in environment variables")
+# api_key = os.environ.get("PINATA_API_KEY")
+# secret_key = os.environ.get("PINATA_SECRET_API_KEY")
+# if api_key and secret_key:
+#     pinata = PinataPy(api_key, secret_key)
+# else:
+#     raise ValueError("No API keys in environment variables")
 
-response = pinata.pin_hash_to_ipfs(ipfs_hash_directory, "Final JSONs")
+# response = pinata.pin_hash_to_ipfs(ipfs_hash_directory, "Final JSONs")
 
-print(response)
+# print(response)

@@ -7,7 +7,7 @@ import shutil
 dir_path = os.path.dirname(os.path.realpath(__file__))
 os.makedirs(f"{dir_path}/output/stills", exist_ok=True)
 
-shift_amount = 0
+shift_amount = 800813
 
 files = {"_solid.png": "image", "_transparent.png": "image_t", "_solid_pfp.png": "pfp", "_transparent_pfp.png": "pfp_t", "_apng.png": "apng", ".mp4": "mp4", ".gif": "gif", ".json": "metadata"}
 
@@ -32,7 +32,7 @@ for file_type in files:
 
     #normalize files if any were deleted
     
-    for i in range(5):
+    for i in range(image_count):
  
         
         new_name = Path(normalized_still_path / (str(i + 1) + file_type )) #file
@@ -54,7 +54,7 @@ for file_type in files:
     print(f"\nShifted list is: {shifted_list}\n")
 
     # Replace original files for new name (changing folders)
-    for i in range(5):
+    for i in range(normal_image_count):
 
         new_name = Path(shifted_still_path / shifted_list[i]) #file
 

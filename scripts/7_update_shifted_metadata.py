@@ -3,14 +3,14 @@ import os
 import numpy as np
 
 
-image_cid = "QmX6SN6gRmF7kKRDLXvp6rAqo6HkaZxdrc7pYTp9q351s9"
-image_t_cid = "QmcwCrjDgNX3EWwSn1ZaR2VihkEbQffbvcmBsP8QNpMemu"
+image_cid = "QmcSNSXTwUU7S3nG5C65Kr48RnHYjSpReUU1KZsCLsqv4S"
+image_t_cid = "QmeHY4ej8v6ErAT5w3KyRoXzHMRKJQzqZDwVAaZXnExPMP"
 
-pfp_cid = "QmRwbovydPoU3odMWL2Ddsa5YXthjtdJEoK8P97eXZaMPj"
-pfp_t_cid = "QmSggdushskLXn8dXHyVuNtKNRoNU2vvTa65cnGv7Kffxy"
-mp4_cid = "QmRDeRLPcCB3nyfh2kZijxpArVZMyWc9VtxcKr3HYSCHoe"
-apng_cid = "Qmc2SDBHdMJkQi12jisFcwj3YPMsXHn89d5cMZZ4CTk8TE"
-gif_cid = "QmVZrnLkZxWHoCkoCaS53xj1cS2MxEUtMxMC2Xcb1AoJkd"
+pfp_cid = "QmYvjjd7Zti2NAD4YTop39uBP1vmfrm4RMYvcHNnoJHjUc"
+pfp_t_cid = "QmSVFbb9HjPsB3PqUaaTczpjd4NQ8qkfMrEupNu9mLtZjd"
+mp4_cid = "QmXLmAv3BWcJDoTHkEYH5oKmDTmkzvRajiYwdX7RUcCzkU"
+apng_cid = "QmU8yLudV17P6Rp3K7V4XPTf9Vi9bSnVTQ5E7RzqJdBekn"
+gif_cid = "QmeeaCMt2TLsjRGbdwuKUqCnghZH5f4au8CLbYbCp6whUs" 
 
 os.makedirs("/Users/chrisrussell/Cryptids/cryptid-generation/output/shifted/metadata_final", exist_ok=True)
 

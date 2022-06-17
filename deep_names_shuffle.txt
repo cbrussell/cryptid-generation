@@ -1,6 +1,6 @@
 Wallan
 Celle
-Daenguninira
+Briniver
 Coryaddn
 Arlane
 Varonki
@@ -58,7 +58,7 @@ Ulenarusa
 Zoriell
 Querenpalla
 Lovath
-Vittonia
+Maya
 Erelina
 Peldrel
 Caromit
@@ -84,7 +84,7 @@ Varosari
 Quethenar
 Fiskiad
 Mayun
-Felon
+Quell
 Calamyur
 Moraekin
 Fuetha
@@ -125,7 +125,7 @@ Caladaria
 Raiselith
 Ynas
 Brenden
-Berobeltera
+Aedron
 Saryne
 Weldia
 Iriss
@@ -153,7 +153,7 @@ Hurel
 Yasal
 Callindet
 Ylanade
-Caleb
+Ylsel
 Horrin
 Pendalit
 Waloen
@@ -281,7 +281,7 @@ Sadagin
 Bericke
 Bakily
 Nantel
-Carisidlen
+Carisiden
 Fendania
 Utrecdi
 Lavnam
@@ -412,7 +412,7 @@ Taras
 Binna
 Errth
 Camol
-Berobrefur
+Yneriae
 Berobul
 Kyros
 Petua
@@ -1043,7 +1043,7 @@ Verelia
 Gholam
 Nydie
 Tolma
-Caladeledidda
+Vindata
 Torvarel
 Miar
 Olorin
@@ -2760,7 +2760,7 @@ Lello
 Tugir
 Frichan
 Torvas
-Lama
+Draka
 Calalathon
 Boricte
 Fisk
@@ -5523,7 +5523,7 @@ Shucy
 Tugotha
 Nori
 Callisde
-Weylnnarealane
+Nolara
 Earisu
 Elvaee
 Anonn
@@ -8029,7 +8029,6 @@ Delelil
 Wende
 Reiles
 Uresa
-Draka
 Zirthe
 Hutervant
 Alentet
@@ -8870,7 +8869,6 @@ Mornai
 Runayl
 Reus
 Erella
-Ylsel
 Holansy
 Dylollul
 Amthantaras
@@ -9025,8 +9023,6 @@ Amor
 Yndenval
 Xanot
 Dyse
-Vilanan
-Olonet
 Jadety
 Araort
 Zenvene
@@ -9596,7 +9592,6 @@ Bitnoris
 Nadrit
 Walon
 Isalund
-Yneriae
 Earid
 Delalonnen
 Varonka
@@ -9767,7 +9762,6 @@ Ronaun
 Basira
 Oncepe
 Isanasa
-Quell
 Urdadi
 Lydethasa
 Carama
@@ -10063,7 +10057,6 @@ Ulsoy
 Elianarethe
 Caletad
 Reorta
-Briniver
 Esslen
 Frydet
 Merara
@@ -10409,7 +10402,6 @@ Banra
 Yerna
 Felah
 Chander
-Nolara
 Devan
 Welmae
 Settinia
@@ -10893,7 +10885,6 @@ Virasa
 Elin
 Varosacelia
 Zenir
-Vidanya
 Sadakin
 Galgod
 Sarene
@@ -10984,7 +10975,6 @@ Hamora
 Amethynlel
 Kelenial
 Lynerarennish
-Maya
 Hilelin
 Yndesus
 Xarton
@@ -11223,7 +11213,6 @@ Ruyd
 Elianane
 Medagia
 Belanduisi
-Aedron
 Terah
 Nimae
 Vanoan

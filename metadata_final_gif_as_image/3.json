@@ -1,0 +1,85 @@
+{
+    "name": "Coryaddn",
+    "description": "Part fantasy, part science-fiction. Cryptids is a generative art collection of 7,777 fantastic mythical creatures. Created by @no__solo and @chrisrusselljr.",
+    "image": "ipfs://QmeeaCMt2TLsjRGbdwuKUqCnghZH5f4au8CLbYbCp6whUs/3.gif",
+    "animation_url": "ipfs://QmXLmAv3BWcJDoTHkEYH5oKmDTmkzvRajiYwdX7RUcCzkU/3.mp4",
+    "image_t": "ipfs://QmeHY4ej8v6ErAT5w3KyRoXzHMRKJQzqZDwVAaZXnExPMP/3_transparent.png",
+    "gif": "ipfs://QmeeaCMt2TLsjRGbdwuKUqCnghZH5f4au8CLbYbCp6whUs/3.gif",
+    "apng": "ipfs://QmU8yLudV17P6Rp3K7V4XPTf9Vi9bSnVTQ5E7RzqJdBekn/3_apng.png",
+    "pfp": "ipfs://QmYvjjd7Zti2NAD4YTop39uBP1vmfrm4RMYvcHNnoJHjUc/3_solid_pfp.png",
+    "pfp_t": "ipfs://QmSVFbb9HjPsB3PqUaaTczpjd4NQ8qkfMrEupNu9mLtZjd/3_transparent_pfp.png",
+    "attributes": [
+        {
+            "trait_type": "Back Legs",
+            "value": "Lupus"
+        },
+        {
+            "trait_type": "Front Legs",
+            "value": "Lupus"
+        },
+        {
+            "trait_type": "Torso",
+            "value": "Shaggy"
+        },
+        {
+            "trait_type": "Body Pattern",
+            "value": "Red Stripes"
+        },
+        {
+            "trait_type": "Fur",
+            "value": "Windy Black"
+        },
+        {
+            "trait_type": "Head",
+            "value": "Goat"
+        },
+        {
+            "trait_type": "Head Accent",
+            "value": "Face"
+        },
+        {
+            "trait_type": "Ears",
+            "value": "Prick"
+        },
+        {
+            "trait_type": "Background",
+            "value": "Steel"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "Fluffy"
+        },
+        {
+            "trait_type": "Eye Color",
+            "value": "Purple"
+        },
+        {
+            "trait_type": "Eye Type",
+            "value": "Beast"
+        },
+        {
+            "trait_type": "Base",
+            "value": "White"
+        },
+        {
+            "trait_type": "Magic",
+            "value": 90
+        },
+        {
+            "trait_type": "Empathy",
+            "value": 95
+        },
+        {
+            "trait_type": "Morality",
+            "value": 61
+        },
+        {
+            "trait_type": "Wisdom",
+            "value": 61
+        },
+        {
+            "trait_type": "Chaos",
+            "value": 66
+        }
+    ]
+}

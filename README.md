@@ -40,3 +40,6 @@ Genrate Cryptids
 ```shell
 scp -i "/Users/chrisrussell/.ssh/ec2/cryptids_keypair_may_21.pem" -r mp4  ubuntu@ec2-3-21-33-226.us-east-2.compute.amazonaws.com:~
 ```
+
+n % ipfs add --recursive --progress ./gif    
+

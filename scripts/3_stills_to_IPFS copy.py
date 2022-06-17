@@ -13,6 +13,7 @@ for file in files:
     image_path = f"/Users/chrisrussell/Cryptids/cryptid-generation/output/shifted/{files[file]}"
     image_list = fnmatch.filter(os.listdir(image_path), f'*{file}')
     image_count = len(image_list)
+    print(file)
 
     client = ipfshttpclient.connect()
 

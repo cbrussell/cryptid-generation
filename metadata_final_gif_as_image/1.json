@@ -1,0 +1,85 @@
+{
+    "name": "Celle",
+    "description": "Part fantasy, part science-fiction. Cryptids is a generative art collection of 7,777 fantastic mythical creatures. Created by @no__solo and @chrisrusselljr.",
+    "image": "ipfs://QmeeaCMt2TLsjRGbdwuKUqCnghZH5f4au8CLbYbCp6whUs/1.gif",
+    "animation_url": "ipfs://QmXLmAv3BWcJDoTHkEYH5oKmDTmkzvRajiYwdX7RUcCzkU/1.mp4",
+    "image_t": "ipfs://QmeHY4ej8v6ErAT5w3KyRoXzHMRKJQzqZDwVAaZXnExPMP/1_transparent.png",
+    "gif": "ipfs://QmeeaCMt2TLsjRGbdwuKUqCnghZH5f4au8CLbYbCp6whUs/1.gif",
+    "apng": "ipfs://QmU8yLudV17P6Rp3K7V4XPTf9Vi9bSnVTQ5E7RzqJdBekn/1_apng.png",
+    "pfp": "ipfs://QmYvjjd7Zti2NAD4YTop39uBP1vmfrm4RMYvcHNnoJHjUc/1_solid_pfp.png",
+    "pfp_t": "ipfs://QmSVFbb9HjPsB3PqUaaTczpjd4NQ8qkfMrEupNu9mLtZjd/1_transparent_pfp.png",
+    "attributes": [
+        {
+            "trait_type": "Back Legs",
+            "value": "Equus"
+        },
+        {
+            "trait_type": "Front Legs",
+            "value": "Lupus"
+        },
+        {
+            "trait_type": "Torso",
+            "value": "Medium"
+        },
+        {
+            "trait_type": "Body Accent",
+            "value": "White"
+        },
+        {
+            "trait_type": "Fur",
+            "value": "Windy Brown"
+        },
+        {
+            "trait_type": "Head",
+            "value": "Bear"
+        },
+        {
+            "trait_type": "Head Accent",
+            "value": "Blaze"
+        },
+        {
+            "trait_type": "Ears",
+            "value": "Flop"
+        },
+        {
+            "trait_type": "Background",
+            "value": "Navy"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "Lion"
+        },
+        {
+            "trait_type": "Eye Color",
+            "value": "Yellow"
+        },
+        {
+            "trait_type": "Eye Type",
+            "value": "Predator"
+        },
+        {
+            "trait_type": "Base",
+            "value": "Brown"
+        },
+        {
+            "trait_type": "Magic",
+            "value": 67
+        },
+        {
+            "trait_type": "Empathy",
+            "value": 88
+        },
+        {
+            "trait_type": "Morality",
+            "value": 72
+        },
+        {
+            "trait_type": "Wisdom",
+            "value": 81
+        },
+        {
+            "trait_type": "Chaos",
+            "value": 56
+        }
+    ]
+}

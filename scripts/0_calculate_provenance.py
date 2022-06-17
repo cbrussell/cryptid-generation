@@ -10,7 +10,8 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 image_path = Path(__file__).resolve().parents[1] / "output/stills/"
 image_list = fnmatch.filter(os.listdir(image_path), '*_solid.png')
 image_count = len(image_list)
-shift_value = 0
+print(image_count)
+shift_value = 800813
 
 combined_hash_string = ""
 table = []
@@ -34,6 +35,11 @@ column_values = ["Init", "Shifted", "Hash"]
 df =pd.DataFrame(data=cryptid_array, columns=column_values)
 df['Shifted'] = np.roll(df['Shifted'], shift = shift_value)
 shifted_table = tabulate(df, column_values, tablefmt="fancy_grid", showindex=False)
+
+with open('provenance_table.txt', 'w') as f:
+    f.write(f"\n{shifted_table} \n")
+    f.write(f"The final provenance hash is {provenance_hash}. \n")
+    f.write(f"\nThe shift amount is: {shift_value}.\n")
 
 # output
 print(f"Final shifted table is: \n{shifted_table} \n")

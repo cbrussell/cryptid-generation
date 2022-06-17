@@ -38,21 +38,21 @@ from multiprocessing import Process, Manager
 
 def main():
     # list = ['101', '201', '301', '401', '501', '601', '701', '801', '901']
-    list =['11453','11087','11175','11136','11382','11418','11399','11464','11453','12258','12286','12293','12375','12410','12499','12495','12557','12718','12813','11709','11703','11964','12174','12189','12599']
+    list =['1']
 
     for id in list:
         number = 0
 
-        mp4 = f"ffmpeg -y -r 24 -start_number 0 -stream_loop 1 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png  -c:v libx264 -crf 8 -pix_fmt yuv420p output/stills/{id}_video.mp4"
-        subprocess.call(mp4,shell=True)
+        # mp4 = f"ffmpeg -y -r 24 -start_number 0 -stream_loop 1 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png  -c:v libx264 -crf 8 -pix_fmt yuv420p output/stills/{id}_video.mp4"
+        # subprocess.call(mp4,shell=True)
 
-        palette = f' ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png -vf "scale=750:-1:flags=lanczos,palettegen=stats_mode=diff" -y output/raw/{id}/{id}_palette.png'
-        subprocess.call(palette,shell=True)
+        # palette = f' ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png -vf "scale=750:-1:flags=lanczos,palettegen=stats_mode=diff" -y output/raw/{id}/{id}_palette.png'
+        # subprocess.call(palette,shell=True)
 
-        gif = f'ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png -i output/raw/{id}/{id}_palette.png -filter_complex "scale=750:-1:flags=lanczos,paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle"  output/stills/{id}_gif.gif'
-        subprocess.call(gif,shell=True)
+        # gif = f'ffmpeg -y -f image2 -framerate 24 -thread_queue_size 512 -i output/raw/{id}/{id}_%03d.png -i output/raw/{id}/{id}_palette.png -filter_complex "scale=750:-1:flags=lanczos,paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle"  output/stills/{id}_gif.gif'
+        # subprocess.call(gif,shell=True)
 
-        png = f'ffmpeg -r 24 -y -thread_queue_size 512  -i output/raw/{id}/{id}_%03d_t.png  -filter_complex "setpts=PTS-STARTPTS" -plays 0 -f apng output/stills/{id}_apng.png'
+        png = f'ffmpeg -r 24 -y -thread_queue_size 512  -i output/raw/{id}/{id}_%03d_t.png  -filter_complex "scale=200:-1,setpts=PTS-STARTPTS" -plays 0 -f apng output/{id}_apng_test_200.png'
         subprocess.call(png,shell=True)
 
         number += 1

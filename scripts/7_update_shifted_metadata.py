@@ -20,20 +20,20 @@ def main():
     names = json.load(open("/Users/chrisrussell/Cryptids/cryptid-generation/scripts/names.json"))
 
         
-    name_file = open("/Users/chrisrussell/Cryptids/cryptid-generation/deep_names_shuffle.txt", "r")
+    name_file = open("/Users/chrisrussell/Cryptids/cryptid-generation/deep_names_shuffle_shifted.txt", "r")
     data = name_file.read()
     name_list = data.split("\n")
     name_file.close()
 
-    
 
+    # for filename in os.scandir("/Users/chrisrussell/Cryptids/cryptid-generation/output/shifted/metadata"):
 
-    for filename in os.scandir("/Users/chrisrussell/Cryptids/cryptid-generation/output/shifted/metadata"):
+    for file_name in range(1,7778):
         name = name_list.pop(0)
-        if len(filename.name.split(".")) != 2:
-            continue
-        file_name = filename.name.split(".")[0]
-        transformed = transform_json(json.load(open(filename.path)), names, file_name, name)
+        # if len(filename.name.split(".")) != 2:
+        #     continue
+        # file_name = filename.name.split(".")[0]
+        transformed = transform_json(json.load(open(f'/Users/chrisrussell/Cryptids/cryptid-generation/output/shifted/metadata/{file_name}.json')), names, file_name, name)
 
         with open(f"/Users/chrisrussell/Cryptids/cryptid-generation/output/shifted/metadata_final/{file_name}.json", "w") as o:
             json.dump(transformed, o, indent=4)
@@ -88,26 +88,36 @@ def transform_json(data, names, file_name, cryptid_name):
     #         del data["14b_eyes_iris_left"]
     #         del data["14e_eyes_iris_right"
  
-                   
 
+    # split mane and wing types
+    if "7_fur" in data:
+        _, fur_type, fur_color = data['7_fur'].split('_')
+        metadata["attributes"].append({"trait_type": "Mane Type", "value": fur_type.capitalize()})
+        metadata["attributes"].append({"trait_type": "Mane Color", "value": fur_color.capitalize()})
+
+    if "4_back" in data:
+        _, back_type, back_color = data['4_back'].split('_')
+        metadata["attributes"].append({"trait_type": "Back Type", "value": back_type.capitalize()})
+        metadata["attributes"].append({"trait_type": "Back Color", "value": back_color.capitalize()})
+           
     for x in data.items():
-        print(x)
-        print(x[1])
-        print(names.values())
+        # print(x)
+        # print(x[1])
+        # print(names.values())
         if x[1] in names.keys():
-            print(x[1])
-            print(names.values())
+            # print(x[1])
+            # print(names.values())
            
             # For each sub-item in attribute
         
             metadata["attributes"].append({"trait_type": names[x[0]], "value": names[x[1]]})
    
     # Boost attributes
-    magic = np.random.randint(50,100)
-    empathy = np.random.randint(50,100)
-    morality = np.random.randint(50,100)
-    wisdom = np.random.randint(50,100)
-    chaos = np.random.randint(50,100)
+    magic = np.random.randint(1,11)
+    empathy = np.random.randint(1,11)
+    morality = np.random.randint(1,11)
+    wisdom = np.random.randint(1,11)
+    chaos = np.random.randint(1,11)
 
     # metadata["attributes"].append(
     #         {"display_type": "boost_number", "trait_type": "Magic", "value": magic}

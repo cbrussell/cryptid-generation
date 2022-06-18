@@ -281,35 +281,6 @@
     "leftfrontleg_horse_white": "Equus",
     "leftfrontleg_horse_yellow":  "Equus",
 
-   
-    "back_featherwings_red": "Featherwings Red",
-    "back_featherwings_orange": "Featherwings Orange",
-    "back_featherwings_yellow": "Featherwings Yellow",
-    "back_featherwings_blue": "Featherwings Blue",
-    "back_featherwings_purple": "Featherwings Purple",
-    "back_featherwings_brown": "Featherwings Brown",
-    "back_featherwings_gray": "Featherwings Gray",
-    "back_featherwings_black": "Featherwings Black",
-    "back_featherwings_white": "Featherwings White",
-    "back_dragonwings_black": "Dragonwings Black",
-    "back_dragonwings_blue": "Dragonwings Blue",
-    "back_dragonwings_brown": "Dragonwings Brown",
-    "back_dragonwings_gray": "Dragonwings Gray",
-    "back_dragonwings_orange": "Dragonwings Orange",
-    "back_dragonwings_purple": "Dragonwings Purple",
-    "back_dragonwings_red": "Dragonwings Red",
-    "back_dragonwings_white": "Dragonwings White",
-    "back_dragonwings_yellow": "Dragonwings Yellow",
-
-    "back_spike_red": "Spike Red",
-    "back_spike_black": "Spike Black",
-    "back_spike_blue": "Spike Blue",
-    "back_spike_white": "Spike White",
-    "back_spike_yellow": "Spike Yellow",
-    "back_spike_purple": "Spike Purple",
-    "back_spike_brown": "Spike Brown",
-    "back_spike_gray": "Spike Gray",
-    "back_spike_orange": "Spike Orange",
 
     "torsobase_medium_black": "Medium",
     "torsobase_medium_blue":  "Medium",
@@ -344,46 +315,6 @@
     "torsopattern_stripes_white": "White Stripes",
     "torsopattern_stripes_yellow": "Yellow Stripes",
 
-    "fur_bushy_black": "Bushy Black",
-    "fur_bushy_blue": "Bushy Blue",
-    "fur_bushy_brown": "Bushy Brown",
-    "fur_bushy_gray": "Bushy Gray",
-    "fur_bushy_orange": "Bushy Orange",
-    "fur_bushy_purple": "Bushy Purple",
-    "fur_bushy_red": "Bushy Red",
-    "fur_bushy_white": "Bushy White",
-    "fur_bushy_yellow": "Bushy Yellow",
-
-    "fur_wooly_black": "Wooly Black",
-    "fur_wooly_blue": "Wooly Blue",
-    "fur_wooly_brown": "Wooly Brown",
-    "fur_wooly_gray": "Wooly Gray",
-    "fur_wooly_orange": "Fur Wooly Orange",
-    "fur_wooly_purple": "Wooly Purple",
-    "fur_wooly_red": "Wooly Red",
-    "fur_wooly_white": "Wooly White",
-    "fur_wooly_yellow": "Wooly Yellow",
-
-    "fur_silky_black": "Silky Black",
-    "fur_silky_blue": "Silky Blue",
-    "fur_silky_brown": "Silky Brown",
-    "fur_silky_gray": "Silky Gray",
-    "fur_silky_orange": "Silky Orange",
-    "fur_silky_purple": "Silky Purple",
-    "fur_silky_red": "Silky Red",
-    "fur_silky_white": "Silky White",
-    "fur_silky_yellow": "Silky Yellow",
-
-    "fur_windy_black": "Windy Black",
-    "fur_windy_blue": "Windy Blue",
-    "fur_windy_brown": "Windy Brown",
-    "fur_windy_gray": "Windy Gray",
-    "fur_windy_orange": "Windy Orange",
-    "fur_windy_purple": "Windy Purple",
-    "fur_windy_red": "Windy Red",
-    "fur_windy_white": "Windy White",
-    "fur_windy_yellow": "Windy Yellow",
-    
 
 
     "ears_lamb_red": "Lamb",
@@ -716,7 +647,6 @@
 
     "3_leftfrontleg": "Front Legs",
 
-    "4_back": "Back",
 
     "5a_torsobase": "Torso",
     "5b_torsoaccent": "Body Accent",
@@ -724,7 +654,6 @@
 
     "6a_neckbase": "Neck",
 
-    "7_fur": "Fur",
 
     "10_ears": "Ears",
 

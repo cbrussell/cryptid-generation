@@ -37,9 +37,9 @@ Genrate Cryptids
 12. Upload metadata
 13. Figure out how to host own IPFS - need at least 5 tb
 
-```shell
-scp -i "/Users/chrisrussell/.ssh/ec2/cryptids_keypair_may_21.pem" -r mp4  ubuntu@ec2-3-21-33-226.us-east-2.compute.amazonaws.com:~
-```
 
-n % ipfs add --recursive --progress ./gif    
+## Pin folder to IPFS
+```
+ipfs add --recursive --progress ./gif  
+```  
 

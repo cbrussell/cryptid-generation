@@ -2,19 +2,18 @@ import json
 import os
 import numpy as np
 
-
+gif_cid = "QmV7d7KaXmxTfxFd9PdgtJpLVLwjyjeDgFnnGWoj79f5D3" 
+mp4_cid = "QmaChPE8uobvscmKDjNwarzzWki2F2WHvK3raiXPqGF71V"
 image_cid = "QmcSNSXTwUU7S3nG5C65Kr48RnHYjSpReUU1KZsCLsqv4S"
-image_t_cid = "QmeHY4ej8v6ErAT5w3KyRoXzHMRKJQzqZDwVAaZXnExPMP"
+still_image_cid = "QmczDCw4Rnuyb54WXMgTAVrFUermxHuMCwZFGhGam6WKZX"
+still_image_t_cid = "QmaJa49QZ65AUhKJ5tujq5jSan2hDcZnAuhuvCk3sJozVj"
 
-pfp_cid = "QmYvjjd7Zti2NAD4YTop39uBP1vmfrm4RMYvcHNnoJHjUc"
-pfp_t_cid = "QmSVFbb9HjPsB3PqUaaTczpjd4NQ8qkfMrEupNu9mLtZjd"
-mp4_cid = "QmXLmAv3BWcJDoTHkEYH5oKmDTmkzvRajiYwdX7RUcCzkU"
-apng_cid = "QmU8yLudV17P6Rp3K7V4XPTf9Vi9bSnVTQ5E7RzqJdBekn"
-gif_cid = "QmeeaCMt2TLsjRGbdwuKUqCnghZH5f4au8CLbYbCp6whUs" 
+pfp_cid = "Qme8escZxhsLonXKTH361zeJEbRL3rBPcwNp9npqkVEZQa"
+pfp_t_cid = "QmRnjSWGQzvPJaLSNM8stRSa37t3gdtrzmtpocfveWhrSs"
+
+
 
 os.makedirs("/Users/chrisrussell/Cryptids/cryptid-generation/output/shifted/metadata_final", exist_ok=True)
-
-
 
 def main():
     names = json.load(open("/Users/chrisrussell/Cryptids/cryptid-generation/scripts/names.json"))
@@ -43,14 +42,13 @@ def transform_json(data, names, file_name, cryptid_name):
     # print(file_name)
     metadata = {
         "name": f"{cryptid_name}",
-        "description": "Part fantasy, part science-fiction. Cryptids is a generative art collection of 7,777 fantastic mythical creatures. Created by @no__solo and @chrisrusselljr.",
-        "image": f"ipfs://{image_cid}/{file_name}_solid.png",
-        "image_t": f"ipfs://{image_t_cid}/{file_name}_transparent.png",
-        "animation_url": f"ipfs://{mp4_cid}/{file_name}.mp4",
-        "gif": f"ipfs://{gif_cid}/{file_name}.gif",
-        "apng": f"ipfs://{apng_cid}/{file_name}_apng.png",
-        "pfp": f"ipfs://{pfp_cid}/{file_name}_solid_pfp.png",
-        "pfp_t": f"ipfs://{pfp_t_cid}/{file_name}_transparent_pfp.png",
+        "description": "Mythical chimeras rule over domains in a foreign universe. From the shadows of Nos Atomos lurk its original inhabitants, the CRYPTIDS. They will defend, conquer, or aid you in this new land. Only 7,777 await your discovery. A generative art collection created by @no__solo and @chrisrusselljr.",
+        "image": f"http://52.8.140.24/ipfs/{gif_cid}/{file_name}.gif",
+        "animation_url": f"http://52.8.140.24/ipfs/{mp4_cid}/{file_name}.mp4",
+        "still_image": f"http://52.8.140.24/ipfs/{still_image_cid}/{file_name}_solid.png",
+        "still_image_t": f"http://52.8.140.24/ipfs/{still_image_t_cid}/{file_name}_transparent.png",
+        "pfp": f"http://52.8.140.24/ipfs/{pfp_cid}/{file_name}_solid_pfp.png",
+        "pfp_t": f"http://52.8.140.24/ipfs/{pfp_t_cid}/{file_name}_transparent_pfp.png",
         "attributes": []
 
     }

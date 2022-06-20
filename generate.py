@@ -4,7 +4,7 @@ from datetime import datetime
 from multiprocessing import Process, Manager, Value
 from dna import get_dna, to_hash
 from traits import TraitManifest, ColorManifest, BackgroundManifest
-from combine_eyes import combine_attributes
+from combine import combine_attributes
 
 def main():
 

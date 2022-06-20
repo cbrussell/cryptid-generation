@@ -4,7 +4,7 @@ from PIL import Image
 from dna import Frames
 from collections import deque
 import random
-from background_2d_generator import get_2d_gradient
+from RenderTools.background_2d_generator import get_2d_gradient
 
 def combine_attributes(frames: Frames, prefix: str, frame_count: int):
     R = np.random.randint(0, 256)

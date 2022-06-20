@@ -6,7 +6,7 @@ from PIL import Image, ImageFont, ImageDraw
 from deprecated.background import get_gradient, get_gradient_3d
 from dna import Frames
 from time import sleep
-from background_2d_generator import get_2d_gradient
+from RenderTools.background_2d_generator import get_2d_gradient
 
 def combine_attributes_solid(frames: Frames, prefix: str):
     # R = np.random.randint(0, 256)

@@ -6,3 +6,5 @@ __pycache__/
 Deprecated/
 names/
 deprecated/
+provenance_table.txt
+hash_list.txt

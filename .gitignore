@@ -8,3 +8,5 @@ names/
 deprecated/
 provenance_table.txt
 hash_list.txt
+render_tools/
+scripts/

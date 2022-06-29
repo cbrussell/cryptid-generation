@@ -31,7 +31,7 @@ def main():
 
 
         procs = 10  # number of processors
-        n = 2000 # collection size
+        n = 10 # collection size
         frame_count = 72 # 1 for stills, 72 for animation
 
         increment = int(n / procs)
@@ -69,7 +69,6 @@ def worker(start: int, stop: int, hashlist: list, duplicates: int, trait_manifes
     
     for edition in range(start, stop):
        
-        
         images, dna  = get_dna(trait_manifest, color_manifest, background_manifest)
         base_color_pop = dna.pop('base_color')
 

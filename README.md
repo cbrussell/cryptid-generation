@@ -1,3 +1,55 @@
+## File setup
+Each Cryptid is constructed by layering multiple traits on a sinle frame, then iterating through all 72 frames to build a 3-second loop at 24 frames/second. Each trait is composed of 72 frames (1100x1100), exported from After Effects, with transparency. 
+
+We did build our own tooling so only a single color would need to be exported from After Effects, then a script would geneate the othe 8 colors. We also decided mid-project to increase the size of the borders, leading to a final frame size of 1180x1180. This allowed us the space necessary to generate profile pictures as well as full-frame shots. 
+
+## Naming convention
+Every folder and file share the same descriptor. This allows the program to locate the folder and file directory using a single keyword.   
+
+ex.) folder = `eyes_beast_pupil_right`, frames = `eyes_beast_pupil_right_00X.png`
+
+![](examples/folder_file_setup.png)
+
+## JSON Trait Structure
+Every trait (attribute) has a category and color. Trait rarity ranges between 0 to 1 and category/color rarity are determined by the sum of that group's weight. THis setup allows continuous refinement/integration of art assets as you build your project. 
+
+ex.) Snippit from `trait_manifest.json`
+```json
+{
+    "attribute": "14e_eyes_iris_right",
+    "rarity": 1,
+    "categories": [
+        {
+            "category": "beast",
+            "weight": 1,
+            "colors": [
+                {
+                    "color": "green",
+                    "weight": 1,
+                    "traits": [
+                        {
+                            "trait": "eyes_beast_iris_right_green",
+                            "weight": 1
+                        }
+                    ]
+                },
+                {
+                    "color": "orange",
+                    "weight": 1,
+                    "traits": [
+                        {
+                            "trait": "eyes_beast_iris_right_orange",
+                            "weight": 1
+                        }
+                    ]
+                },
+            ]
+        }
+    ]
+}
+```
+
+
 ## Methodology
 1. `trait_manifest.json`, `color_manifest.json`, and  `background_manifest.json` determine the rarity and occurence of traits that form a single Cryptid.
 2. Our files are 72 rendered frames (3 second animation), using the same naming convention for the folder and file. For example, `eyes_beast_pupil_right` folder contains 72 files of `eyes_beast_pupil_right_00X.png`.

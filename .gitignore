@@ -3,10 +3,8 @@ venv/
 RENDERS/
 __pycache__/
 .DS_Store
-Deprecated/
 names/
 deprecated/
-provenance_table.txt
 hash_list.txt
 render_tools/
 scripts/

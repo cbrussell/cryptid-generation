@@ -1,9 +1,9 @@
 # Cryptids Generative Art Engine
 ![](examples/collage.gif)
 ## File setup
-Each Cryptid is constructed by layering multiple traits on a sinle frame, then iterating through all 72 frames to build a 3-second loop at 24 frames/second. Each trait is composed of 72 frames (1100x1100), exported from After Effects, with transparency. 
+Each Cryptid is constructed by layering multiple image files/traits on a single frame, then iterating through all 72 frames to build a 3-second loop at 24 frames/second. Each trait folder contains 72 frames, 1100x1100px in size.
 
-We did build our own tooling so only a single color would need to be exported from After Effects, then a script would geneate the othe 8 colors. We also decided mid-project to increase the size of the borders, leading to a final frame size of 1180x1180. This allowed us the space necessary to generate profile pictures as well as full-frame shots. 
+We built our own tooling so only a single color would need to be exported from After Effects, where a script would then generate the othe 8 colors. We also decided mid-project to increase the size of the borders, leading to a final frame size of 1180x1180. This allowed us the space necessary to generate profile pictures as well as full-frame shots. 
 
 ## Naming convention
 Every folder and file share the same descriptor. This allows the program to locate the folder and file directory using a single keyword.   

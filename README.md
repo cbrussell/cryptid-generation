@@ -1,3 +1,5 @@
+# Cryptids Generative Art Engine
+![](examples/collage.gif)
 ## File setup
 Each Cryptid is constructed by layering multiple traits on a sinle frame, then iterating through all 72 frames to build a 3-second loop at 24 frames/second. Each trait is composed of 72 frames (1100x1100), exported from After Effects, with transparency. 
 
